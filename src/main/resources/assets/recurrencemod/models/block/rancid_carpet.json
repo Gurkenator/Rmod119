@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "particle": "recurrencemod:block/rancid_carpet",
+    "rancid_carpet": "recurrencemod:block/rancid_carpet"
+  }
+}

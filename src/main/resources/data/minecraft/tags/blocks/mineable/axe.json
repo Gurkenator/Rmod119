@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "recurrencemod:crate_food",
+    "recurrencemod:crate_common",
+    "recurrencemod:crate_good",
+    "recurrencemod:crate_rare",
+    "recurrencemod:crate_epic",
+    "recurrencemod:crate_legendary"
+  ]
+}

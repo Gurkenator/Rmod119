@@ -1,0 +1,13 @@
+{
+  "values": [
+    "recurrencemod:copper_scraps",
+    "recurrencemod:tin_scraps",
+    "recurrencemod:iron_scraps",
+    "recurrencemod:lead_scraps",
+    "recurrencemod:aluminium_scraps",
+    "recurrencemod:nickel_scraps",
+    "recurrencemod:silver_scraps",
+    "recurrencemod:gold_scraps",
+    "recurrencemod:cobalt_scraps"
+  ]
+}

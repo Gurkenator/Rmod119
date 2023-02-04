@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "recurrencemod:scorchstone",
+    "recurrencemod:scrap_block",
+    "recurrencemod:tire",
+    "recurrencemod:metal_beam"
+  ]
+}

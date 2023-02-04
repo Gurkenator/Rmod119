@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "up": "recurrencemod:block/scrap_block_s2",
+    "north": "recurrencemod:block/scrap_block_s1",
+    "west": "recurrencemod:block/scrap_block_s5",
+    "south": "recurrencemod:block/scrap_block_s4",
+    "east": "recurrencemod:block/scrap_block_s3",
+    "down": "recurrencemod:block/scrap_block_s6",
+    "particle": "recurrencemod:block/scrap_block_s1"
+  }
+}

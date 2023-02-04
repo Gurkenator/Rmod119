@@ -1,0 +1,155 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "recurrencemod:crate_rare",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:group",
+              "children": [
+                {
+                  "type": "minecraft:item",
+                  "weight": 20,
+                  "name": "recurrencemod:silver_scraps",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 3
+                      },
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:limit_count",
+                      "limit": {
+                        "max": 5
+                      }
+                    },
+                    {
+                      "function": "minecraft:apply_bonus",
+                      "enchantment": "minecraft:fortune",
+                      "formula": "minecraft:uniform_bonus_count",
+                      "parameters": {
+                        "bonusMultiplier": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "weight": 20,
+                  "name": "recurrencemod:gold_scraps",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 1,
+                        "max": 3
+                      },
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:limit_count",
+                      "limit": {
+                        "max": 5
+                      }
+                    },
+                    {
+                      "function": "minecraft:apply_bonus",
+                      "enchantment": "minecraft:fortune",
+                      "formula": "minecraft:uniform_bonus_count",
+                      "parameters": {
+                        "bonusMultiplier": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "weight": 20,
+                  "name": "minecraft:lapis_lazuli",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 3,
+                        "max": 9
+                      },
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:limit_count",
+                      "limit": {
+                        "max": 15
+                      }
+                    },
+                    {
+                      "function": "minecraft:apply_bonus",
+                      "enchantment": "minecraft:fortune",
+                      "formula": "minecraft:uniform_bonus_count",
+                      "parameters": {
+                        "bonusMultiplier": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "weight": 20,
+                  "name": "minecraft:glowstone",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": {
+                        "min": 3,
+                        "max": 9
+                      },
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:limit_count",
+                      "limit": {
+                        "max": 15
+                      }
+                    },
+                    {
+                      "function": "minecraft:apply_bonus",
+                      "enchantment": "minecraft:fortune",
+                      "formula": "minecraft:uniform_bonus_count",
+                      "parameters": {
+                        "bonusMultiplier": 1
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

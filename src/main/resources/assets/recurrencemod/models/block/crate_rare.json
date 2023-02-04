@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "up": "recurrencemod:block/crate_rare_top",
+    "north": "recurrencemod:block/crate_rare_side",
+    "west": "recurrencemod:block/crate_rare_side",
+    "south": "recurrencemod:block/crate_rare_side",
+    "east": "recurrencemod:block/crate_rare_side",
+    "down": "recurrencemod:block/crate_bottom",
+    "particle": "recurrencemod:block/crate_rare_top"
+  }
+}

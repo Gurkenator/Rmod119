@@ -1,0 +1,75 @@
+{
+  "item.recurrencemod.rotten_wood": "Rotten Wood",
+  "item.recurrencemod.raider_platings": "Raider Platings",
+  "item.recurrencemod.lunatic_platings": "Lunatic Platings",
+  "item.recurrencemod.iron_scraps": "Iron Scraps",
+  "item.recurrencemod.copper_scraps": "Copper Scraps",
+  "item.recurrencemod.tin_scraps": "Tin Scraps",
+  "item.recurrencemod.lead_scraps": "Lead Scraps",
+  "item.recurrencemod.aluminium_scraps": "Aluminium Scraps",
+  "item.recurrencemod.nickel_scraps": "Nickel Scraps",
+  "item.recurrencemod.silver_scraps": "Silver Scraps",
+  "item.recurrencemod.gold_scraps": "Gold Scraps",
+  "item.recurrencemod.cobalt_scraps": "Cobalt Scraps",
+
+  "item.recurrencemod.raider_sword": "Raider Sword",
+  "item.recurrencemod.raider_axe": "Raider Axe",
+
+  "item.recurrencemod.chainsword": "Chainsaw Sword",
+  "item.recurrencemod.chemdrill": "Chemical Drill",
+
+  "item.recurrencemod.nomad_sword": "Nomad Sword",
+
+  "item.recurrencemod.knife_sword": "Makeshift Knife",
+  "item.recurrencemod.broken_sword": "Broken Sword",
+  "item.recurrencemod.bat_sword": "Bat",
+  "item.recurrencemod.rags": "Rags",
+
+  "item.recurrencemod.gambler_sword": "The Gambler's Blade",
+  "item.recurrencemod.blood_sword": "The Bloody Blade",
+  "item.recurrencemod.speed_sword": "The Acceleration Blade",
+
+  "item.recurrencemod.raider_helmet": "Raider Helmet",
+  "item.recurrencemod.raider_chestplate": "Raider Chestplate",
+  "item.recurrencemod.raider_leggings": "Raider Leggings",
+  "item.recurrencemod.raider_boots": "Raider Boots",
+
+  "item.recurrencemod.canned_meat": "Canned Meat",
+  "item.recurrencemod.canned_vegetables": "Canned Vegetables",
+  "item.recurrencemod.canned_soup": "Canned Soup",
+
+  "item.recurrencemod.blue_pills": "Blue Pills",
+  "item.recurrencemod.red_pills": "Red Pills",
+  "item.recurrencemod.yellow_pills": "Yellow Pills",
+  "item.recurrencemod.green_pills": "Green Pills",
+
+  "block.recurrencemod.graffiti_spray_blue": "Blue Graffiti",
+  "block.recurrencemod.graffiti_spray_red": "Red Graffiti",
+  "block.recurrencemod.graffiti_spray_yellow": "Yellow Graffiti",
+  "block.recurrencemod.graffiti_spray_green": "Green Graffiti",
+  "block.recurrencemod.graffiti_spray_orange": "Orange Graffiti",
+  "block.recurrencemod.graffiti_spray_purple": "Purple Graffiti",
+
+  "block.recurrencemod.scorchstone": "Scorchstone",
+  "block.recurrencemod.scrap_block": "Scrap Block",
+  "block.recurrencemod.tire": "Tire",
+  "block.recurrencemod.metal_beam": "Metal Beam",
+  "block.recurrencemod.rancid_carpet": "Rancid Carpet",
+
+  "block.recurrencemod.crate_food": "Crate",
+  "block.recurrencemod.crate_common": "Crate",
+  "block.recurrencemod.crate_good": "Crate",
+  "block.recurrencemod.crate_rare": "Crate",
+  "block.recurrencemod.crate_epic": "Crate",
+  "block.recurrencemod.crate_legendary": "Crate",
+
+  "block.recurrencemod.skeleton_block_1": "Skeleton Block",
+  "block.recurrencemod.skeleton_block_2": "Skeleton Block",
+
+  "tooltip.recurrencemod.blue_pills": "Get you high but smell really bad",
+  "tooltip.recurrencemod.red_pills": "A volatile mix",
+  "tooltip.recurrencemod.yellow_pills": "Cause an exhausting rush",
+  "tooltip.recurrencemod.green_pills": "Close your eyes and see your fortune",
+
+  "itemGroup.recurrencetab": "Recurrence Mod Tab"
+}

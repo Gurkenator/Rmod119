@@ -1,0 +1,12 @@
+ {
+  "parent": "block/cube_all",
+  "textures": {
+    "up": "recurrencemod:block/crate_food_top",
+    "north": "recurrencemod:block/crate_food_side_meat",
+    "west": "recurrencemod:block/crate_food_side_soup",
+    "south": "recurrencemod:block/crate_food_side_vegetables",
+    "east": "recurrencemod:block/crate_food_side_soup",
+    "down": "recurrencemod:block/crate_bottom",
+    "particle": "recurrencemod:block/crate_food_top"
+  }
+}

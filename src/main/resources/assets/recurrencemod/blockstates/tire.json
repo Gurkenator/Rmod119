@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "recurrencemod:block/tire_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "recurrencemod:block/tire"
+    },
+    "axis=z": {
+      "model": "recurrencemod:block/tire_horizontal",
+      "x": 90
+    }
+  }
+}

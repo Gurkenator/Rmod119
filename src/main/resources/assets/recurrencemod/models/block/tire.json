@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "recurrencemod:block/tire_front",
+    "side": "recurrencemod:block/tire"
+  }
+}

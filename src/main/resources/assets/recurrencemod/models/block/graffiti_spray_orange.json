@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:block/glow_lichen",
+  "render_type": "cutout",
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "recurrencemod:block/graffiti_spray_orange",
+    "graffiti_spray_orange": "recurrencemod:block/graffiti_spray_orange"
+  },
+  "elements": [
+    {   "from": [ 0, 0, 0.1 ],
+      "to": [ 16, 16, 0.1 ],
+      "faces": {
+        "north": { "uv": [ 16, 0, 0, 16 ], "texture": "#graffiti_spray_orange" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#graffiti_spray_orange" }
+      }
+    }
+  ]
+}
