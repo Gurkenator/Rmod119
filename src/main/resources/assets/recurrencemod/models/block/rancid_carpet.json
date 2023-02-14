@@ -1,7 +1,6 @@
 {
-  "parent": "minecraft:block/carpet",
+  "parent": "block/carpet",
   "textures": {
-    "particle": "recurrencemod:block/rancid_carpet",
-    "rancid_carpet": "recurrencemod:block/rancid_carpet"
+    "wool": "recurrencemod:block/rancid_carpet"
   }
 }

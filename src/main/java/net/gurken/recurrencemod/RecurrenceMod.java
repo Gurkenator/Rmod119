@@ -2,14 +2,12 @@ package net.gurken.recurrencemod;
 
 import com.mojang.logging.LogUtils;
 import net.gurken.recurrencemod.block.ModBlocks;
-import net.gurken.recurrencemod.block.entity.ModBlockEntities;
+import net.gurken.recurrencemod.entity.ModBlockEntities;
 import net.gurken.recurrencemod.item.ModCreativeModeTab;
 import net.gurken.recurrencemod.item.ModItems;
 import net.gurken.recurrencemod.screen.ModMenuTypes;
 import net.gurken.recurrencemod.screen.SkeletonBlockScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;

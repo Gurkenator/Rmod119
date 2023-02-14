@@ -1,7 +1,7 @@
 package net.gurken.recurrencemod.block.custom;
 
-import net.gurken.recurrencemod.block.entity.ModBlockEntities;
-import net.gurken.recurrencemod.block.entity.SkeletonBlockBlockEntity;
+import net.gurken.recurrencemod.entity.ModBlockEntities;
+import net.gurken.recurrencemod.entity.SkeletonBlockBlockEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;

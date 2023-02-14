@@ -1,7 +1,7 @@
 package net.gurken.recurrencemod.screen;
 
 import net.gurken.recurrencemod.block.ModBlocks;
-import net.gurken.recurrencemod.block.entity.SkeletonBlockBlockEntity;
+import net.gurken.recurrencemod.entity.SkeletonBlockBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -9,7 +9,6 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 

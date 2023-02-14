@@ -5,10 +5,8 @@
   },
   "overrides":
           [
-            {
-              "predicate": { "damaged": 1, "damage": 0.25}, "model": "item/bat_sword1",
-              "predicate": { "damaged": 1, "damage": 0.5}, "model": "item/bat_sword2",
-              "predicate": { "damaged": 1, "damage": 0.75}, "model": "item/bat_sword3"
-            }
+            {"predicate": { "damaged": 1, "damage": 0.25}, "model": "recurrencemod:item/bat_sword1"},
+            {"predicate": { "damaged": 1, "damage": 0.5}, "model": "recurrencemod:item/bat_sword2"},
+            {"predicate": { "damaged": 1, "damage": 0.75}, "model": "recurrencemod:item/bat_sword3"}
           ]
 }

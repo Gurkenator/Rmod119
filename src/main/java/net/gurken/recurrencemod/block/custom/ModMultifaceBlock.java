@@ -48,12 +48,6 @@ public class ModMultifaceBlock extends MultifaceBlock implements SimpleWaterlogg
         return super.updateShape(p_153302_, p_153303_, p_153304_, p_153305_, p_153306_, p_153307_);
     }
 
-    /**
-    public boolean canBeReplaced(BlockState p_153299_, BlockPlaceContext p_153300_) {
-        return !p_153300_.getItemInHand().is(Items.GRAFFITI_ITEM) || super.canBeReplaced(p_153299_, p_153300_);
-    }
-    **/
-
     public FluidState getFluidState(BlockState p_153311_) {
         return p_153311_.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(p_153311_);
     }

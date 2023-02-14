@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "recurrencemod:item/broken_sword1"
+  }
+}

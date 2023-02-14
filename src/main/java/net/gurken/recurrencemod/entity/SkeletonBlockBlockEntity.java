@@ -1,4 +1,4 @@
-package net.gurken.recurrencemod.block.entity;
+package net.gurken.recurrencemod.entity;
 
 import net.gurken.recurrencemod.screen.SkeletonBlockMenu;
 import net.minecraft.core.BlockPos;

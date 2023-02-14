@@ -1,8 +1,7 @@
-package net.gurken.recurrencemod.block.entity;
+package net.gurken.recurrencemod.entity;
 
 import net.gurken.recurrencemod.RecurrenceMod;
 import net.gurken.recurrencemod.block.ModBlocks;
-import net.gurken.recurrencemod.block.custom.SkeletonBlock;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

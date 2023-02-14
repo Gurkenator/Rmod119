@@ -14,10 +14,15 @@ import net.minecraftforge.common.ToolAction;
 import org.jetbrains.annotations.Nullable;
 
 public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
+    private final int flammability;
+    private final int fireSpreadSpeed;
 
-    public ModFlammableRotatedPillarBlock(Properties properties) {
+    public ModFlammableRotatedPillarBlock(Properties properties, int flammability, int fireSpreadSpeed) {
         super(properties);
+        this.flammability = flammability;
+        this.fireSpreadSpeed = fireSpreadSpeed;
     }
+    //Thanks to DancerVLT69 on the Kaupenjoe Discord, who helped me clean up this code
 
     @Override
     public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
@@ -26,11 +31,11 @@ public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
 
     @Override
     public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-        return 5;
+        return flammability;
     }
 
     @Override
     public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-        return 5;
+        return fireSpreadSpeed;
     }
 }

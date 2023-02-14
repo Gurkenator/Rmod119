@@ -1,21 +1,15 @@
 package net.gurken.recurrencemod.block;
 
 import net.gurken.recurrencemod.RecurrenceMod;
-import net.gurken.recurrencemod.block.custom.SkeletonBlock;
+import net.gurken.recurrencemod.block.custom.*;
 import net.gurken.recurrencemod.item.ModItems;
-import net.gurken.recurrencemod.block.custom.ModFlammableRotatedPillarBlock;
-import net.gurken.recurrencemod.block.custom.ModMultifaceBlock;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CarpetBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -40,23 +34,7 @@ public class ModBlocks {
                     .strength(4f).requiresCorrectToolForDrops().explosionResistance(9f)));
     public static final RegistryObject<Block> TIRE = registerBlock("tire",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(2.0f).explosionResistance(2.0f)) {
-            @Override
-            public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                return true;
-            }
-
-            @Override
-            public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                return 10;
-            }
-
-            @Override
-            public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
-                return 20;
-            }
-            });
-
+                    .strength(2.0f).explosionResistance(2.0f), 10, 20));
     public static final RegistryObject<Block> GRAFFITI_SPRAY_BLUE = registerBlock("graffiti_spray_blue",
             () -> new ModMultifaceBlock(BlockBehaviour.Properties.of(Material.DECORATION)
                     .strength(0.5f).noOcclusion().explosionResistance(1f).instabreak().noCollission()));
@@ -111,9 +89,14 @@ public class ModBlocks {
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-
-        return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+        if (name.equals("rancid_carpet"))
+            return ModItems.ITEMS.register(name,() -> new RancidCarpetBlockItem(block.get(), new Item.Properties()));
+        else if (name.equals("tire"))
+            return ModItems.ITEMS.register(name,() -> new TireBlockItem(block.get(), new Item.Properties()));
+        else
+            return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
+
     public static void register(IEventBus eventBus) {
 
         BLOCKS.register(eventBus);
