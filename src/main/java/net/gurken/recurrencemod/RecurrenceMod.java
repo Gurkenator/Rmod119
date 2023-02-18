@@ -7,7 +7,9 @@ import net.gurken.recurrencemod.item.ModCreativeModeTab;
 import net.gurken.recurrencemod.item.ModItems;
 import net.gurken.recurrencemod.screen.ModMenuTypes;
 import net.gurken.recurrencemod.screen.SkeletonBlockScreen;
+import net.gurken.recurrencemod.worldgen.ModSurfaceRuleData;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,6 +21,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import terrablender.api.Regions;
+import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(RecurrenceMod.MOD_ID)
@@ -46,7 +50,15 @@ public class RecurrenceMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        event.enqueueWork(() ->
+        {
+            // Weights are kept intentionally low as we add minimal biomes
+            //Regions.register(new TestRegion1(new ResourceLocation(MOD_ID, "overworld_1"), 2));
+            //Regions.register(new TestRegion2(new ResourceLocation(MOD_ID, "overworld_2"), 2));
 
+            // Register our surface rules
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRuleData.makeRules());
+        });
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
@@ -86,6 +98,7 @@ public class RecurrenceMod
             event.accept(ModBlocks.GRAFFITI_SPRAY_GREEN);
             event.accept(ModBlocks.GRAFFITI_SPRAY_ORANGE);
             event.accept(ModBlocks.GRAFFITI_SPRAY_PURPLE);
+            event.accept(ModBlocks.GRAFFITI_SPRAY_LIGHT_GREY);
 
             event.accept(ModItems.RAIDER_SWORD);
             event.accept(ModItems.RAIDER_AXE);

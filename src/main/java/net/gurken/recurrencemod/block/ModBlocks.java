@@ -32,6 +32,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> METAL_BEAM = registerBlock("metal_beam",
             () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(4f).requiresCorrectToolForDrops().explosionResistance(9f)));
+    public static final RegistryObject<Block> RANCID_CARPET = registerBlock("rancid_carpet",
+            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+                    .strength(0.5f).noOcclusion().explosionResistance(1f)));
     public static final RegistryObject<Block> TIRE = registerBlock("tire",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(2.0f).explosionResistance(2.0f), 10, 20));
@@ -53,9 +56,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> GRAFFITI_SPRAY_PURPLE = registerBlock("graffiti_spray_purple",
             () -> new ModMultifaceBlock(BlockBehaviour.Properties.of(Material.DECORATION)
                     .strength(0.5f).noOcclusion().explosionResistance(1f).instabreak().noCollission()));
-    public static final RegistryObject<Block> RANCID_CARPET = registerBlock("rancid_carpet",
-            () -> new CarpetBlock(BlockBehaviour.Properties.of(Material.DECORATION)
-                    .strength(0.5f).noOcclusion().explosionResistance(1f)));
+    public static final RegistryObject<Block> GRAFFITI_SPRAY_LIGHT_GREY = registerBlock("graffiti_spray_light_grey",
+            () -> new ModMultifaceBlock(BlockBehaviour.Properties.of(Material.DECORATION)
+                    .strength(0.5f).noOcclusion().explosionResistance(1f).instabreak().noCollission()));
 
     public static final RegistryObject<Block> CRATE_FOOD = registerBlock("crate_food",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.WOOD)
