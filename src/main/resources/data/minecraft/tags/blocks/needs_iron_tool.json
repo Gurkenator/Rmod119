@@ -1,5 +1,8 @@
 {
   "replace": false,
   "values": [
+    "recurrencemod:ashstone",
+    "recurrencemod:duststone",
+    "recurrencemod:fracturestone"
   ]
 }

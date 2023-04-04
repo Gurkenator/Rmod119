@@ -7,7 +7,6 @@ import net.gurken.recurrencemod.item.ModCreativeModeTab;
 import net.gurken.recurrencemod.item.ModItems;
 import net.gurken.recurrencemod.screen.ModMenuTypes;
 import net.gurken.recurrencemod.screen.SkeletonBlockScreen;
-import net.gurken.recurrencemod.worldgen.ModSurfaceRuleData;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -53,17 +52,23 @@ public class RecurrenceMod
         event.enqueueWork(() ->
         {
             // Weights are kept intentionally low as we add minimal biomes
-            //Regions.register(new TestRegion1(new ResourceLocation(MOD_ID, "overworld_1"), 2));
-            //Regions.register(new TestRegion2(new ResourceLocation(MOD_ID, "overworld_2"), 2));
+            //Regions.register(new ModRegion1(new ResourceLocation(MOD_ID, "overworld_1"), 2));
+            //Regions.register(new ModRegion2(new ResourceLocation(MOD_ID, "overworld_2"), 2));
 
             // Register our surface rules
-            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRuleData.makeRules());
+            //SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModSurfaceRuleData.makeRules());
         });
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if(event.getTab() == ModCreativeModeTab.RECURRENCE_TAB) {
             event.accept(ModBlocks.SCORCHSTONE);
+            event.accept(ModBlocks.GLIMMERING_SCORCHSTONE);
+            event.accept(ModBlocks.ASHSTONE);
+            event.accept(ModBlocks.DUSTSTONE);
+            event.accept(ModBlocks.FRACTURESTONE);
+            event.accept(ModBlocks.SPIRESTONE);
+
             event.accept(ModBlocks.SCRAP_BLOCK);
             event.accept(ModBlocks.TIRE);
             event.accept(ModBlocks.RANCID_CARPET);
@@ -81,6 +86,7 @@ public class RecurrenceMod
             event.accept(ModItems.CANNED_MEAT);
             event.accept(ModItems.CANNED_VEGETABLES);
             event.accept(ModItems.CANNED_SOUP);
+            event.accept(ModItems.BOTTLED_WATER);
             event.accept(ModItems.ROTTEN_WOOD);
             event.accept(ModItems.COPPER_SCRAPS);
             event.accept(ModItems.TIN_SCRAPS);

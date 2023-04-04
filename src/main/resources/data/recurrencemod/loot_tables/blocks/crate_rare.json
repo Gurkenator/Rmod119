@@ -119,7 +119,7 @@
                 {
                   "type": "minecraft:item",
                   "weight": 20,
-                  "name": "minecraft:glowstone",
+                  "name": "minecraft:glowstone_dust",
                   "functions": [
                     {
                       "function": "minecraft:set_count",

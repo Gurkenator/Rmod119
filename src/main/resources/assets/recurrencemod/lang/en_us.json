@@ -37,6 +37,7 @@
   "item.recurrencemod.canned_meat": "Canned Meat",
   "item.recurrencemod.canned_vegetables": "Canned Vegetables",
   "item.recurrencemod.canned_soup": "Canned Soup",
+  "item.recurrencemod.bottled_water": "Bottled Water",
 
   "item.recurrencemod.blue_pills": "Blue Pills",
   "item.recurrencemod.red_pills": "Red Pills",
@@ -52,6 +53,12 @@
   "block.recurrencemod.graffiti_spray_light_grey": "Light Grey Graffiti",
 
   "block.recurrencemod.scorchstone": "Scorchstone",
+  "block.recurrencemod.glimmering_scorchstone": "Glimmering Scorchstone",
+  "block.recurrencemod.ashstone": "Ashstone",
+  "block.recurrencemod.duststone": "Duststone",
+  "block.recurrencemod.fracturestone": "Fracturestone",
+  "block.recurrencemod.spirestone": "Spirestone",
+
   "block.recurrencemod.scrap_block": "Scrap Block",
   "block.recurrencemod.tire": "Tire",
   "block.recurrencemod.metal_beam": "Metal Beam",

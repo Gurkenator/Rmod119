@@ -104,6 +104,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.CANNED_VEGETABLES)));
     public static final RegistryObject<Item> CANNED_SOUP = ITEMS.register("canned_soup",
             () -> new Item(new Item.Properties().food(ModFoods.CANNED_SOUP)));
+    public static final RegistryObject<Item> BOTTLED_WATER = ITEMS.register("bottled_water",
+            () -> new DrinkableItem(new Item.Properties()));
 
     public static final RegistryObject<Item> BLUE_PILLS = ITEMS.register("blue_pills",
             () -> new BluePillsItem(new Item.Properties().food(ModFoods.BLUE_PILLS)));
