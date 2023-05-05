@@ -40,12 +40,12 @@ public class RaiderArmorItem extends ArmorItem implements GeoItem {
 
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.RAIDER, new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 1)).build();
+                    .put(ModArmorMaterials.RAIDER, new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0)).build();
 
     private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 
-    public RaiderArmorItem(ArmorMaterial armorMaterial, EquipmentSlot slot, Item.Properties properties) {
-        super(armorMaterial, slot, properties);
+    public RaiderArmorItem(ArmorMaterial armorMaterial, Type type, Item.Properties properties) {
+        super(armorMaterial, type, properties);
     }
 
     @Override

@@ -1,8 +1,6 @@
 {
   "replace": false,
   "values": [
-    "recurrencemod:scorchstone",
-    "recurrencemod:glimmering_scorchstone",
-    "recurrencemod:spirestone"
+    "recurrencemod:scorchslate"
   ]
 }

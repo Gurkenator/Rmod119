@@ -67,7 +67,13 @@ public class RecurrenceMod
             event.accept(ModBlocks.ASHSTONE);
             event.accept(ModBlocks.DUSTSTONE);
             event.accept(ModBlocks.FRACTURESTONE);
+            event.accept(ModBlocks.FUMESTONE);
             event.accept(ModBlocks.SPIRESTONE);
+            event.accept(ModBlocks.SCORCHSLATE);
+
+            event.accept(ModBlocks.SPIRESTONE_BRICKS);
+            event.accept(ModBlocks.SPIRESTONE_BRICK_STAIRS);
+            event.accept(ModBlocks.SPIRESTONE_BRICK_SLAB);
 
             event.accept(ModBlocks.SCRAP_BLOCK);
             event.accept(ModBlocks.TIRE);
@@ -79,6 +85,9 @@ public class RecurrenceMod
             event.accept(ModBlocks.CRATE_RARE);
             event.accept(ModBlocks.CRATE_EPIC);
             event.accept(ModBlocks.CRATE_LEGENDARY);
+
+            event.accept(ModBlocks.DIAMOND_CLUSTER);
+            event.accept(ModBlocks.EMERALD_CLUSTER);
 
             event.accept(ModItems.KNIFE_SWORD);
             event.accept(ModItems.BROKEN_SWORD);

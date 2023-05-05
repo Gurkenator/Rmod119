@@ -1,6 +1,12 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "recurrencemod:block/glimmering_scorchstone"
+    "up": "recurrencemod:block/glimmering_scorchstone",
+    "north": "recurrencemod:block/scorchstone",
+    "west": "recurrencemod:block/scorchstone",
+    "south": "recurrencemod:block/scorchstone",
+    "east": "recurrencemod:block/scorchstone",
+    "down": "recurrencemod:block/scorchstone",
+    "particle": "recurrencemod:block/glimmering_scorchstone"
   }
 }

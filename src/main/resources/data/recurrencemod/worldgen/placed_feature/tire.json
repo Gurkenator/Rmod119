@@ -1,0 +1,10 @@
+{
+    "feature": "recurrencemod:tire",
+    "placement": [
+      {
+        "type": "minecraft:heightmap",
+        "heightmap": "MOTION_BLOCKING"
+      }
+    ]
+  }
+  

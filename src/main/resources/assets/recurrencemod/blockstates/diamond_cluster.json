@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/diamond_cluster" }
+  }
+}

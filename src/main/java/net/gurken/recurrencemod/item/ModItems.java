@@ -86,16 +86,16 @@ public class ModItems {
                     new Item.Properties()));
 
     public static final RegistryObject<Item> RAIDER_HELMET = ITEMS.register("raider_helmet",
-            () -> new RaiderArmorItem(ModArmorMaterials.RAIDER, EquipmentSlot.HEAD,
+            () -> new RaiderArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.HELMET,
                     new Item.Properties()));
     public static final RegistryObject<Item> RAIDER_CHESTPLATE = ITEMS.register("raider_chestplate",
-            () -> new RaiderArmorItem(ModArmorMaterials.RAIDER, EquipmentSlot.CHEST,
+            () -> new RaiderArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties()));
     public static final RegistryObject<Item> RAIDER_LEGGINGS = ITEMS.register("raider_leggings",
-            () -> new RaiderArmorItem(ModArmorMaterials.RAIDER, EquipmentSlot.LEGS,
+            () -> new RaiderArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.LEGGINGS,
                     new Item.Properties()));
     public static final RegistryObject<Item> RAIDER_BOOTS = ITEMS.register("raider_boots",
-            () -> new RaiderArmorItem(ModArmorMaterials.RAIDER, EquipmentSlot.FEET,
+            () -> new RaiderArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
 
     public static final RegistryObject<Item> CANNED_MEAT = ITEMS.register("canned_meat",

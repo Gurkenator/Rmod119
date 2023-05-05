@@ -6,9 +6,7 @@ import net.gurken.recurrencemod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CarpetBlock;
-import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -27,7 +25,7 @@ public class ModBlocks {
                     .strength(6f, 9f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> GLIMMERING_SCORCHSTONE = registerBlock("glimmering_scorchstone",
             () -> new ModGlimmeringBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(3.0F, 3.0F).requiresCorrectToolForDrops().randomTicks()));
+                    .strength(3f, 3f).requiresCorrectToolForDrops().randomTicks()));
     public static final RegistryObject<Block> ASHSTONE = registerBlock("ashstone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f, 9f).requiresCorrectToolForDrops()));
@@ -37,6 +35,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> FRACTURESTONE = registerBlock("fracturestone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f, 9f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SCORCHSLATE = registerBlock("scorchslate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> FUMESTONE = registerBlock("fumestone",
+            () -> new ModFumeBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(3f, 3f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SPIRESTONE = registerBlock("spirestone",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f, 9f).requiresCorrectToolForDrops()));
@@ -53,6 +58,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> TIRE = registerBlock("tire",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.of(Material.METAL)
                     .strength(2.0f, 2.0f), 10, 20));
+
+    public static final RegistryObject<Block> SPIRESTONE_BRICKS = registerBlock("spirestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SPIRESTONE_BRICK_STAIRS = registerBlock("spirestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SPIRESTONE_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SPIRESTONE_BRICK_SLAB = registerBlock("spirestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+
     public static final RegistryObject<Block> GRAFFITI_SPRAY_BLUE = registerBlock("graffiti_spray_blue",
             () -> new ModMultifaceBlock(BlockBehaviour.Properties.of(Material.DECORATION)
                     .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
@@ -94,6 +110,12 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(1.8f, 3.0f), UniformInt.of(1, 2)));
 
+    public static final RegistryObject<Block> DIAMOND_CLUSTER = registerBlock("diamond_cluster",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> EMERALD_CLUSTER = registerBlock("emerald_cluster",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SKELETON_BLOCK_1 = registerBlock("skeleton_block_1",
             () -> new SkeletonBlock(BlockBehaviour.Properties.of(Material.DECORATION)
                     .strength(6.0f, 18.0f).noOcclusion().noCollission()));

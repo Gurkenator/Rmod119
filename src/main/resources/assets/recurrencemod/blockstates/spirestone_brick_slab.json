@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "recurrencemod:block/spirestone_brick_slab"
+    },
+    "type=double": {
+      "model": "recurrencemod:block/spirestone_bricks"
+    },
+    "type=top": {
+      "model": "recurrencemod:block/spirestone_brick_slab_top"
+    }
+  }
+}

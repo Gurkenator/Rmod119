@@ -52,17 +52,25 @@
   "block.recurrencemod.graffiti_spray_purple": "Purple Graffiti",
   "block.recurrencemod.graffiti_spray_light_grey": "Light Grey Graffiti",
 
+  "block.recurrencemod.diamond_cluster": "Diamond Cluster",
+  "block.recurrencemod.emerald_cluster": "Emerald Cluster",
+
   "block.recurrencemod.scorchstone": "Scorchstone",
   "block.recurrencemod.glimmering_scorchstone": "Glimmering Scorchstone",
+  "block.recurrencemod.scorchslate": "Scorchslate",
   "block.recurrencemod.ashstone": "Ashstone",
   "block.recurrencemod.duststone": "Duststone",
   "block.recurrencemod.fracturestone": "Fracturestone",
+  "block.recurrencemod.fumestone": "Fumestone",
   "block.recurrencemod.spirestone": "Spirestone",
 
   "block.recurrencemod.scrap_block": "Scrap Block",
   "block.recurrencemod.tire": "Tire",
   "block.recurrencemod.metal_beam": "Metal Beam",
   "block.recurrencemod.rancid_carpet": "Rancid Carpet",
+  "block.recurrencemod.spirestone_bricks": "Spire Bricks",
+  "block.recurrencemod.spirestone_brick_stairs": "Spire Brick Stairs",
+  "block.recurrencemod.spirestone_brick_slab": "Spire Brick Stairs",
 
   "block.recurrencemod.crate_food": "Crate",
   "block.recurrencemod.crate_common": "Crate",

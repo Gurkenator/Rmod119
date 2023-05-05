@@ -2,8 +2,18 @@
   "replace": false,
   "values": [
     "recurrencemod:scorchstone",
+    "recurrencemod:glimmering_scorchstone",
+    "recurrencemod:scorchslate",
+    "recurrencemod:ashstone",
+    "recurrencemod:duststone",
+    "recurrencemod:fracturestone",
+    "recurrencemod:fumestone",
+    "recurrencemod:spirestone",
+    "recurrencemod:diamond_cluster",
+    "recurrencemod:emerald_cluster",
     "recurrencemod:scrap_block",
     "recurrencemod:tire",
-    "recurrencemod:metal_beam"
+    "recurrencemod:metal_beam",
+    "recurrencemod:spirestone_bricks"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "recurrencemod:scorched_valley",
+    "recurrencemod:bleak_plateau",
+	"recurrencemod:shattered_lands",
+    "recurrencemod:spires"
+  ]
+}

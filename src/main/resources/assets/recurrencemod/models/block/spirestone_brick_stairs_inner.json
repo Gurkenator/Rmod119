@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "recurrencemod:block/spirestone_bricks",
+    "top": "recurrencemod:block/spirestone_bricks",
+    "side": "recurrencemod:block/spirestone_bricks"
+  }
+}

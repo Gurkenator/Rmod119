@@ -26,7 +26,7 @@ public class ModGlimmeringBlock extends Block {
 
     public void stepOn(Level pLevel, BlockPos pPos, BlockState pState, Entity pEntity) {
         if (!pEntity.isSteppingCarefully() && pEntity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)pEntity)) {
-            pEntity.hurt(DamageSource.HOT_FLOOR, 1.5F);
+            pEntity.hurt(pLevel.damageSources().hotFloor(), 2.0F);
         }
         interact(pState, pLevel, pPos);
         super.stepOn(pLevel, pPos, pState, pEntity);

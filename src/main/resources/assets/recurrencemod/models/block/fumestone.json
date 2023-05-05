@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "up": "recurrencemod:block/fumestone",
+    "north": "recurrencemod:block/fracturestone",
+    "west": "recurrencemod:block/fracturestone",
+    "south": "recurrencemod:block/fracturestone",
+    "east": "recurrencemod:block/fracturestone",
+    "down": "recurrencemod:block/fracturestone",
+    "particle": "recurrencemod:block/fracturestone"
+  }
+}
