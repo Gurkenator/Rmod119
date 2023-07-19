@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "recurrencemod:block/metal_bars_slab"
+    },
+    "type=double": {
+      "model": "recurrencemod:block/metal_bars_block"
+    },
+    "type=top": {
+      "model": "recurrencemod:block/metal_bars_slab_top"
+    }
+  }
+}

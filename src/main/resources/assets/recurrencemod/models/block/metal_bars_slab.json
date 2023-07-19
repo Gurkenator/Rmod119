@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/slab",
+  "render_type": "cutout",
+  "ambientocclusion": false,
+  "textures": {
+    "bottom": "recurrencemod:block/metal_bars_top",
+    "top": "recurrencemod:block/metal_bars_top",
+    "side": "recurrencemod:block/metal_bars_side_v1"
+  }
+}

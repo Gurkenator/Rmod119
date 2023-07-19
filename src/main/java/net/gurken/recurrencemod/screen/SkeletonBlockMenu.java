@@ -13,19 +13,21 @@ import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class SkeletonBlockMenu extends AbstractContainerMenu {
+
     public final SkeletonBlockBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
+
     public SkeletonBlockMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(15));
+        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(15));
     }
 
     public SkeletonBlockMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.SKELETON_BLOCK_MENU.get(), id);
         checkContainerSize(inv, 15);
         blockEntity = (SkeletonBlockBlockEntity) entity;
-        this.level = inv.player.level;
+        this.level = inv.player.level();
         this.data = data;
 
         addPlayerInventory(inv);
@@ -108,8 +110,8 @@ public class SkeletonBlockMenu extends AbstractContainerMenu {
     @Override
     public boolean stillValid(Player player) {
         ContainerLevelAccess acc = ContainerLevelAccess.create(level, blockEntity.getBlockPos());
-        return stillValid(acc,player, ModBlocks.SKELETON_BLOCK_1.get()) ||
-                stillValid(acc,player, ModBlocks.SKELETON_BLOCK_2.get());
+        return stillValid(acc,player, ModBlocks.SKELETON_BLOCK.get()) ||
+                stillValid(acc,player, ModBlocks.SCATTERED_SKELETON_BLOCK.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {
@@ -125,6 +127,4 @@ public class SkeletonBlockMenu extends AbstractContainerMenu {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 144));
         }
     }
-
-
 }

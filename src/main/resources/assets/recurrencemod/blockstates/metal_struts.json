@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "recurrencemod:block/metal_struts"
+    },
+    "facing=south": {
+      "model": "recurrencemod:block/metal_struts",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "recurrencemod:block/metal_struts",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "recurrencemod:block/metal_struts",
+      "y": 90
+    }
+  }
+}

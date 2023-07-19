@@ -88,9 +88,7 @@
     [
       "minecraft:spring_lava"
     ],
-    [
-	  "recurrencemod:spires/spire"
-	],
+    [],
     [
       "minecraft:freeze_top_layer",
 	  "recurrencemod:snow_purger"

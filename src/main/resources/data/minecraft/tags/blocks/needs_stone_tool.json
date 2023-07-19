@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "recurrencemod:metal_beam"
+    "recurrencemod:metal_beam",
+    "recurrencemod:pipe",
+    "recurrencemod:metal_struts",
+    "recurrencemod:metal_bars_block",
+    "recurrencemod:metal_bars_slab"
   ]
 }

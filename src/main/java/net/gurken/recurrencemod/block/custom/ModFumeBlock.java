@@ -30,7 +30,7 @@ public class ModFumeBlock extends Block {
         if (!pEntity.isSteppingCarefully() && pEntity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)pEntity)) {
             LivingEntity livingEntity = ((LivingEntity) pEntity);
             if (!livingEntity.hasEffect(MobEffects.LEVITATION)) {
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 12, 11));
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 12, 11, false, false));
             }
         }
         interact(pState, pLevel, pPos);

@@ -446,7 +446,7 @@
                       "then_run": {
                         "type": "minecraft:block",
                         "result_state": {
-                          "Name": "recurrencemod:ashstone"
+                          "Name": "recurrencemod:duststone"
                         }
                       }
                     }
@@ -506,7 +506,7 @@
                       "then_run": {
                         "type": "minecraft:block",
                         "result_state": {
-                          "Name": "recurrencemod:duststone"
+                          "Name": "recurrencemod:palestone"
                         }
                       }
                     }

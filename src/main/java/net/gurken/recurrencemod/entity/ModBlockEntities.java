@@ -13,7 +13,7 @@ public class ModBlockEntities {
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, RecurrenceMod.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<SkeletonBlockBlockEntity>> SKELETON_BLOCK =
-            BLOCK_ENTITIES.register("skeleton_block", () -> BlockEntityType.Builder.of(SkeletonBlockBlockEntity::new, ModBlocks.SKELETON_BLOCK_1.get(), ModBlocks.SKELETON_BLOCK_2.get()).build(null));
+            BLOCK_ENTITIES.register("skeleton_block", () -> BlockEntityType.Builder.of(SkeletonBlockBlockEntity::new, ModBlocks.SKELETON_BLOCK.get(), ModBlocks.SCATTERED_SKELETON_BLOCK.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

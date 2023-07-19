@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "recurrencemod:block/scorchstone_rubble"
+    },
+    "facing=south": {
+      "model": "recurrencemod:block/scorchstone_rubble",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "recurrencemod:block/scorchstone_rubble",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "recurrencemod:block/scorchstone_rubble",
+      "y": 90
+    }
+  }
+}

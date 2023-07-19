@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "render_type": "cutout",
+  "ambientocclusion": false,
+  "textures": {
+    "all": "recurrencemod:block/metal_bars_top"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "recurrencemod:block/skeleton_block"
+    },
+    "facing=south": {
+      "model": "recurrencemod:block/skeleton_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "recurrencemod:block/skeleton_block",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "recurrencemod:block/skeleton_block",
+      "y": 90
+    }
+  }
+}

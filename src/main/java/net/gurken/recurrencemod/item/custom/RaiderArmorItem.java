@@ -57,7 +57,7 @@ public class RaiderArmorItem extends ArmorItem implements GeoItem {
 
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.RAIDER, new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0)).build();
+                    .put(ModArmorMaterials.RAIDER, new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, false, false, true)).build();
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {

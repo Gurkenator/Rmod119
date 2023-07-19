@@ -3,16 +3,18 @@ package net.gurken.recurrencemod;
 import com.mojang.logging.LogUtils;
 import net.gurken.recurrencemod.block.ModBlocks;
 import net.gurken.recurrencemod.entity.ModBlockEntities;
-import net.gurken.recurrencemod.item.ModCreativeModeTab;
+import net.gurken.recurrencemod.entity.ModEntities;
+import net.gurken.recurrencemod.entity.client.RaiderRenderer;
+import net.gurken.recurrencemod.item.ModCreativeModeTabs;
 import net.gurken.recurrencemod.item.ModItems;
 import net.gurken.recurrencemod.screen.ModMenuTypes;
 import net.gurken.recurrencemod.screen.SkeletonBlockScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -21,8 +23,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import software.bernie.geckolib.GeckoLib;
-import terrablender.api.Regions;
-import terrablender.api.SurfaceRuleManager;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(RecurrenceMod.MOD_ID)
@@ -36,10 +36,13 @@ public class RecurrenceMod
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         GeckoLib.initialize();
 
@@ -63,12 +66,12 @@ public class RecurrenceMod
         });
     }
 
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if(event.getTab() == ModCreativeModeTab.RECURRENCE_TAB) {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTab() == ModCreativeModeTabs.RECURRENCE_TAB.get()) {
             event.accept(ModBlocks.SCORCHSTONE);
             event.accept(ModBlocks.GLIMMERING_SCORCHSTONE);
-            event.accept(ModBlocks.ASHSTONE);
             event.accept(ModBlocks.DUSTSTONE);
+            event.accept(ModBlocks.PALESTONE);
             event.accept(ModBlocks.FRACTURESTONE);
             event.accept(ModBlocks.FUMESTONE);
             event.accept(ModBlocks.SPIRESTONE);
@@ -78,10 +81,20 @@ public class RecurrenceMod
             event.accept(ModBlocks.SPIRESTONE_BRICK_STAIRS);
             event.accept(ModBlocks.SPIRESTONE_BRICK_SLAB);
 
+            event.accept(ModBlocks.PALESTONE_BRICKS);
+            event.accept(ModBlocks.PALESTONE_BRICK_STAIRS);
+            event.accept(ModBlocks.PALESTONE_BRICK_SLAB);
+
+            event.accept(ModBlocks.SCORCHSTONE_RUBBLE);
+            event.accept(ModBlocks.METAL_BARS_BLOCK);
+            event.accept(ModBlocks.METAL_BARS_SLAB);
+
             event.accept(ModBlocks.SCRAP_BLOCK);
             event.accept(ModBlocks.TIRE);
             event.accept(ModBlocks.RANCID_CARPET);
             event.accept(ModBlocks.METAL_BEAM);
+            event.accept(ModBlocks.PIPE);
+            event.accept(ModBlocks.METAL_STRUTS);
             event.accept(ModBlocks.CRATE_FOOD);
             event.accept(ModBlocks.CRATE_COMMON);
             event.accept(ModBlocks.CRATE_GOOD);
@@ -141,11 +154,13 @@ public class RecurrenceMod
             event.accept(ModItems.BLOOD_SWORD);
             event.accept(ModItems.SPEED_SWORD);
 
-            event.accept(ModBlocks.SKELETON_BLOCK_1);
-            event.accept(ModBlocks.SKELETON_BLOCK_2);
+            event.accept(ModItems.RAIDER_SPAWN_EGG);
+
+            event.accept(ModBlocks.SKELETON_BLOCK);
+            event.accept(ModBlocks.SCATTERED_SKELETON_BLOCK);
         }
 
-        if(event.getTab() == CreativeModeTabs.COMBAT) {
+        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.KNIFE_SWORD);
             event.accept(ModItems.BAT_SWORD);
             event.accept(ModItems.BROKEN_SWORD);
@@ -173,6 +188,8 @@ public class RecurrenceMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             MenuScreens.register(ModMenuTypes.SKELETON_BLOCK_MENU.get(), SkeletonBlockScreen::new);
+
+            EntityRenderers.register(ModEntities.RAIDER.get(), RaiderRenderer::new);
         }
     }
 }

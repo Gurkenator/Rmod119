@@ -44,6 +44,8 @@
   "item.recurrencemod.yellow_pills": "Yellow Pills",
   "item.recurrencemod.green_pills": "Green Pills",
 
+  "item.recurrencemod.raider_spawn_egg": "Raider Spawn Egg",
+
   "block.recurrencemod.graffiti_spray_blue": "Blue Graffiti",
   "block.recurrencemod.graffiti_spray_red": "Red Graffiti",
   "block.recurrencemod.graffiti_spray_yellow": "Yellow Graffiti",
@@ -58,19 +60,28 @@
   "block.recurrencemod.scorchstone": "Scorchstone",
   "block.recurrencemod.glimmering_scorchstone": "Glimmering Scorchstone",
   "block.recurrencemod.scorchslate": "Scorchslate",
-  "block.recurrencemod.ashstone": "Ashstone",
   "block.recurrencemod.duststone": "Duststone",
+  "block.recurrencemod.palestone": "Palestone",
   "block.recurrencemod.fracturestone": "Fracturestone",
   "block.recurrencemod.fumestone": "Fumestone",
   "block.recurrencemod.spirestone": "Spirestone",
+  "block.recurrencemod.scorchstone_rubble": "Scorchstone Rubble",
 
   "block.recurrencemod.scrap_block": "Scrap Block",
   "block.recurrencemod.tire": "Tire",
   "block.recurrencemod.metal_beam": "Metal Beam",
+  "block.recurrencemod.pipe": "Pipe",
+  "block.recurrencemod.metal_struts": "Metal Struts",
   "block.recurrencemod.rancid_carpet": "Rancid Carpet",
+  "block.recurrencemod.metal_bars_block": "Metal Bars Block",
+  "block.recurrencemod.metal_bars_slab": "Metal Bars Slab",
+
   "block.recurrencemod.spirestone_bricks": "Spire Bricks",
   "block.recurrencemod.spirestone_brick_stairs": "Spire Brick Stairs",
-  "block.recurrencemod.spirestone_brick_slab": "Spire Brick Stairs",
+  "block.recurrencemod.spirestone_brick_slab": "Spire Brick Slab",
+  "block.recurrencemod.palestone_bricks": "Palestone Bricks",
+  "block.recurrencemod.palestone_brick_stairs": "Palestone Brick Stairs",
+  "block.recurrencemod.palestone_brick_slab": "Palestone Brick Slab",
 
   "block.recurrencemod.crate_food": "Crate",
   "block.recurrencemod.crate_common": "Crate",
@@ -79,13 +90,22 @@
   "block.recurrencemod.crate_epic": "Crate",
   "block.recurrencemod.crate_legendary": "Crate",
 
-  "block.recurrencemod.skeleton_block_1": "Skeleton Block",
-  "block.recurrencemod.skeleton_block_2": "Skeleton Block",
+  "block.recurrencemod.skeleton_block": "Skeleton",
+  "block.recurrencemod.scattered_skeleton_block": "Scattered Skeleton",
 
   "tooltip.recurrencemod.blue_pills": "Get you high but smell really bad",
   "tooltip.recurrencemod.red_pills": "A volatile mix",
   "tooltip.recurrencemod.yellow_pills": "Cause an exhausting rush",
   "tooltip.recurrencemod.green_pills": "Close your eyes and see your fortune",
 
-  "itemGroup.recurrencetab": "Recurrence Mod Tab"
+  "block.recurrencemod.proxy_block_1": "Proxy Block",
+  "block.recurrencemod.proxy_block_2": "Proxy Block",
+  "block.recurrencemod.proxy_block_3": "Proxy Block",
+  "block.recurrencemod.proxy_block_4": "Proxy Block",
+  "block.recurrencemod.proxy_block_5": "Proxy Block",
+  "block.recurrencemod.proxy_block_6": "Proxy Block",
+  "block.recurrencemod.proxy_block_7": "Proxy Block",
+  "block.recurrencemod.proxy_block_8": "Proxy Block",
+
+  "creativemodetab.recurrence_tab": "Recurrence"
 }
