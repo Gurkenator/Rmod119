@@ -5,6 +5,8 @@
     "recurrencemod:pipe",
     "recurrencemod:metal_struts",
     "recurrencemod:metal_bars_block",
-    "recurrencemod:metal_bars_slab"
+    "recurrencemod:metal_bars_slab",
+    "recurrencemod:metal_door",
+    "recurrencemod:metal_trapdoor"
   ]
 }

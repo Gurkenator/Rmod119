@@ -88,6 +88,8 @@ public class RecurrenceMod
             event.accept(ModBlocks.SCORCHSTONE_RUBBLE);
             event.accept(ModBlocks.METAL_BARS_BLOCK);
             event.accept(ModBlocks.METAL_BARS_SLAB);
+            event.accept(ModBlocks.METAL_DOOR);
+            event.accept(ModBlocks.METAL_TRAPDOOR);
 
             event.accept(ModBlocks.SCRAP_BLOCK);
             event.accept(ModBlocks.TIRE);

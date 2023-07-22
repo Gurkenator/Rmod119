@@ -8,6 +8,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -56,7 +57,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> PIPE = registerBlock("pipe",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+            () -> new ModPipeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> METAL_STRUTS = registerBlock("metal_struts",
@@ -69,11 +70,17 @@ public class ModBlocks {
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(2.0f, 2.0f), 10, 20));
     public static final RegistryObject<Block> METAL_BARS_BLOCK = registerBlock("metal_bars_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BARS)
+            () -> new HalfTransparentBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS)
                     .strength(2f, 2f).requiresCorrectToolForDrops().noOcclusion()));
     public static final RegistryObject<Block> METAL_BARS_SLAB = registerBlock("metal_bars_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS)
+            () -> new HalfTransparentSlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS)
                     .strength(2f, 2f).requiresCorrectToolForDrops().noOcclusion()));
+    public static final RegistryObject<Block> METAL_DOOR = registerBlock("metal_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f, 2f).requiresCorrectToolForDrops().noOcclusion(), BlockSetType.STONE));
+    public static final RegistryObject<Block> METAL_TRAPDOOR = registerBlock("metal_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f, 2f).requiresCorrectToolForDrops().noOcclusion(), BlockSetType.STONE));
 
     public static final RegistryObject<Block> SPIRESTONE_BRICKS = registerBlock("spirestone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)

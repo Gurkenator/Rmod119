@@ -6,7 +6,6 @@ import net.gurken.recurrencemod.entity.layers.ModModelLayers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.resources.Resource;
 
 public class RaiderRenderer extends MobRenderer<RaiderEntity, RaiderModel<RaiderEntity>> {
     private static final ResourceLocation RAIDER_LOCATION = new ResourceLocation(RecurrenceMod.MOD_ID, "textures/entity/raider_v1.png");

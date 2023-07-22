@@ -19,16 +19,16 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
-public class ModStrutBlock extends RotatedPillarBlock {
+public class ModStrutBlock extends RotatedPillarBlock implements SimpleWaterloggedBlock{
     public ModStrutBlock(Properties p_49795_) {
         super(p_49795_);
         this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(AXIS, Direction.Axis.X));
     }
 
-    public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
+    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    private static final VoxelShape SHAPE_X_AXIS = Block.box(7,4,0,9,12,16);
-    private static final VoxelShape SHAPE_Z_AXIS = Block.box(0,4,7,16,12,9);
+    private static final VoxelShape SHAPE_X_AXIS = Block.box(0,4,7,16,12,9);
+    private static final VoxelShape SHAPE_Z_AXIS = Block.box(7,4,0,9,12,16);
 
     @Nullable
     @Override
@@ -39,14 +39,9 @@ public class ModStrutBlock extends RotatedPillarBlock {
     }
 
     @Override
-    public VoxelShape getShape(BlockState p_51470_, BlockGetter p_51471_, BlockPos p_51472_, CollisionContext p_51473_) {
-        switch (p_51470_.getValue(AXIS)) {
-            case X:
-            default:
-                return SHAPE_X_AXIS;
-            case Z:
-                return SHAPE_Z_AXIS;
-        }
+    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        Direction direction = pState.getValue(FACING);
+        return direction.getAxis() == Direction.Axis.X ? SHAPE_X_AXIS : SHAPE_Z_AXIS;
     }
 
     @Override
@@ -62,7 +57,8 @@ public class ModStrutBlock extends RotatedPillarBlock {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
-        builder.add(WATERLOGGED).add(AXIS);
+        builder.add(WATERLOGGED);
+        builder.add(AXIS);
     }
 
     @Override
@@ -83,6 +79,6 @@ public class ModStrutBlock extends RotatedPillarBlock {
     }
 
     public boolean isPathfindable(BlockState p_51456_, BlockGetter p_51457_, BlockPos p_51458_, PathComputationType p_51459_) {
-        return false;
+        return true;
     }
 }

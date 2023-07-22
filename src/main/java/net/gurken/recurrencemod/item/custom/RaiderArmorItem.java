@@ -49,9 +49,8 @@ public class RaiderArmorItem extends ArmorItem implements GeoItem {
         });
     }
 
-
     private PlayState predicate(AnimationState animationState) {
-        animationState.getController().setAnimation(RawAnimation.begin().then("idle", Animation.LoopType.LOOP));
+        animationState.getController().setAnimation(RawAnimation.begin().then("animation.RaiderArmorItem.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 
@@ -84,7 +83,7 @@ public class RaiderArmorItem extends ArmorItem implements GeoItem {
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
             player.addEffect(new MobEffectInstance(mapStatusEffect.getEffect(),
-                    mapStatusEffect.getDuration(), mapStatusEffect.getAmplifier()));
+                    mapStatusEffect.getDuration(), mapStatusEffect.getAmplifier(), mapStatusEffect.isAmbient(), mapStatusEffect.isVisible()));
 
             //if(new Random().nextFloat() > 0.6f) { // 40% of damaging the armor! Possibly!
             //    player.getInventory().hurtArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});

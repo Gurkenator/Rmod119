@@ -52,7 +52,7 @@ public class ModAnimationDefinitions {
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(2f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR))).build();
-    public static final AnimationDefinition RAIDER_WALK = AnimationDefinition.Builder.withLength(2f)
+    public static final AnimationDefinition RAIDER_WALK = AnimationDefinition.Builder.withLength(2f).looping()
             .addAnimation("leftarm",
                     new AnimationChannel(AnimationChannel.Targets.ROTATION,
                             new Keyframe(0f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
@@ -113,6 +113,4 @@ public class ModAnimationDefinitions {
                                     AnimationChannel.Interpolations.LINEAR),
                             new Keyframe(2f, KeyframeAnimations.degreeVec(0f, 0f, 0f),
                                     AnimationChannel.Interpolations.LINEAR))).build();
-
-    //public static final AnimationDefinition RAIDER_ARMOR_IDLE = AnimationDefinition.Builder.withLength(0f).build();
 }

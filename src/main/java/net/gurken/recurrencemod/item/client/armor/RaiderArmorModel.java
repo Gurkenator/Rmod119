@@ -18,6 +18,6 @@ public class RaiderArmorModel extends GeoModel<RaiderArmorItem> {
 
     @Override
     public ResourceLocation getAnimationResource(RaiderArmorItem animatable) {
-        return new ResourceLocation(RecurrenceMod.MOD_ID, "animations/raider_armor_animation.json");
+        return new ResourceLocation(RecurrenceMod.MOD_ID, "animations/item/armor/raider_armor_animation.json");
     }
 }
