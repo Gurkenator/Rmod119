@@ -1,5 +1,5 @@
 {
-  "temperature": 2,
+  "temperature": 1,
   "downfall": 0,
   "has_precipitation": false,
   "temperature_modifier": "none",
@@ -69,10 +69,7 @@
     [
 	  "recurrencemod:scorchslate"
 	],
-    [
-      "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface"
-    ],
+    [],
     [
 	  "recurrencemod:geode_copper",
 	  "recurrencemod:geode_iron",
@@ -84,20 +81,17 @@
     ],
     [],
     [],
-    [
-      "minecraft:ore_iron_middle",
-      "minecraft:ore_lapis"
-    ],
+    [],
     [],
     [
       "minecraft:spring_lava"
     ],
     [
-	  "recurrencemod:patch_tire",
-	  "recurrencemod:patch_glimmering_scorchstone"
+	  "recurrencemod:patch_tire"
 	],
     [
-      "minecraft:freeze_top_layer"
+      "minecraft:freeze_top_layer",
+	  "recurrencemod:snow_purger"
     ]
   ]
 }

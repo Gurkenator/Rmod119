@@ -77,6 +77,10 @@ public class RecurrenceMod
             event.accept(ModBlocks.SPIRESTONE);
             event.accept(ModBlocks.SCORCHSLATE);
 
+            event.accept(ModBlocks.SCORCHSTONE_BRICKS);
+            event.accept(ModBlocks.SCORCHSTONE_BRICK_STAIRS);
+            event.accept(ModBlocks.SCORCHSTONE_BRICK_SLAB);
+
             event.accept(ModBlocks.SPIRESTONE_BRICKS);
             event.accept(ModBlocks.SPIRESTONE_BRICK_STAIRS);
             event.accept(ModBlocks.SPIRESTONE_BRICK_SLAB);

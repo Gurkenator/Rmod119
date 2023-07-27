@@ -1,5 +1,5 @@
 {
-  "temperature": 0,
+  "temperature": -2,
   "downfall": 0,
   "has_precipitation": false,
   "temperature_modifier": "none",
@@ -33,7 +33,7 @@
       },
       {
         "type": "minecraft:skeleton",
-        "weight": 100,
+        "weight": 20,
         "minCount": 4,
         "maxCount": 4
       },
@@ -47,6 +47,12 @@
         "type": "minecraft:enderman",
         "weight": 10,
         "minCount": 1,
+        "maxCount": 4
+      },
+      {
+        "type": "minecraft:stray",
+        "weight": 80,
+        "minCount": 4,
         "maxCount": 4
       }
     ]
@@ -76,11 +82,9 @@
     [
       "minecraft:spring_lava"
     ],
+    [],
     [
-	  "recurrencemod:patch_fumestone"
-	],
-    [
-	  "minecraft:freeze_top_layer",
+      "minecraft:freeze_top_layer",
 	  "recurrencemod:snow_purger"
     ]
   ]

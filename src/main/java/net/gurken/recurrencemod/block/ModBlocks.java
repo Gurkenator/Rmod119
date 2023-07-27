@@ -82,6 +82,15 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2f, 2f).requiresCorrectToolForDrops().noOcclusion(), BlockSetType.STONE));
 
+    public static final RegistryObject<Block> SCORCHSTONE_BRICKS = registerBlock("scorchstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SCORCHSTONE_BRICK_STAIRS = registerBlock("scorchstone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SCORCHSTONE_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SCORCHSTONE_BRICK_SLAB = registerBlock("scorchstone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SPIRESTONE_BRICKS = registerBlock("spirestone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
                     .strength(6f, 9f).requiresCorrectToolForDrops()));

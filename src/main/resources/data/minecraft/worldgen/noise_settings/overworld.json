@@ -654,6 +654,248 @@
 			{
               "type": "minecraft:condition",
               "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "recurrencemod:frozen_spires"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:noise_threshold",
+                      "noise": "recurrencemod:spires/big_noise",
+                      "min_threshold": -0.3,
+                      "max_threshold": 0.4
+                    },
+                    "then_run": {
+                      "type": "minecraft:condition",
+                      "if_true": {
+                        "type": "minecraft:stone_depth",
+                        "offset": 0,
+                        "surface_type": "floor",
+                        "add_surface_depth": false,
+                        "secondary_depth_range": 0
+                      },
+                      "then_run": {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 64
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "recurrencemod:spirestone"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": true,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "recurrencemod:scorchstone"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+			{
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "recurrencemod:desolate_mountains"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+				"type": "minecraft:condition",
+				"if_true": {
+				  "type": "minecraft:noise_threshold",
+				  "noise": "recurrencemod:desolate_mountains/big_noise",
+				  "min_threshold": 0,
+				  "max_threshold": 0
+				},
+				"then_run": {
+				  "type": "minecraft:condition",
+				  "if_true": {
+					"type": "minecraft:stone_depth",
+					"offset": 0,
+					"surface_type": "floor",
+					"add_surface_depth": true,
+					"secondary_depth_range": 0
+				  },
+				  "then_run": {
+					"type": "minecraft:condition",
+					"if_true": {
+					  "type": "minecraft:y_above",
+					  "anchor": {
+						"absolute": 64
+					  },
+					  "surface_depth_multiplier": 0,
+					  "add_stone_depth": true
+					},
+					"then_run": {
+					  "type": "minecraft:condition",
+					  "if_true": {
+						"type": "minecraft:not",
+						"invert": {
+						  "type": "minecraft:y_above",
+						  "anchor": {
+							"absolute": 128
+						  },
+						  "surface_depth_multiplier": 0,
+						  "add_stone_depth": true
+						}
+						  },
+						  "then_run": {
+							"type": "minecraft:block",
+							"result_state": {
+							  "Name": "recurrencemod:fracturestone"
+							}
+						  }
+						}
+					  }
+					}
+				  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": true,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "recurrencemod:scorchstone"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+			{
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "recurrencemod:forlorn_hills"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:sequence",
+                "sequence": [
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:noise_threshold",
+                      "noise": "recurrencemod:forlorn_hills/big_noise",
+                      "min_threshold": -0.25,
+                      "max_threshold": 0.25
+                    },
+                    "then_run": {
+                      "type": "minecraft:condition",
+                      "if_true": {
+                        "type": "minecraft:stone_depth",
+                        "offset": 0,
+                        "surface_type": "floor",
+                        "add_surface_depth": false,
+                        "secondary_depth_range": 0
+                      },
+                      "then_run": {
+                        "type": "minecraft:condition",
+                        "if_true": {
+                          "type": "minecraft:y_above",
+                          "anchor": {
+                            "absolute": 72
+                          },
+                          "surface_depth_multiplier": 0,
+                          "add_stone_depth": false
+                        },
+                        "then_run": {
+                          "type": "minecraft:block",
+                          "result_state": {
+                            "Name": "recurrencemod:palestone"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "type": "minecraft:condition",
+                    "if_true": {
+                      "type": "minecraft:stone_depth",
+                      "offset": 0,
+                      "surface_type": "floor",
+                      "add_surface_depth": true,
+                      "secondary_depth_range": 0
+                    },
+                    "then_run": {
+                      "type": "minecraft:block",
+                      "result_state": {
+                        "Name": "recurrencemod:scorchstone"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+			{
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "recurrencemod:infested_wastes"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "recurrencemod:scorchstone"
+                }
+              }
+            },
+			{
+              "type": "minecraft:condition",
+              "if_true": {
+                "type": "minecraft:biome",
+                "biome_is": [
+                  "recurrencemod:torrid_wastes"
+                ]
+              },
+              "then_run": {
+                "type": "minecraft:block",
+                  "result_state": {
+                    "Name": "recurrencemod:scorchstone"
+                }
+              }
+            },
+			{
+              "type": "minecraft:condition",
+              "if_true": {
                 "type": "minecraft:stone_depth",
                 "offset": 0,
                 "surface_type": "floor",
@@ -1673,50 +1915,6 @@
                           "if_true": {
                             "type": "minecraft:biome",
                             "biome_is": [
-                              "minecraft:windswept_savanna"
-                            ]
-                          },
-                          "then_run": {
-                            "type": "minecraft:sequence",
-                            "sequence": [
-                              {
-                                "type": "minecraft:condition",
-                                "if_true": {
-                                  "type": "minecraft:noise_threshold",
-                                  "noise": "minecraft:surface",
-                                  "min_threshold": 0.21212121212121213,
-                                  "max_threshold": 1.7976931348623157e+308
-                                },
-                                "then_run": {
-                                  "type": "minecraft:block",
-                                  "result_state": {
-                                    "Name": "minecraft:stone"
-                                  }
-                                }
-                              },
-                              {
-                                "type": "minecraft:condition",
-                                "if_true": {
-                                  "type": "minecraft:noise_threshold",
-                                  "noise": "minecraft:surface",
-                                  "min_threshold": -0.06060606060606061,
-                                  "max_threshold": 1.7976931348623157e+308
-                                },
-                                "then_run": {
-                                  "type": "minecraft:block",
-                                  "result_state": {
-                                    "Name": "minecraft:coarse_dirt"
-                                  }
-                                }
-                              }
-                            ]
-                          }
-                        },
-                        {
-                          "type": "minecraft:condition",
-                          "if_true": {
-                            "type": "minecraft:biome",
-                            "biome_is": [
                               "minecraft:windswept_gravelly_hills"
                             ]
                           },
@@ -2443,30 +2641,6 @@
                               }
                             }
                           ]
-                        },
-                        {
-                          "type": "minecraft:condition",
-                          "if_true": {
-                            "type": "minecraft:biome",
-                            "biome_is": [
-                              "minecraft:windswept_savanna"
-                            ]
-                          },
-                          "then_run": {
-                            "type": "minecraft:condition",
-                            "if_true": {
-                              "type": "minecraft:noise_threshold",
-                              "noise": "minecraft:surface",
-                              "min_threshold": 0.21212121212121213,
-                              "max_threshold": 1.7976931348623157e+308
-                            },
-                            "then_run": {
-                              "type": "minecraft:block",
-                              "result_state": {
-                                "Name": "minecraft:stone"
-                              }
-                            }
-                          }
                         },
                         {
                           "type": "minecraft:condition",

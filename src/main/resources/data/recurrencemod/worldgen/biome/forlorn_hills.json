@@ -64,7 +64,11 @@
 	  "recurrencemod:scorchslate"
 	],
     [],
-    [],
+    [
+	  "recurrencemod:geode_copper",
+	  "recurrencemod:geode_iron",
+	  "recurrencemod:geode_gold"
+	],
     [
       "minecraft:fossil_upper",
       "minecraft:fossil_lower"
@@ -76,11 +80,9 @@
     [
       "minecraft:spring_lava"
     ],
+    [],
     [
-	  "recurrencemod:patch_fumestone"
-	],
-    [
-	  "minecraft:freeze_top_layer",
+      "minecraft:freeze_top_layer",
 	  "recurrencemod:snow_purger"
     ]
   ]

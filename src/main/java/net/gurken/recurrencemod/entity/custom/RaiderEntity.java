@@ -1,19 +1,29 @@
 package net.gurken.recurrencemod.entity.custom;
 
+import net.gurken.recurrencemod.item.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.Difficulty;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.monster.AbstractSkeleton;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.ProjectileUtil;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -65,6 +75,39 @@ public class RaiderEntity extends Monster {
 
         this.walkAnimation.update(f, 0.2F);
     }
+
+    protected void populateDefaultEquipmentSlots(RandomSource pRandom, DifficultyInstance pDifficulty) {
+        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.RAIDER_SWORD.get()));
+    }
+
+    /**
+    public void setItemSlot(EquipmentSlot pSlot, ItemStack pStack) {
+        super.setItemSlot(pSlot, pStack);
+        if (!this.level().isClientSide) {
+            this.reassessWeaponGoal();
+        }
+    }
+
+    public void reassessWeaponGoal() {
+        if (this.level() != null && !this.level().isClientSide) {
+            this.goalSelector.removeGoal(this.meleeGoal);
+            this.goalSelector.removeGoal(this.bowGoal);
+            ItemStack itemstack = this.getItemInHand(ProjectileUtil.getWeaponHoldingHand(this, item -> item instanceof net.minecraft.world.item.BowItem));
+            if (itemstack.is(Items.BOW)) {
+                int i = 20;
+                if (this.level().getDifficulty() != Difficulty.HARD) {
+                    i = 40;
+                }
+
+                this.bowGoal.setMinAttackInterval(i);
+                this.goalSelector.addGoal(4, this.bowGoal);
+            } else {
+                this.goalSelector.addGoal(4, this.meleeGoal);
+            }
+
+        }
+    }
+     **/
 
     protected SoundEvent getAmbientSound() {
         return SoundEvents.ZOMBIE_AMBIENT;

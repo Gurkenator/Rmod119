@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
@@ -24,7 +25,7 @@ import javax.annotation.Nullable;
 
 public class ModPipeBlock extends RotatedPillarBlock implements SimpleWaterloggedBlock {
 
-    public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
+    public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     private static final VoxelShape Z_INSIDE = box(2.0D, 2.0D, 0.0D, 14.0D, 14.0D, 16.0D);
     private static final VoxelShape Y_INSIDE = box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
@@ -35,7 +36,7 @@ public class ModPipeBlock extends RotatedPillarBlock implements SimpleWaterlogge
     public ModPipeBlock(BlockBehaviour.Properties pProperties) {
 
         super(pProperties);
-        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(AXIS, Direction.Axis.Y));
+        this.registerDefaultState(this.defaultBlockState().setValue(AXIS, Direction.Axis.Y).setValue(WATERLOGGED, Boolean.valueOf(false)));
     }
 
     @Nullable
@@ -43,12 +44,12 @@ public class ModPipeBlock extends RotatedPillarBlock implements SimpleWaterlogge
     public BlockState getStateForPlacement(BlockPlaceContext p_51454_) {
         FluidState fluidstate = p_51454_.getLevel().getFluidState(p_51454_.getClickedPos());
         boolean flag = fluidstate.getType() == Fluids.WATER;
-        return super.getStateForPlacement(p_51454_).setValue(WATERLOGGED, Boolean.valueOf(flag)).setValue(FACING, p_51454_.getHorizontalDirection());
+        return this.defaultBlockState().setValue(AXIS, p_51454_.getClickedFace().getAxis()).setValue(WATERLOGGED, Boolean.valueOf(flag));
     }
 
     @Override
     public VoxelShape getShape(BlockState p_154346_, BlockGetter p_154347_, BlockPos p_154348_, CollisionContext p_154349_) {
-        switch (p_154346_.getValue(FACING).getAxis()) {
+        switch (p_154346_.getValue(AXIS)) {
             case X:
                 return X_AXIS_PIPE;
             case Z:
@@ -60,17 +61,28 @@ public class ModPipeBlock extends RotatedPillarBlock implements SimpleWaterlogge
 
     @Override
     public BlockState rotate(BlockState pState, Rotation pRotation) {
-        return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
+        return rotatePillar(pState, pRotation);
     }
 
-    @Override
-    public BlockState mirror(BlockState pState, Mirror pMirror) {
-        return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
+    public static BlockState rotatePillar(BlockState pState, Rotation pRotation) {
+        switch (pRotation) {
+            case COUNTERCLOCKWISE_90:
+            case CLOCKWISE_90:
+                switch (pState.getValue(AXIS)) {
+                    case X:
+                        return pState.setValue(AXIS, Direction.Axis.Z);
+                    case Z:
+                        return pState.setValue(AXIS, Direction.Axis.X);
+                    default:
+                        return pState;
+                }
+            default:
+                return pState;
+        }
     }
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
         builder.add(WATERLOGGED);
         builder.add(AXIS);
     }

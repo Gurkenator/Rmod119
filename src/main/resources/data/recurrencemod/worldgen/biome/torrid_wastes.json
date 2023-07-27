@@ -1,5 +1,5 @@
 {
-  "temperature": 0,
+  "temperature": 2,
   "downfall": 0,
   "has_precipitation": false,
   "temperature_modifier": "none",
@@ -27,7 +27,7 @@
       },
       {
         "type": "minecraft:zombie",
-        "weight": 100,
+        "weight": 20,
         "minCount": 4,
         "maxCount": 4
       },
@@ -48,6 +48,12 @@
         "weight": 10,
         "minCount": 1,
         "maxCount": 4
+      },
+      {
+        "type": "minecraft:husk",
+        "weight": 80,
+        "minCount": 4,
+        "maxCount": 4
       }
     ]
   },
@@ -64,7 +70,11 @@
 	  "recurrencemod:scorchslate"
 	],
     [],
-    [],
+    [
+	  "recurrencemod:geode_copper",
+	  "recurrencemod:geode_iron",
+	  "recurrencemod:geode_gold"
+	],
     [
       "minecraft:fossil_upper",
       "minecraft:fossil_lower"
@@ -77,10 +87,10 @@
       "minecraft:spring_lava"
     ],
     [
-	  "recurrencemod:patch_fumestone"
+	  "recurrencemod:patch_glimmering_scorchstone"
 	],
     [
-	  "minecraft:freeze_top_layer",
+      "minecraft:freeze_top_layer",
 	  "recurrencemod:snow_purger"
     ]
   ]

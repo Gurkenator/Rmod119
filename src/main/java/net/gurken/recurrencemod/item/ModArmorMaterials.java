@@ -22,11 +22,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266655_.put(ArmorItem.Type.LEGGINGS, 5);
         p_266655_.put(ArmorItem.Type.CHESTPLATE, 6);
         p_266655_.put(ArmorItem.Type.HELMET, 3);
-    }), 19, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.1F, () -> {
-        return Ingredient.of(ModItems.RAIDER_PLATINGS.get());
-    });
-
-    public static final StringRepresentable.EnumCodec<ArmorMaterials> CODEC = StringRepresentable.fromEnum(ArmorMaterials::values);
+    }), 19, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.1F, () -> Ingredient.of(ModItems.RAIDER_PLATINGS.get()));
     private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266653_) -> {
         p_266653_.put(ArmorItem.Type.BOOTS, 13);
         p_266653_.put(ArmorItem.Type.LEGGINGS, 15);
@@ -42,7 +38,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final float knockbackResistance;
     private final LazyLoadedValue<Ingredient> repairIngredient;
 
-    private ModArmorMaterials(String p_268171_, int p_268303_, EnumMap<ArmorItem.Type, Integer> p_267941_, int p_268086_, SoundEvent p_268145_, float p_268058_, float p_268180_, Supplier<Ingredient> p_268256_) {
+    ModArmorMaterials(String p_268171_, int p_268303_, EnumMap<ArmorItem.Type, Integer> p_267941_, int p_268086_, SoundEvent p_268145_, float p_268058_, float p_268180_, Supplier<Ingredient> p_268256_) {
         this.name = p_268171_;
         this.durabilityMultiplier = p_268303_;
         this.protectionFunctionForType = p_267941_;
@@ -83,9 +79,5 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     public float getKnockbackResistance() {
         return this.knockbackResistance;
-    }
-
-    public String getSerializedName() {
-        return this.name;
     }
 }

@@ -1,5 +1,5 @@
 {
-  "temperature": 0,
+  "temperature": 1,
   "downfall": 0,
   "has_precipitation": false,
   "temperature_modifier": "none",
@@ -48,6 +48,12 @@
         "weight": 10,
         "minCount": 1,
         "maxCount": 4
+      },
+      {
+        "type": "minecraft:slime",
+        "weight": 20,
+        "minCount": 4,
+        "maxCount": 4
       }
     ]
   },
@@ -63,8 +69,14 @@
     [
 	  "recurrencemod:scorchslate"
 	],
-    [],
-    [],
+    [
+      "recurrencemod:infested_wastes/infested_lake"
+    ],
+    [
+	  "recurrencemod:geode_copper",
+	  "recurrencemod:geode_iron",
+	  "recurrencemod:geode_gold"
+	],
     [
       "minecraft:fossil_upper",
       "minecraft:fossil_lower"
@@ -74,13 +86,11 @@
     [],
     [],
     [
-      "minecraft:spring_lava"
+      "recurrencemod:infested_wastes/infested_puddle"
     ],
+    [],
     [
-	  "recurrencemod:patch_fumestone"
-	],
-    [
-	  "minecraft:freeze_top_layer",
+      "minecraft:freeze_top_layer",
 	  "recurrencemod:snow_purger"
     ]
   ]

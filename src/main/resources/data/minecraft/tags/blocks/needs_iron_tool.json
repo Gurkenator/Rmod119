@@ -7,6 +7,15 @@
     "recurrencemod:duststone",
     "recurrencemod:palestone",
     "recurrencemod:fracturestone",
-    "recurrencemod:fumestone"
+    "recurrencemod:fumestone",
+    "recurrencemod:scorchstone_bricks",
+    "recurrencemod:scorchstone_brick_stairs",
+    "recurrencemod:scorchstone_brick_slab",
+    "recurrencemod:spirestone_bricks",
+    "recurrencemod:spirestone_brick_stairs",
+    "recurrencemod:spirestone_brick_slab",
+    "recurrencemod:palestone_bricks",
+    "recurrencemod:palestone_brick_stairs",
+    "recurrencemod:palestone_brick_slab"
   ]
 }
