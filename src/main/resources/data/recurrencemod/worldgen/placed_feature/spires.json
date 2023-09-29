@@ -1,0 +1,64 @@
+{
+  "feature": {
+    "type": "recurrencemod:spire",
+    "config": {
+      "max_empty_corners_allowed": 6,
+      "spire_structures": [
+        "recurrencemod:spires/spire1",
+		"recurrencemod:spires/spire2",
+		"recurrencemod:spires/spire3",
+		"recurrencemod:spires/spire4",
+		"recurrencemod:spires/spire1_tall",
+		"recurrencemod:spires/spire2_tall",
+		"recurrencemod:spires/spire3_tall",
+		"recurrencemod:spires/spire4_tall"
+      ],
+      "overlay_structures": [
+	    "recurrencemod:spires/spire_overlay",
+		"recurrencemod:spires/spire_overlay",
+		"recurrencemod:spires/spire_overlay",
+		"recurrencemod:spires/spire_overlay",
+		"recurrencemod:spires/spire_overlay",
+		"recurrencemod:spires/spire_overlay",
+		"recurrencemod:spires/spire_overlay",
+		"recurrencemod:spires/spire_overlay"
+	  ],
+      "spire_processors": "recurrencemod:spires",
+      "overlay_processors": "minecraft:empty"
+    }
+  },
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "value": {
+          "min_inclusive": 3,
+          "max_inclusive": 7
+        }
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:height_range",
+      "height": {
+        "type": "minecraft:uniform",
+        "min_inclusive": {
+          "below_top": 2
+        },
+        "max_inclusive": {
+          "below_top": 0
+        }
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

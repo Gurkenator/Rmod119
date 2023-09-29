@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "recurrencemod:block/proxy_block_9"
+  }
+}

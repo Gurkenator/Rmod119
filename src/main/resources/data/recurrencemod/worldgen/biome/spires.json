@@ -69,25 +69,18 @@
     [
 	  "recurrencemod:scorchslate"
 	],
-    [
-      "minecraft:lake_lava_underground",
-      "minecraft:lake_lava_surface"
-    ],
+    [],
     [],
     [
+	  "recurrencemod:spires",
       "minecraft:fossil_upper",
       "minecraft:fossil_lower"
     ],
     [],
     [],
-    [
-      "minecraft:ore_iron_middle",
-      "minecraft:ore_lapis"
-    ],
     [],
-    [
-      "minecraft:spring_lava"
-    ],
+    [],
+    [],
     [],
     [
       "minecraft:freeze_top_layer",

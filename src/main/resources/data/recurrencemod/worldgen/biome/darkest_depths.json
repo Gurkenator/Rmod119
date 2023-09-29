@@ -1,0 +1,67 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.0,
+  "effects": {
+	"sky_color": 16428668,
+    "fog_color": 16095022,
+    "water_color": 4757355,
+    "water_fog_color": 2245163,
+	"grass_color": 8100432,
+	"foliage_color": 6784839,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "music": {
+      "max_delay": 24000,
+      "min_delay": 12000,
+      "replace_current_music": false,
+      "sound": "minecraft:music.overworld.deep_dark"
+    },
+    "sky_color": 7907327,
+    "water_color": 4159204,
+    "water_fog_color": 329011
+  },
+  "features": [
+    [
+	  "recurrencemod:scorchslate"
+	],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:sculk_vein",
+      "minecraft:sculk_patch_deep_dark"
+    ],
+    [],
+    [],
+    [
+      "minecraft:freeze_top_layer",
+	  "recurrencemod:snow_purger"
+    ]
+  ],
+  "has_precipitation": false,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.8
+}

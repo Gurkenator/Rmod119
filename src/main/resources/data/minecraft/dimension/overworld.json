@@ -4,489 +4,30 @@
     "type": "minecraft:noise",
     "biome_source": {
       "biomes": [
-        {
-          "biome": "minecraft:frozen_river",
+		{
+          "biome": "recurrencemod:scorched_valley",
           "parameters": {
             "continentalness": [
-              -0.19,
-              -0.11
+              -1,
+              0.3
             ],
             "depth": 0.0,
             "erosion": [
-              -1.0,
-              -0.375
+              0.3,
+              1
             ],
             "humidity": [
-              -1.0,
-              1.0
+              -1,
+              1
             ],
             "offset": 0.0,
             "temperature": [
-              -1.0,
-              -0.45
+              0.3,
+              0.7
             ],
             "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:frozen_river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              -0.11
-            ],
-            "depth": 1.0,
-            "erosion": [
               -1.0,
-              -0.375
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.45
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              -0.11
-            ],
-            "depth": 0.0,
-            "erosion": [
-              -1.0,
-              -0.375
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              1.0
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              -0.11
-            ],
-            "depth": 1.0,
-            "erosion": [
-              -1.0,
-              -0.375
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              1.0
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:frozen_river",
-          "parameters": {
-            "continentalness": [
-              -0.11,
-              0.03
-            ],
-            "depth": 0.0,
-            "erosion": [
-              -1.0,
-              -0.375
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.45
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:frozen_river",
-          "parameters": {
-            "continentalness": [
-              -0.11,
-              0.03
-            ],
-            "depth": 1.0,
-            "erosion": [
-              -1.0,
-              -0.375
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.45
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:river",
-          "parameters": {
-            "continentalness": [
-              -0.11,
-              0.03
-            ],
-            "depth": 0.0,
-            "erosion": [
-              -1.0,
-              -0.375
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              1.0
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:river",
-          "parameters": {
-            "continentalness": [
-              -0.11,
-              0.03
-            ],
-            "depth": 1.0,
-            "erosion": [
-              -1.0,
-              -0.375
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              1.0
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:frozen_river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              1.0
-            ],
-            "depth": 0.0,
-            "erosion": [
-              -0.375,
-              0.55
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.45
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:frozen_river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              1.0
-            ],
-            "depth": 1.0,
-            "erosion": [
-              -0.375,
-              0.55
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.45
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              1.0
-            ],
-            "depth": 0.0,
-            "erosion": [
-              -0.375,
-              0.55
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              1.0
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              1.0
-            ],
-            "depth": 1.0,
-            "erosion": [
-              -0.375,
-              0.55
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              1.0
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:frozen_river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              -0.11
-            ],
-            "depth": 0.0,
-            "erosion": [
-              0.55,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.45
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:frozen_river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              -0.11
-            ],
-            "depth": 1.0,
-            "erosion": [
-              0.55,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.45
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              -0.11
-            ],
-            "depth": 0.0,
-            "erosion": [
-              0.55,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              1.0
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:river",
-          "parameters": {
-            "continentalness": [
-              -0.19,
-              -0.11
-            ],
-            "depth": 1.0,
-            "erosion": [
-              0.55,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              1.0
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:frozen_river",
-          "parameters": {
-            "continentalness": [
-              -0.11,
-              1.0
-            ],
-            "depth": 0.0,
-            "erosion": [
-              0.55,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.45
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
-            ]
-          }
-        },
-        {
-          "biome": "minecraft:frozen_river",
-          "parameters": {
-            "continentalness": [
-              -0.11,
-              1.0
-            ],
-            "depth": 1.0,
-            "erosion": [
-              0.55,
-              1.0
-            ],
-            "humidity": [
-              -1.0,
-              1.0
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -1.0,
-              -0.45
-            ],
-            "weirdness": [
-              -0.05,
-              0.05
+              -0.3
             ]
           }
         },
@@ -494,107 +35,26 @@
           "biome": "recurrencemod:scorched_valley",
           "parameters": {
             "continentalness": [
-              -0.3,
-              0.2
-            ],
-            "depth": 0.0,
-            "erosion": [
-              -0.8,
-              -0.2
-            ],
-            "humidity": [
-              -0.4,
-              -0.2
-            ],
-            "offset": 0.0,
-            "temperature": [
-              0.35,
-              0.65
-            ],
-            "weirdness": [
-              -1.0,
-              -0.65
-            ]
-          }
-        },
-		{
-          "biome": "recurrencemod:scorched_valley",
-          "parameters": {
-            "continentalness": [
-              -0.3,
-              0.2
+              -1,
+              0.3
             ],
             "depth": 1.0,
             "erosion": [
-              -0.8,
-              -0.2
+              0.3,
+              1
             ],
             "humidity": [
-              -0.4,
-              -0.2
+              -1,
+              1
             ],
             "offset": 0.0,
             "temperature": [
-              0.35,
-              0.65
+              0.3,
+              0.7
             ],
             "weirdness": [
-              -1.0,
-              -0.65
-            ]
-          }
-        },
-		{
-          "biome": "recurrencemod:bleak_plateau",
-          "parameters": {
-            "continentalness": [
-              -0.3,
-              1.0
-            ],
-            "depth": 0.0,
-            "erosion": [
-              -1.0,
-              -0.1
-            ],
-            "humidity": [
               -1.0,
               -0.3
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.25,
-              2
-            ],
-            "weirdness": [
-              -1.0,
-              -0.65
-            ]
-          }
-        },
-		{
-          "biome": "recurrencemod:bleak_plateau",
-          "parameters": {
-            "continentalness": [
-              -0.3,
-              1.0
-            ],
-            "depth":1.0,
-            "erosion": [
-              -1.0,
-              -0.1
-            ],
-            "humidity": [
-              -1.0,
-              -0.3
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.25,
-              2
-            ],
-            "weirdness": [
-              -1.0,
-              -0.65
             ]
           }
         },
@@ -603,24 +63,24 @@
           "parameters": {
             "continentalness": [
               -0.3,
-              0.5
+              0.3
             ],
             "depth": 0.0,
             "erosion": [
-              0.1,
-              2
+              -1,
+              -0.3
             ],
             "humidity": [
-              -1.0,
-              -0.3
+              -1,
+              1
             ],
             "offset": 0.0,
             "temperature": [
               -0.3,
-              0.5
+              0.3
             ],
             "weirdness": [
-              -0.2,
+              0.3,
               1
             ]
           }
@@ -630,24 +90,24 @@
           "parameters": {
             "continentalness": [
               -0.3,
-              0.5
+              0.3
             ],
             "depth":1.0,
             "erosion": [
-              0.1,
-			  2
+              -1,
+			  -0.3
             ],
             "humidity": [
-              -1.0,
-              -0.3
+              -1,
+              1
             ],
             "offset": 0.0,
             "temperature": [
               -0.3,
-              0.5
+              0.3
             ],
             "weirdness": [
-              -0.2,
+              0.3,
               1
             ]
           }
@@ -656,26 +116,26 @@
           "biome": "recurrencemod:spires",
           "parameters": {
             "continentalness": [
-              -0.3,
-              1.0
+              -1,
+              0.3
             ],
             "depth": 0.0,
             "erosion": [
-              -0.2,
-              0.8
+              0.7,
+              1
             ],
             "humidity": [
-              -1.0,
-              -0.3
+              -1,
+              1
             ],
             "offset": 0.0,
             "temperature": [
-              -0.8,
-              -0.4
+              -0.7,
+              -0.3
             ],
             "weirdness": [
-              -0.3,
-              0.5
+              -1,
+              -0.7
             ]
           }
         },
@@ -683,26 +143,26 @@
           "biome": "recurrencemod:spires",
           "parameters": {
             "continentalness": [
-              -0.3,
-              1.0
+              -1,
+              0.3
             ],
             "depth":1.0,
             "erosion": [
-              -0.2,
-			  0.8
+              0.7,
+			  1
             ],
             "humidity": [
-              -1.0,
-              -0.3
+              -1,
+              1
             ],
             "offset": 0.0,
             "temperature": [
-              -0.8,
-              -0.4
+              -0.7,
+              -0.3
             ],
             "weirdness": [
-              -0.3,
-              0.5
+              -1,
+              -0.7
             ]
           }
         },
@@ -710,26 +170,26 @@
           "biome": "recurrencemod:frozen_spires",
           "parameters": {
             "continentalness": [
-              -0.3,
-              1.0
+              -1,
+              0.3
             ],
             "depth": 0.0,
             "erosion": [
-              -0.2,
-              0.8
+              0.7,
+              1
             ],
             "humidity": [
-              -1.0,
-              -0.3
+              -1,
+              1
             ],
             "offset": 0.0,
             "temperature": [
-              -1.2,
-              -0.8
+              -1,
+              -0.7
             ],
             "weirdness": [
-              -0.3,
-              0.5
+              -1,
+              -0.7
             ]
           }
         },
@@ -737,80 +197,26 @@
           "biome": "recurrencemod:frozen_spires",
           "parameters": {
             "continentalness": [
-              -0.3,
-              1.0
+              -1,
+              0.3
             ],
             "depth":1.0,
             "erosion": [
-              -0.2,
-			  0.8
+              0.7,
+			  1
             ],
             "humidity": [
-              -1.0,
-              -0.3
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -1.2,
-              -0.8
-            ],
-            "weirdness": [
-              -0.3,
-              0.5
-            ]
-          }
-        },
-		{
-          "biome": "recurrencemod:desolate_mountains",
-          "parameters": {
-            "continentalness": [
-              0.7,
+              -1,
               1
             ],
-            "depth": 0.0,
-            "erosion": [
-              0.3,
-              0.85
-            ],
-            "humidity": [
-              -0.5,
-              0.35
-            ],
             "offset": 0.0,
             "temperature": [
-              -0.6,
-              -0.2
+              -1,
+              -0.7
             ],
             "weirdness": [
-              -0.45,
-              0.5
-            ]
-          }
-        },
-		{
-          "biome": "recurrencemod:desolate_mountains",
-          "parameters": {
-            "continentalness": [
-              0.7,
-              1
-            ],
-            "depth":1.0,
-            "erosion": [
-              0.3,
-			  0.85
-            ],
-            "humidity": [
-              -0.5,
-              0.35
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.6,
-              -0.2
-            ],
-            "weirdness": [
-              -0.45,
-              0.5
+              -1,
+              -0.7
             ]
           }
         },
@@ -819,165 +225,111 @@
           "parameters": {
             "continentalness": [
               0.3,
-              0.65
-            ],
-            "depth": 0.0,
-            "erosion": [
-              0.2,
-              0.6
-            ],
-            "humidity": [
-              -0.5,
-              0.35
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              0.45
-            ],
-            "weirdness": [
-              -0.35,
-              0.45
-            ]
-          }
-        },
-		{
-          "biome": "recurrencemod:forlorn_hills",
-          "parameters": {
-            "continentalness": [
-              0.3,
-              0.65
-            ],
-            "depth":1.0,
-            "erosion": [
-              0.2,
-			  0.6
-            ],
-            "humidity": [
-              -0.5,
-              0.35
-            ],
-            "offset": 0.0,
-            "temperature": [
-              -0.45,
-              0.45
-            ],
-            "weirdness": [
-              -0.35,
-              0.45
-            ]
-          }
-        },
-		{
-          "biome": "recurrencemod:infested_wastes",
-          "parameters": {
-            "continentalness": [
-              -0.1,
               1
             ],
             "depth": 0.0,
             "erosion": [
-              0.55,
-              1
-            ],
-            "humidity": [
-              0.1,
-              1
-            ],
-            "offset": 0.0,
-            "temperature": [
-              0.2,
-              0.8
-            ],
-            "weirdness": [
-              -1,
-              -0.65
-            ]
-          }
-        },
-		{
-          "biome": "recurrencemod:infested_wastes",
-          "parameters": {
-            "continentalness": [
-              -0.1,
-              1
-            ],
-            "depth":1.0,
-            "erosion": [
-              0.55,
-			  1
-            ],
-            "humidity": [
-              0.1,
-              1
-            ],
-            "offset": 0.0,
-            "temperature": [
-              0.2,
-              0.8
-            ],
-            "weirdness": [
-              -1,
-              -0.65
-            ]
-          }
-        },
-		{
-          "biome": "recurrencemod:torrid_wastes",
-          "parameters": {
-            "continentalness": [
-              -1,
-              0.6
-            ],
-            "depth": 0.0,
-            "erosion": [
-              0.55,
-              1
-            ],
-            "humidity": [
-              -1,
-              0.1
-            ],
-            "offset": 0.0,
-            "temperature": [
-              0.6,
-              1.2
-            ],
-            "weirdness": [
-              -0.65,
+              -0.7,
               -0.3
-            ]
-          }
-        },
-		{
-          "biome": "recurrencemod:torrid_wastes",
-          "parameters": {
-            "continentalness": [
-              -1,
-              0.6
-            ],
-            "depth":1.0,
-            "erosion": [
-              0.55,
-			  1
             ],
             "humidity": [
               -1,
-              0.1
+              1
             ],
             "offset": 0.0,
             "temperature": [
-              0.6,
-              1.2
+              -0.7,
+              -0.3
             ],
             "weirdness": [
-              -0.65,
+              -0.3,
               0.3
             ]
           }
         },
 		{
-          "biome": "minecraft:deep_dark",
+          "biome": "recurrencemod:forlorn_hills",
+          "parameters": {
+            "continentalness": [
+              0.3,
+              1
+            ],
+            "depth":1.0,
+            "erosion": [
+              -0.7,
+			  -0.3
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "offset": 0.0,
+            "temperature": [
+              -0.7,
+              -0.3
+            ],
+            "weirdness": [
+              -0.3,
+              0.3
+            ]
+          }
+        },
+		{
+          "biome": "recurrencemod:torrid_wastes",
+          "parameters": {
+            "continentalness": [
+              -1,
+              0.3
+            ],
+            "depth": 0.0,
+            "erosion": [
+              0.3,
+              1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "offset": 0.0,
+            "temperature": [
+              0.7,
+              1
+            ],
+            "weirdness": [
+              -1,
+              -0.3
+            ]
+          }
+        },
+		{
+          "biome": "recurrencemod:torrid_wastes",
+          "parameters": {
+            "continentalness": [
+              -1,
+              0.3
+            ],
+            "depth":1.0,
+            "erosion": [
+              0.3,
+			  1
+            ],
+            "humidity": [
+              -1,
+              1
+            ],
+            "offset": 0.0,
+            "temperature": [
+              0.7,
+              1
+            ],
+            "weirdness": [
+              -1,
+              -0.3
+            ]
+          }
+        },
+		{
+          "biome": "recurrencemod:darkest_depths",
           "parameters": {
             "continentalness": [
               -1.0,

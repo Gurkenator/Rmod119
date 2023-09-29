@@ -188,6 +188,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> PROXY_BLOCK_8 = registerBlock("proxy_block_8",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(-1.0F, 3600000.0F).noLootTable()));
+    public static final RegistryObject<Block> PROXY_BLOCK_9 = registerBlock("proxy_block_9",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(-1.0F, 3600000.0F).noLootTable()));
+    public static final RegistryObject<Block> PROXY_BLOCK_10 = registerBlock("proxy_block_10",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(-1.0F, 3600000.0F).noLootTable()));
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

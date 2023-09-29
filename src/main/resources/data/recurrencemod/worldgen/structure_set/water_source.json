@@ -1,0 +1,34 @@
+{
+  "structures": [
+    {
+      "structure": "recurrencemod:torrid_wastes/water_source1",
+      "weight": 1
+    },
+    {
+      "structure": "recurrencemod:torrid_wastes/water_source2",
+      "weight": 1
+    },
+	{
+      "structure": "recurrencemod:torrid_wastes/water_source3",
+      "weight": 1
+    },
+    {
+      "structure": "recurrencemod:torrid_wastes/water_source4",
+      "weight": 1
+    },
+	{
+      "structure": "recurrencemod:torrid_wastes/water_source5",
+      "weight": 1
+    },
+    {
+      "structure": "recurrencemod:torrid_wastes/water_source6",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 4,
+    "separation": 3,
+    "salt": 1646358470
+  }
+}

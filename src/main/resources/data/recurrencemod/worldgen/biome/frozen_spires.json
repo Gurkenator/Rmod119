@@ -4,8 +4,8 @@
   "has_precipitation": false,
   "temperature_modifier": "none",
   "effects": {
-    "sky_color": 16428668,
-    "fog_color": 16095022,
+    "sky_color": 15977335,
+    "fog_color": 16172348,
     "water_color": 4757355,
     "water_fog_color": 2245163,
 	"grass_color": 8100432,
@@ -72,6 +72,7 @@
     [],
     [],
     [
+	  "recurrencemod:frozen_spires",
       "minecraft:fossil_upper",
       "minecraft:fossil_lower"
     ],
@@ -79,9 +80,7 @@
     [],
     [],
     [],
-    [
-      "minecraft:spring_lava"
-    ],
+    [],
     [],
     [
       "minecraft:freeze_top_layer",

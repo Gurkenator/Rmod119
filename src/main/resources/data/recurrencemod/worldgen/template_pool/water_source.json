@@ -1,0 +1,51 @@
+{
+  "name": "recurrencemod:water_source",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:list_pool_element",
+        "projection": "rigid",
+        "elements": [
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "recurrencemod:torrid_wastes/water_source1",
+            "processors": "recurrencemod:water_source"
+          },
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "recurrencemod:torrid_wastes/water_source2",
+            "processors": "recurrencemod:water_source"
+          },
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "recurrencemod:torrid_wastes/water_source3",
+            "processors": "recurrencemod:water_source"
+          },
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "recurrencemod:torrid_wastes/water_source4",
+            "processors": "recurrencemod:water_source"
+          },
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "recurrencemod:torrid_wastes/water_source5",
+            "processors": "recurrencemod:water_source"
+          },
+          {
+            "element_type": "minecraft:single_pool_element",
+            "projection": "rigid",
+            "location": "recurrencemod:torrid_wastes/water_source6",
+            "processors": "recurrencemod:water_source"
+          }
+        ]
+      }
+    }
+  ]
+}

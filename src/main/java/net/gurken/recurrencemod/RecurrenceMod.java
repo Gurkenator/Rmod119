@@ -5,12 +5,14 @@ import net.gurken.recurrencemod.block.ModBlocks;
 import net.gurken.recurrencemod.entity.ModBlockEntities;
 import net.gurken.recurrencemod.entity.ModEntities;
 import net.gurken.recurrencemod.entity.client.RaiderRenderer;
+import net.gurken.recurrencemod.init.RecFeatures;
 import net.gurken.recurrencemod.item.ModCreativeModeTabs;
 import net.gurken.recurrencemod.item.ModItems;
 import net.gurken.recurrencemod.screen.ModMenuTypes;
 import net.gurken.recurrencemod.screen.SkeletonBlockScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,13 +26,15 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 import software.bernie.geckolib.GeckoLib;
 
+import java.util.Locale;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(RecurrenceMod.MOD_ID)
 
 public class RecurrenceMod
 {
     public static final String MOD_ID = "recurrencemod";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    //private static final Logger LOGGER = LogUtils.getLogger();
 
     public RecurrenceMod()
     {
@@ -43,6 +47,7 @@ public class RecurrenceMod
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModEntities.register(modEventBus);
+        RecFeatures.FEATURES.register(modEventBus);
 
         GeckoLib.initialize();
 
@@ -51,6 +56,11 @@ public class RecurrenceMod
         MinecraftForge.EVENT_BUS.register(this);
 
         modEventBus.addListener(this::addCreative);
+    }
+
+    public static ResourceLocation prefix(String name) {
+        // METHOD ADAPTED FROM: TeamTwilight | https://github.com/TeamTwilight/twilightforest
+        return new ResourceLocation(MOD_ID, name.toLowerCase(Locale.ROOT));
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

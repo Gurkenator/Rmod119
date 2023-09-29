@@ -1,0 +1,59 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:random_block_match",
+            "block": "recurrencemod:proxy_block_1",
+            "probability": 0.5
+          },
+          "output_state": {
+            "Name": "recurrencemod:glimmering_scorchstone"
+          }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "recurrencemod:proxy_block_1"
+          },
+          "output_state": {
+            "Name": "recurrencemod:scorchstone"
+          }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:random_block_match",
+            "block": "recurrencemod:proxy_block_2",
+            "probability": 0.5
+          },
+          "output_state": {
+            "Name": "minecraft:air"
+          }
+        },
+        {
+          "location_predicate": {
+            "predicate_type": "minecraft:always_true"
+          },
+          "input_predicate": {
+            "predicate_type": "minecraft:block_match",
+            "block": "recurrencemod:proxy_block_2"
+          },
+          "output_state": {
+            "Name": "recurrencemod:scorchstone"
+          }
+        }
+      ]
+    }
+  ]
+}

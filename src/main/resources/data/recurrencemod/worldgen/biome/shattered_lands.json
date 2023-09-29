@@ -4,8 +4,8 @@
   "has_precipitation": false,
   "temperature_modifier": "none",
   "effects": {
-    "sky_color": 16428668,
-    "fog_color": 16095022,
+    "sky_color": 16422780,
+    "fog_color": 15889202,
     "water_color": 4757355,
     "water_fog_color": 2245163,
 	"grass_color": 8100432,
@@ -73,9 +73,7 @@
     [],
     [],
     [],
-    [
-      "minecraft:spring_lava"
-    ],
+    [],
     [
 	  "recurrencemod:patch_fumestone"
 	],

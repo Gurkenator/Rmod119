@@ -2,8 +2,11 @@
   "replace": false,
   "values": [
     "recurrencemod:scorched_valley",
-    "recurrencemod:bleak_plateau",
+    "recurrencemod:forlorn_hills",
 	"recurrencemod:shattered_lands",
-    "recurrencemod:spires"
+    "recurrencemod:spires",
+    "recurrencemod:frozen_spires",
+    "recurrencemod:torrid_wastes",
+	"recurrencemod:darkest_depths"
   ]
 }
