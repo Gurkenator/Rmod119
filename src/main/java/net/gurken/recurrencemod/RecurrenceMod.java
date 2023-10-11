@@ -88,8 +88,14 @@ public class RecurrenceMod
             event.accept(ModBlocks.SCORCHSLATE);
 
             event.accept(ModBlocks.SCORCHSTONE_BRICKS);
+            event.accept(ModBlocks.FUSED_SCORCHSTONE);
             event.accept(ModBlocks.SCORCHSTONE_BRICK_STAIRS);
             event.accept(ModBlocks.SCORCHSTONE_BRICK_SLAB);
+
+            event.accept(ModBlocks.SCORCHSLATE_BRICKS);
+            event.accept(ModBlocks.FUSED_SCORCHSLATE);
+            event.accept(ModBlocks.SCORCHSLATE_BRICK_STAIRS);
+            event.accept(ModBlocks.SCORCHSLATE_BRICK_SLAB);
 
             event.accept(ModBlocks.SPIRESTONE_BRICKS);
             event.accept(ModBlocks.SPIRESTONE_BRICK_STAIRS);
@@ -146,6 +152,10 @@ public class RecurrenceMod
             event.accept(ModBlocks.GRAFFITI_SPRAY_ORANGE);
             event.accept(ModBlocks.GRAFFITI_SPRAY_PURPLE);
             event.accept(ModBlocks.GRAFFITI_SPRAY_LIGHT_GREY);
+            event.accept(ModBlocks.GRAFFITI_SPRAY_LIGHT_GREEN);
+            event.accept(ModBlocks.GRAFFITI_SPRAY_DARK_GREY);
+            event.accept(ModBlocks.GRAFFITI_SPRAY_WHITE);
+            event.accept(ModBlocks.GRAFFITI_SPRAY_PINK);
 
             event.accept(ModItems.RAIDER_SWORD);
             event.accept(ModItems.RAIDER_AXE);

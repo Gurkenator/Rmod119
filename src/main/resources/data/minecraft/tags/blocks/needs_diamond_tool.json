@@ -1,6 +1,10 @@
 {
   "replace": false,
   "values": [
-    "recurrencemod:scorchslate"
+    "recurrencemod:scorchslate",
+    "recurrencemod:scorchslate_bricks",
+    "recurrencemod:fused_scorchslate",
+    "recurrencemod:scorchslate_brick_stairs",
+    "recurrencemod:scorchslate_brick_slabs"
   ]
 }

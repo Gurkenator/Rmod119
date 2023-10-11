@@ -85,10 +85,26 @@ public class ModBlocks {
     public static final RegistryObject<Block> SCORCHSTONE_BRICKS = registerBlock("scorchstone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
                     .strength(6f, 9f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> FUSED_SCORCHSTONE = registerBlock("fused_scorchstone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SCORCHSTONE_BRICK_STAIRS = registerBlock("scorchstone_brick_stairs",
             () -> new StairBlock(() -> ModBlocks.SCORCHSTONE_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)
                     .strength(6f, 9f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SCORCHSTONE_BRICK_SLAB = registerBlock("scorchstone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SCORCHSLATE_BRICKS = registerBlock("scorchslate_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> FUSED_SCORCHSLATE = registerBlock("fused_scorchslate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SCORCHSLATE_BRICK_STAIRS = registerBlock("scorchslate_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.SCORCHSLATE_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)
+                    .strength(6f, 9f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SCORCHSLATE_BRICK_SLAB = registerBlock("scorchslate_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)
                     .strength(6f, 9f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SPIRESTONE_BRICKS = registerBlock("spirestone_bricks",
@@ -129,6 +145,18 @@ public class ModBlocks {
             () -> new ModMultifaceBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE)
                     .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
     public static final RegistryObject<Block> GRAFFITI_SPRAY_LIGHT_GREY = registerBlock("graffiti_spray_light_grey",
+            () -> new ModMultifaceBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE)
+                    .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
+    public static final RegistryObject<Block> GRAFFITI_SPRAY_LIGHT_GREEN = registerBlock("graffiti_spray_light_green",
+            () -> new ModMultifaceBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE)
+                    .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
+    public static final RegistryObject<Block> GRAFFITI_SPRAY_DARK_GREY = registerBlock("graffiti_spray_dark_grey",
+            () -> new ModMultifaceBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE)
+                    .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
+    public static final RegistryObject<Block> GRAFFITI_SPRAY_WHITE = registerBlock("graffiti_spray_white",
+            () -> new ModMultifaceBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE)
+                    .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
+    public static final RegistryObject<Block> GRAFFITI_SPRAY_PINK = registerBlock("graffiti_spray_pink",
             () -> new ModMultifaceBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE)
                     .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
 
