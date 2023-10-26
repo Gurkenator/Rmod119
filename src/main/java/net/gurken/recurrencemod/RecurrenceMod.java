@@ -23,7 +23,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
 import software.bernie.geckolib.GeckoLib;
 
 import java.util.Locale;
@@ -86,6 +85,7 @@ public class RecurrenceMod
             event.accept(ModBlocks.FUMESTONE);
             event.accept(ModBlocks.SPIRESTONE);
             event.accept(ModBlocks.SCORCHSLATE);
+            event.accept(ModBlocks.SCORCHSHALE);
 
             event.accept(ModBlocks.SCORCHSTONE_BRICKS);
             event.accept(ModBlocks.FUSED_SCORCHSTONE);
@@ -96,6 +96,11 @@ public class RecurrenceMod
             event.accept(ModBlocks.FUSED_SCORCHSLATE);
             event.accept(ModBlocks.SCORCHSLATE_BRICK_STAIRS);
             event.accept(ModBlocks.SCORCHSLATE_BRICK_SLAB);
+
+            event.accept(ModBlocks.SCORCHSHALE_BRICKS);
+            event.accept(ModBlocks.FUSED_SCORCHSHALE);
+            event.accept(ModBlocks.SCORCHSHALE_BRICK_STAIRS);
+            event.accept(ModBlocks.SCORCHSHALE_BRICK_SLAB);
 
             event.accept(ModBlocks.SPIRESTONE_BRICKS);
             event.accept(ModBlocks.SPIRESTONE_BRICK_STAIRS);
@@ -124,6 +129,8 @@ public class RecurrenceMod
             event.accept(ModBlocks.CRATE_EPIC);
             event.accept(ModBlocks.CRATE_LEGENDARY);
 
+            event.accept(ModBlocks.DIAMOND_DEPOSIT);
+            event.accept(ModBlocks.EMERALD_DEPOSIT);
             event.accept(ModBlocks.DIAMOND_CLUSTER);
             event.accept(ModBlocks.EMERALD_CLUSTER);
 

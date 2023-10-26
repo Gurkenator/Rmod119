@@ -1,5 +1,14 @@
 {
   "variants": {
     "": {"model": "recurrencemod:block/rancid_carpet" }
+  },
+
+  "athena:loader": "athena:carpet_ctm",
+  "ctm_textures": {
+    "center": "recurrencemod:block/ctm/rancid_carpet_center",
+    "empty": "recurrencemod:block/ctm/rancid_carpet_empty",
+    "horizontal": "recurrencemod:block/ctm/rancid_carpet_horizontal",
+    "vertical": "recurrencemod:block/ctm/rancid_carpet_vertical",
+    "particle": "recurrencemod:block/rancid_carpet"
   }
 }

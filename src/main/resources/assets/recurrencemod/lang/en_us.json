@@ -58,12 +58,15 @@
   "block.recurrencemod.graffiti_spray_white": "White Graffiti",
   "block.recurrencemod.graffiti_spray_pink": "Pink Graffiti",
 
+  "block.recurrencemod.diamond_deposit": "Diamond Deposit",
+  "block.recurrencemod.emerald_deposit": "Emerald Deposit",
   "block.recurrencemod.diamond_cluster": "Diamond Cluster",
   "block.recurrencemod.emerald_cluster": "Emerald Cluster",
 
   "block.recurrencemod.scorchstone": "Scorchstone",
   "block.recurrencemod.glimmering_scorchstone": "Glimmering Scorchstone",
   "block.recurrencemod.scorchslate": "Scorchslate",
+  "block.recurrencemod.scorchshale": "Scorchshale",
   "block.recurrencemod.duststone": "Duststone",
   "block.recurrencemod.palestone": "Palestone",
   "block.recurrencemod.fracturestone": "Fracturestone",
@@ -90,6 +93,10 @@
   "block.recurrencemod.scorchslate_brick_stairs": "Scorchslate Brick Stairs",
   "block.recurrencemod.scorchslate_brick_slab": "Scorchslate Brick Slab",
   "block.recurrencemod.fused_scorchslate": "Fused Scorchslate",
+  "block.recurrencemod.scorchshale_bricks": "Scorchshale Bricks",
+  "block.recurrencemod.scorchshale_brick_stairs": "Scorchshale Brick Stairs",
+  "block.recurrencemod.scorchshale_brick_slab": "Scorchshale Brick Slab",
+  "block.recurrencemod.fused_scorchshale": "Fused Scorchshale",
 
   "block.recurrencemod.spirestone_bricks": "Spire Bricks",
   "block.recurrencemod.spirestone_brick_stairs": "Spire Brick Stairs",

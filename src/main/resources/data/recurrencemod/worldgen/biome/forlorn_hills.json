@@ -75,7 +75,14 @@
     ],
     [],
     [],
-    [],
+    [
+	  "recurrencemod:scorchshale_top",
+	  "recurrencemod:scorchshale_high",
+	  "recurrencemod:scorchshale_upper",
+	  "recurrencemod:scorchshale_mid",
+	  "recurrencemod:scorchshale_lower",
+	  "recurrencemod:scorchshale_deep"
+	],
     [],
     [],
     [

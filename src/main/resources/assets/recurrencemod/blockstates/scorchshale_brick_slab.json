@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "recurrencemod:block/scorchshale_brick_slab"
+    },
+    "type=double": {
+      "model": "recurrencemod:block/scorchshale_bricks"
+    },
+    "type=top": {
+      "model": "recurrencemod:block/scorchshale_brick_slab_top"
+    }
+  }
+}

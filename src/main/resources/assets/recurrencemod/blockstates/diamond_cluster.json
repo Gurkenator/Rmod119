@@ -1,5 +1,30 @@
 {
   "variants": {
-    "": {"model":  "recurrencemod:block/diamond_cluster" }
+    "facing=down": {
+      "model": "recurrencemod:block/diamond_cluster",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "recurrencemod:block/diamond_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "recurrencemod:block/diamond_cluster",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "recurrencemod:block/diamond_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "recurrencemod:block/diamond_cluster"
+    },
+    "facing=west": {
+      "model": "recurrencemod:block/diamond_cluster",
+      "x": 90,
+      "y": 270
+    }
   }
 }
