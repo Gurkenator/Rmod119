@@ -1,0 +1,10 @@
+{
+    "feature": "recurrencemod:fire",
+    "placement": [
+      {
+        "type": "minecraft:heightmap",
+        "heightmap": "MOTION_BLOCKING"
+      }
+    ]
+  }
+  

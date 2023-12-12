@@ -26,7 +26,7 @@ public class ModRubbleBlock extends Block {
         super(p_49795_);
     }
 
-    private static final VoxelShape SHAPE = Block.box(0,0,0,16,4,16);
+    private static final VoxelShape SHAPE = Block.box(0,0,0,16,6,16);
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     @Nullable
@@ -39,7 +39,7 @@ public class ModRubbleBlock extends Block {
         if (!pEntity.isSteppingCarefully() && pEntity instanceof LivingEntity) {
             LivingEntity livingEntity = ((LivingEntity) pEntity);
             if (!livingEntity.hasEffect(MobEffects.MOVEMENT_SLOWDOWN)) {
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 20, 2, false, false));
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 30, 1, false, false));
             }
         }
         super.entityInside(pState, pLevel, pPos, pEntity);

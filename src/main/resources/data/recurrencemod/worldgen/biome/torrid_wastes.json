@@ -85,7 +85,8 @@
     [],
     [],
     [
-	  "recurrencemod:patch_glimmering_scorchstone"
+	  "recurrencemod:patch_glimmering_scorchstone",
+	  "recurrencemod:patch_fire"
 	],
     [
       "minecraft:freeze_top_layer",

@@ -92,6 +92,7 @@ public class ClusterBlock extends Block implements SimpleWaterloggedBlock {
      * @deprecated call via {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#rotate} whenever
      * possible. Implementing/overriding is fine.
      */
+    @Deprecated
     public BlockState rotate(BlockState pState, Rotation pRotation) {
         return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
     }
@@ -102,6 +103,7 @@ public class ClusterBlock extends Block implements SimpleWaterloggedBlock {
      * @deprecated call via {@link net.minecraft.world.level.block.state.BlockBehaviour.BlockStateBase#mirror} whenever
      * possible. Implementing/overriding is fine.
      */
+    @Deprecated
     public BlockState mirror(BlockState pState, Mirror pMirror) {
         return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
     }
