@@ -5,6 +5,7 @@ import net.gurken.recurrencemod.block.ModBlocks;
 import net.gurken.recurrencemod.entity.ModBlockEntities;
 import net.gurken.recurrencemod.entity.ModEntities;
 import net.gurken.recurrencemod.entity.client.RaiderRenderer;
+import net.gurken.recurrencemod.entity.client.SappingRazorRenderer;
 import net.gurken.recurrencemod.init.RecFeatures;
 import net.gurken.recurrencemod.item.ModCreativeModeTabs;
 import net.gurken.recurrencemod.item.ModItems;
@@ -12,8 +13,10 @@ import net.gurken.recurrencemod.screen.ModMenuTypes;
 import net.gurken.recurrencemod.screen.SkeletonBlockScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -66,6 +69,9 @@ public class RecurrenceMod
     {
         event.enqueueWork(() ->
         {
+            ComposterBlock.COMPOSTABLES.put(ModItems.ROTTEN_WOOD.get(), 0.3f);
+
+            //TerraBlender
             // Weights are kept intentionally low as we add minimal biomes
             //Regions.register(new ModRegion1(new ResourceLocation(MOD_ID, "overworld_1"), 2));
             //Regions.register(new ModRegion2(new ResourceLocation(MOD_ID, "overworld_2"), 2));
@@ -118,9 +124,11 @@ public class RecurrenceMod
 
             event.accept(ModBlocks.SCRAP_BLOCK);
             event.accept(ModBlocks.TIRE);
+            event.accept(ModBlocks.LARGE_TIRE);
             event.accept(ModBlocks.RANCID_CARPET);
             event.accept(ModBlocks.METAL_BEAM);
             event.accept(ModBlocks.PIPE);
+            event.accept(ModBlocks.RUDIMENTARY_BATTERY);
             event.accept(ModBlocks.METAL_STRUTS);
             event.accept(ModBlocks.CRATE_FOOD);
             event.accept(ModBlocks.CRATE_COMMON);
@@ -177,6 +185,7 @@ public class RecurrenceMod
             event.accept(ModItems.LUNATIC_PLATINGS);
 
             event.accept(ModItems.NOMAD_SWORD);
+            event.accept(ModItems.SAPPING_RAZOR);
 
             event.accept(ModItems.BLUE_PILLS);
             event.accept(ModItems.RED_PILLS);
@@ -223,6 +232,8 @@ public class RecurrenceMod
             MenuScreens.register(ModMenuTypes.SKELETON_BLOCK_MENU.get(), SkeletonBlockScreen::new);
 
             EntityRenderers.register(ModEntities.RAIDER.get(), RaiderRenderer::new);
+
+            EntityRenderers.register(ModEntities.SAPPING_RAZOR_PROJECTILE.get(), SappingRazorRenderer::new);
         }
     }
 }

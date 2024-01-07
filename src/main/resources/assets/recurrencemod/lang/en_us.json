@@ -20,6 +20,8 @@
 
   "item.recurrencemod.nomad_sword": "Nomad Sword",
 
+  "item.recurrencemod.sapping_razor": "Sapping Razor",
+
   "item.recurrencemod.knife_sword": "Makeshift Knife",
   "item.recurrencemod.broken_sword": "Broken Sword",
   "item.recurrencemod.bat_sword": "Bat",
@@ -76,6 +78,7 @@
 
   "block.recurrencemod.scrap_block": "Scrap Block",
   "block.recurrencemod.tire": "Tire",
+  "block.recurrencemod.large_tire": "Large Tire",
   "block.recurrencemod.metal_beam": "Metal Beam",
   "block.recurrencemod.pipe": "Pipe",
   "block.recurrencemod.metal_struts": "Metal Struts",
@@ -111,6 +114,8 @@
   "block.recurrencemod.crate_rare": "Crate",
   "block.recurrencemod.crate_epic": "Crate",
   "block.recurrencemod.crate_legendary": "Crate",
+
+  "block.recurrencemod.rudimentary_battery": "Rudimentary Battery",
 
   "block.recurrencemod.skeleton_block": "Skeleton",
   "block.recurrencemod.scattered_skeleton_block": "Scattered Skeleton",

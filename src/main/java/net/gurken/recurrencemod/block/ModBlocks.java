@@ -73,6 +73,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> TIRE = registerBlock("tire",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(2.0f, 2.0f).mapColor(MapColor.COLOR_GRAY), 10, 20));
+    public static final RegistryObject<Block> LARGE_TIRE = registerBlock("large_tire",
+            () -> new ModFlammableBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(2.0f, 2.0f).mapColor(MapColor.COLOR_GRAY), 10, 20));
     public static final RegistryObject<Block> METAL_BARS_BLOCK = registerBlock("metal_bars_block",
             () -> new HalfTransparentBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS)
                     .strength(0.5f, 0.6f).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
@@ -208,6 +211,10 @@ public class ModBlocks {
     public static final RegistryObject<ClusterBlock> EMERALD_CLUSTER = registerBlock("emerald_cluster",
             () -> new ClusterBlock(3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)
                     .strength(1.5f).forceSolidOn().noOcclusion().mapColor(MapColor.EMERALD).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RUDIMENTARY_BATTERY = registerBlock("rudimentary_battery",
+            () -> new RudimentaryBatteryBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(2.0f, 5.0f)));
     public static final RegistryObject<Block> SKELETON_BLOCK = registerBlock("skeleton_block",
             () -> new SkeletonBlock(BlockBehaviour.Properties.copy(Blocks.SKELETON_SKULL)
                     .strength(6.0f, 18.0f).noOcclusion().noCollission().mapColor(MapColor.TERRACOTTA_WHITE)));

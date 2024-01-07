@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "number=up": {
+      "model": "recurrencemod:block/rudimentary_battery_1"
+    },
+    "number=north": {
+      "model": "recurrencemod:block/rudimentary_battery_2"
+    },
+    "number=east": {
+      "model": "recurrencemod:block/rudimentary_battery_3"
+    },
+    "number=south": {
+      "model": "recurrencemod:block/rudimentary_battery_4"
+    },
+    "number=west": {
+      "model": "recurrencemod:block/rudimentary_battery_5"
+    },
+    "number=down": {
+      "model": "recurrencemod:block/rudimentary_battery_6"
+    }
+  }
+}

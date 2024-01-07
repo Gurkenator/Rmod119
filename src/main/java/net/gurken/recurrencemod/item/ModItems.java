@@ -56,17 +56,6 @@ public class ModItems {
             () -> new AxeItem(ModTiers.RAIDER, 3, -3.2F,
                     new Item.Properties()));
 
-    public static final RegistryObject<Item> CHAINSWORD = ITEMS.register("chainsword",
-            () -> new AxeItem(ModTiers.LUNATIC, 0, -1.4F,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> CHEMDRILL = ITEMS.register("chemdrill",
-            () -> new PickaxeItem(ModTiers.LUNATIC, 3, -3.2F,
-                    new Item.Properties()));
-
-    public static final RegistryObject<Item> NOMAD_SWORD = ITEMS.register("nomad_sword",
-            () -> new NomadSwordItem(ModTiers.NOMAD, 3, -3.2F,
-                    new Item.Properties()));
-
     public static final RegistryObject<Item> KNIFE_SWORD = ITEMS.register("knife_sword",
             () -> new SwordItem(ModTiers.IRON_SCRAPS_KNIFE, 0, -2.3F,
                     new Item.Properties()));
@@ -102,6 +91,18 @@ public class ModItems {
     public static final RegistryObject<Item> RAIDER_SPAWN_EGG = ITEMS.register("raider_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntities.RAIDER, 0x423d3d, 0x191717,
                     new Item.Properties()));
+
+    public static final RegistryObject<Item> CHAINSWORD = ITEMS.register("chainsword",
+            () -> new AxeItem(ModTiers.LUNATIC, 0, -1.4F,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> CHEMDRILL = ITEMS.register("chemdrill",
+            () -> new PickaxeItem(ModTiers.LUNATIC, 3, -3.2F,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> NOMAD_SWORD = ITEMS.register("nomad_sword",
+            () -> new NomadSwordItem(ModTiers.NOMAD, 3, -3.2F,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> SAPPING_RAZOR = ITEMS.register("sapping_razor",
+            () -> new SappingRazorItem(new Item.Properties()));
 
 
     public static final RegistryObject<Item> CANNED_MEAT = ITEMS.register("canned_meat",

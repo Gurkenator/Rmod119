@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/large_tire" }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "recurrencemod:block/ctm/large_tire_center",
+    "empty": "recurrencemod:block/ctm/large_tire_empty",
+    "horizontal": "recurrencemod:block/ctm/large_tire_horizontal",
+    "vertical": "recurrencemod:block/ctm/large_tire_vertical",
+    "particle": "recurrencemod:block/ctm/large_tire_empty"
+  }
+}

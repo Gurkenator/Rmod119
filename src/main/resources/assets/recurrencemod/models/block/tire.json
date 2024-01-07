@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "end": "recurrencemod:block/tire_front",
-    "side": "recurrencemod:block/tire"
+    "end": "recurrencemod:block/tire_top",
+    "side": "recurrencemod:block/ctm/large_tire_horizontal"
   }
 }
