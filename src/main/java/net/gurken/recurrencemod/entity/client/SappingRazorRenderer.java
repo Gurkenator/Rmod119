@@ -20,7 +20,7 @@ public class SappingRazorRenderer extends EntityRenderer<SappingRazorProjectileE
 
     public SappingRazorRenderer(EntityRendererProvider.Context pContext) {
         super(pContext);
-        model = new SappingRazorModel(pContext.bakeLayer(ModModelLayers.SAPPING_RAZOR_PROJECTILE_LAYER));
+        model = new SappingRazorModel<>(pContext.bakeLayer(ModModelLayers.SAPPING_RAZOR_PROJECTILE_LAYER));
         this.shadowRadius = 0.2f;
     }
 
@@ -30,10 +30,11 @@ public class SappingRazorRenderer extends EntityRenderer<SappingRazorProjectileE
         pPoseStack.mulPose(Axis.ZP.rotationDegrees(Mth.lerp(pPartialTick, entity.xRotO, entity.getXRot()) + 90.0F));
         VertexConsumer vertexconsumer = ItemRenderer.getFoilBufferDirect(pBuffer, this.model.renderType(this.getTextureLocation(entity)), false, false);
 
-        this.model.renderToBuffer(pPoseStack, vertexconsumer, pPackedLight, OverlayTexture.NO_OVERLAY, 0.0f, 0f, 0.0f, 1f);
+        this.model.renderToBuffer(pPoseStack, vertexconsumer, pPackedLight, OverlayTexture.NO_OVERLAY, 1f, 1f, 1f, 1f);
         pPoseStack.popPose();
         super.render(entity, pEntityYaw, pPartialTick, pPoseStack, pBuffer, pPackedLight);
     }
+
 
     @Override
     public ResourceLocation getTextureLocation(SappingRazorProjectileEntity pEntity) {

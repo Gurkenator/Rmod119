@@ -23,7 +23,7 @@ public class SappingRazorModel<T extends Entity> extends EntityModel<T> {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition sapping_razor = partdefinition.addOrReplaceChild("sapping_razor", CubeListBuilder.create(), PartPose.offset(0.0F, 16.1863F, 0.3328F));
+        PartDefinition sapping_razor = partdefinition.addOrReplaceChild("sapping_razor", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 14.1555F, -0.5533F, 1.5708F, 1.1781F, 3.1416F));
 
         PartDefinition cube_r1 = sapping_razor.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(17, 8).addBox(-0.5F, 0.0F, 3.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(6, 14).addBox(-0.5F, -2.0F, 1.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
@@ -54,11 +54,12 @@ public class SappingRazorModel<T extends Entity> extends EntityModel<T> {
                 .texOffs(6, 8).addBox(-0.5F, 6.0F, 7.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 0).addBox(-0.5F, 4.0F, -5.0F, 1.0F, 1.0F, 11.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 12).addBox(-0.5F, 2.0F, -5.0F, 1.0F, 2.0F, 10.0F, new CubeDeformation(0.0F))
-                .texOffs(15, 3).addBox(-0.5F, -1.0F, -6.0F, 1.0F, 3.0F, 9.0F, new CubeDeformation(0.0F))
                 .texOffs(24, 15).addBox(-0.5F, -7.0F, -10.0F, 1.0F, 2.0F, 7.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 24).addBox(-0.5F, -5.0F, -9.0F, 1.0F, 2.0F, 8.0F, new CubeDeformation(0.0F))
                 .texOffs(13, 15).addBox(-0.5F, -3.0F, -8.0F, 1.0F, 2.0F, 9.0F, new CubeDeformation(0.0F))
-                .texOffs(0, 0).addBox(-0.5F, -1.0F, -7.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -0.6863F, -0.3328F, 0.7854F, 0.0F, 0.0F));
+                .texOffs(0, 0).addBox(-0.5F, -1.0F, -7.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -0.4055F, -0.6967F, 0.7854F, 0.0F, 0.0F));
+
+        PartDefinition cube_r2 = sapping_razor.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(15, 3).addBox(-0.5F, -1.5F, -4.5F, 1.0F, 3.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 1.0087F, -1.4038F, 0.7854F, 0.0F, 0.0F));
 
         return LayerDefinition.create(meshdefinition, 64, 64);
     }
