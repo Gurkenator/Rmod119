@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "recurrencemod:block/copper_wiring",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "recurrencemod:block/copper_wiring",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "recurrencemod:block/copper_wiring",
+      "x": 90,
+      "y": 180
+    },
+    "facing=west": {
+      "model": "recurrencemod:block/copper_wiring",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

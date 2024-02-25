@@ -3,12 +3,77 @@
   "pools": [
     {
       "rolls": 1,
+      "bonus_rolls": 0,
       "entries": [
         {
-          "type": "minecraft:item",
-          "name": "recurrencemod:emerald_cluster"
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "recurrencemod:emerald_cluster",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:alternatives",
+              "children": [
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:emerald",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": 1,
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:apply_bonus",
+                      "enchantment": "minecraft:fortune",
+                      "formula": "minecraft:ore_drops"
+                    }
+                  ],
+                  "conditions": [
+                    {
+                      "condition": "minecraft:match_tool",
+                      "predicate": {
+                        "tag": "minecraft:cluster_max_harvestables"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "minecraft:item",
+                  "name": "minecraft:emerald",
+                  "functions": [
+                    {
+                      "function": "minecraft:set_count",
+                      "count": 1,
+                      "add": false
+                    },
+                    {
+                      "function": "minecraft:explosion_decay"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
-  ]
+  ],
+  "random_sequence": "recurrencemod:blocks/emerald_cluster"
 }

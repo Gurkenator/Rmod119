@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/metal_plating" }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "recurrencemod:block/ctm/metal_plate_center",
+    "empty": "recurrencemod:block/ctm/metal_plate_empty",
+    "horizontal": "recurrencemod:block/ctm/metal_plate_horizontal",
+    "vertical": "recurrencemod:block/ctm/metal_plate_vertical",
+    "particle": "recurrencemod:block/ctm/metal_plate_particle"
+  }
+}

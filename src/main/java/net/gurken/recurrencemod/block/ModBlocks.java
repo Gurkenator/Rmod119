@@ -57,12 +57,49 @@ public class ModBlocks {
     public static final RegistryObject<Block> SCRAP_BLOCK = registerBlock("scrap_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(1.5f, 1.5f).mapColor(MapColor.METAL)));
-    public static final RegistryObject<Block> METAL_BEAM = registerBlock("metal_beam",
+    public static final RegistryObject<Block> IRON_BEAM = registerBlock("iron_beam",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> COPPER_BEAM = registerBlock("copper_beam",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> TIN_PILLAR = registerBlock("tin_pillar",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> WARNING_PANEL_LEAD = registerBlock("warning_panel_lead",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> WARNING_PANEL_TIN = registerBlock("warning_panel_tin",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BOLTED_SCRAPS_BLOCK = registerBlock("bolted_scraps_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PLATED_IRON_PILLAR = registerBlock("plated_iron_pillar",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RUSTY_GRATING = registerBlock("rusty_grating",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RUSTY_PLATING = registerBlock("rusty_plating",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> METAL_GRATING = registerBlock("metal_grating",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> METAL_PLATING = registerBlock("metal_plating",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> PIPE = registerBlock("pipe",
             () -> new ModPipeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
                     .strength(3f, 4.5f).mapColor(MapColor.COLOR_YELLOW).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> STEEL_PIPE = registerBlock("steel_pipe",
+            () -> new ModPipeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
+                    .strength(3f, 4.5f).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> COPPER_WIRING = registerBlock("copper_wiring",
+            () -> new WiringBlock(BlockBehaviour.Properties.of().noOcclusion().noCollission()
+                    .strength(1f, 1f).mapColor(MapColor.COLOR_ORANGE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> METAL_STRUTS = registerBlock("metal_struts",
             () -> new ModStrutBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
@@ -262,6 +299,8 @@ public class ModBlocks {
         if (name.equals("rancid_carpet"))
             return ModItems.ITEMS.register(name,() -> new RancidCarpetBlockItem(block.get(), new Item.Properties()));
         else if (name.equals("tire"))
+            return ModItems.ITEMS.register(name,() -> new TireBlockItem(block.get(), new Item.Properties()));
+        else if (name.equals("large_tire"))
             return ModItems.ITEMS.register(name,() -> new TireBlockItem(block.get(), new Item.Properties()));
         else
             return ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));

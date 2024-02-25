@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "recurrencemod:block/steel_pipe_x"
+    },
+    "axis=y": {
+      "model": "recurrencemod:block/steel_pipe_y"
+    },
+    "axis=z": {
+      "model": "recurrencemod:block/steel_pipe_z"
+    }
+  }
+}

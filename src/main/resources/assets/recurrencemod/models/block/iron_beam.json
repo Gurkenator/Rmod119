@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "recurrencemod:block/metal_beam"
+    "all": "recurrencemod:block/ctm/iron_beam_self"
   }
 }

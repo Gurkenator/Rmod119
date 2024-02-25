@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/iron_beam" }
+  },
+  "athena:loader": "athena:pillar",
+  "ctm_textures": {
+    "bottom": "recurrencemod:block/ctm/iron_beam_bottom",
+    "center": "recurrencemod:block/ctm/iron_beam_center",
+    "particle": "recurrencemod:block/ctm/iron_beam_self",
+    "self": "recurrencemod:block/ctm/iron_beam_self",
+    "top": "recurrencemod:block/ctm/iron_beam_top"
+  }
+}

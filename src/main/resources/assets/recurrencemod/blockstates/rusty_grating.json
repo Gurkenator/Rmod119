@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/rusty_grating" }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "recurrencemod:block/ctm/rusty_grating_center",
+    "empty": "recurrencemod:block/ctm/rusty_grating_empty",
+    "horizontal": "recurrencemod:block/ctm/rusty_grating_horizontal",
+    "vertical": "recurrencemod:block/ctm/rusty_grating_vertical",
+    "particle": "recurrencemod:block/ctm/rusty_grating_particle"
+  }
+}

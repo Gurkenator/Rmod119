@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/metal_grating" }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "recurrencemod:block/ctm/metal_grating_center",
+    "empty": "recurrencemod:block/ctm/metal_grating_empty",
+    "horizontal": "recurrencemod:block/ctm/metal_grating_horizontal",
+    "vertical": "recurrencemod:block/ctm/metal_grating_vertical",
+    "particle": "recurrencemod:block/ctm/metal_grating_particle"
+  }
+}

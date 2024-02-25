@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/rusty_plating" }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "recurrencemod:block/ctm/rusty_plate_center",
+    "empty": "recurrencemod:block/ctm/rusty_plate_empty",
+    "horizontal": "recurrencemod:block/ctm/rusty_plate_horizontal",
+    "vertical": "recurrencemod:block/ctm/rusty_plate_vertical",
+    "particle": "recurrencemod:block/ctm/rusty_plate_particle"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/tin_pillar" }
+  },
+  "athena:loader": "athena:pillar",
+  "ctm_textures": {
+    "bottom": "recurrencemod:block/ctm/tin_pillar_bottom",
+    "center": "recurrencemod:block/ctm/tin_pillar_center",
+    "particle": "recurrencemod:block/ctm/tin_pillar_self",
+    "self": "recurrencemod:block/ctm/tin_pillar_self",
+    "top": "recurrencemod:block/ctm/tin_pillar_top"
+  }
+}

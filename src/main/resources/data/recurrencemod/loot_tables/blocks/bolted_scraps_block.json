@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "recurrencemod:metal_beam"
+          "name": "recurrencemod:bolted_scraps_block.json"
         }
       ]
     }

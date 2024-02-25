@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/warning_panel_tin" }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "recurrencemod:block/ctm/tin_warning_panel_center",
+    "empty": "recurrencemod:block/ctm/tin_warning_panel_empty",
+    "horizontal": "recurrencemod:block/ctm/tin_warning_panel_horizontal",
+    "vertical": "recurrencemod:block/ctm/tin_warning_panel_vertical",
+    "particle": "recurrencemod:block/ctm/tin_warning_panel_particle"
+  }
+}

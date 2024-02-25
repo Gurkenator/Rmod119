@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/copper_beam" }
+  },
+  "athena:loader": "athena:pillar",
+  "ctm_textures": {
+    "bottom": "recurrencemod:block/ctm/copper_beam_bottom",
+    "center": "recurrencemod:block/ctm/copper_beam_center",
+    "particle": "recurrencemod:block/ctm/copper_beam_self",
+    "self": "recurrencemod:block/ctm/copper_beam_self",
+    "top": "recurrencemod:block/ctm/copper_beam_top"
+  }
+}

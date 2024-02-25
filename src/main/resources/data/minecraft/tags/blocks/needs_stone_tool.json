@@ -1,12 +1,20 @@
 {
   "replace": false,
   "values": [
-    "recurrencemod:metal_beam",
+    "recurrencemod:iron_beam",
+    "recurrencemod:copper_beam",
+    "recurrencemod:tin_pillar",
+    "recurrencemod:plated_iron_pillar",
     "recurrencemod:pipe",
+    "recurrencemod:steel_pipe",
     "recurrencemod:metal_struts",
     "recurrencemod:metal_bars_block",
     "recurrencemod:metal_bars_slab",
     "recurrencemod:metal_door",
-    "recurrencemod:metal_trapdoor"
+    "recurrencemod:metal_trapdoor",
+    "recurrencemod:metal_plating",
+    "recurrencemod:metal_grating",
+    "recurrencemod:rusty_plating",
+    "recurrencemod:rusty_grating"
   ]
 }
