@@ -66,7 +66,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> TIN_PILLAR = registerBlock("tin_pillar",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> WARNING_PANEL_LEAD = registerBlock("warning_panel_lead",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
@@ -78,6 +77,9 @@ public class ModBlocks {
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> PLATED_IRON_PILLAR = registerBlock("plated_iron_pillar",
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LEAD_PANELLING = registerBlock("lead_panelling",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RUSTY_GRATING = registerBlock("rusty_grating",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)

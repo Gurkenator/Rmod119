@@ -9,6 +9,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -66,6 +67,8 @@ public class SappingRazorProjectileEntity extends Projectile {
             }
         }
 
+        float f = 0.99F;
+
         if (this.tickCount >= 1200) {
             this.remove(RemovalReason.DISCARDED);
         }
@@ -78,17 +81,20 @@ public class SappingRazorProjectileEntity extends Projectile {
         double d0 = this.getX() + vec3.x;
         double d1 = this.getY() + vec3.y;
         double d2 = this.getZ() + vec3.z;
-        double d3 = vec3.x;
-        double d4 = vec3.y;
-        double d5 = vec3.z;
-        double d6 = vec3.horizontalDistance();
         this.updateRotation();
 
-        float f = 0.99F;
+        double d5 = vec3.x;
+        double d6 = vec3.y;
+        double d7 = vec3.z;
+
+        //for(int i = 1; i < 5; ++i) {
+        //    this.level().addParticle(ParticleTypes.DRIPPING_OBSIDIAN_TEAR, d0-(d5*2), d1-(d6*2), d2-(d7*2),
+        //            -d5, -d6 - 0.1D, -d7);
+        //}
 
         if (this.isInWater()) {
             for(int j = 0; j < 4; ++j) {
-                this.level().addParticle(ParticleTypes.BUBBLE, d0 - d3 * 0.25D, d1 - d4 * 0.25D, d2 - d5 * 0.25D, d3, d4, d5);
+                this.level().addParticle(ParticleTypes.BUBBLE, d0 - d5 * 0.25D, d1 - d6 * 0.25D, d2 - d7 * 0.25D, d5, d6, d7);
             }
 
             f = this.getWaterInertia();
@@ -96,130 +102,20 @@ public class SappingRazorProjectileEntity extends Projectile {
 
         this.setDeltaMovement(vec3.scale((double)f));
 
-        BlockPos blockpos = this.blockPosition();
-        BlockState blockstate = this.level().getBlockState(blockpos);
 
-        if (this.inGround) {
-            if (this.lastState != blockstate && this.shouldFall()) {
-                this.startFalling();
-            } else if (!this.level().isClientSide) {
-                this.discard();
-            }
-
-            ++this.inGroundTime;
-        } else {
-            this.inGroundTime = 0;
-
-            Vec3 vec32 = this.position();
-            Vec3 vec33 = vec32.add(vec3);
-            if (hitresult.getType() != HitResult.Type.MISS) {
-                vec33 = hitresult.getLocation();
-            }
-
-            while(!this.isRemoved()) {
-                EntityHitResult entityhitresult = this.findHitEntity(vec32, vec33);
-                if (entityhitresult != null) {
-                    hitresult = entityhitresult;
-                }
-
-                if (hitresult != null && hitresult.getType() == HitResult.Type.ENTITY) {
-                    Entity entity = ((EntityHitResult)hitresult).getEntity();
-                    Entity entity1 = this.getOwner();
-                    if (entity instanceof Player && entity1 instanceof Player && !((Player)entity1).canHarmPlayer((Player)entity)) {
-                        hitresult = null;
-                        entityhitresult = null;
-                    }
-                }
-
-                if (hitresult != null && hitresult.getType() != HitResult.Type.MISS) {
-                    if (net.minecraftforge.event.ForgeEventFactory.onProjectileImpact(this, hitresult))
-                        break;
-                    this.onHit(hitresult);
-                    this.hasImpulse = true;
-                }
-
-                if (entityhitresult == null) {
-                    break;
-                }
-
-                hitresult = null;
-            }
-
-            vec3 = this.getDeltaMovement();
-            this.setYRot((float)(Mth.atan2(d3, d5) * (double)(180F / (float)Math.PI)));
-            this.setXRot((float)(Mth.atan2(d4, d6) * (double)(180F / (float)Math.PI)));
-            this.setXRot(lerpRotation(this.xRotO, this.getXRot()));
-            this.setYRot(lerpRotation(this.yRotO, this.getYRot()));
-            float f1 = 0.05F;
-            if (this.isInWater()) {
-                for(int j = 0; j < 4; ++j) {
-                    float f2 = 0.25F;
-                    this.level().addParticle(ParticleTypes.BUBBLE, d0 - d3 * 0.25D, d1 - d4 * 0.25D, d2 - d5 * 0.25D, d3, d4, d5);
-                }
-
-                f = this.getWaterInertia();
-            }
-
-            this.setDeltaMovement(vec3.scale((double)f));
-            if (!this.isNoGravity()) {
-                Vec3 vec34 = this.getDeltaMovement();
-                this.setDeltaMovement(vec34.x, vec34.y - (double)0.05F, vec34.z);
-            }
-
-            this.setPos(d0, d1, d2);
-            this.checkInsideBlocks();
-        }
-
-        if (!blockstate.isAir()) {
-            VoxelShape voxelshape = blockstate.getCollisionShape(this.level(), blockpos);
-            if (!voxelshape.isEmpty()) {
-                Vec3 vec31 = this.position();
-
-                for(AABB aabb : voxelshape.toAabbs()) {
-                    if (aabb.move(blockpos).contains(vec31)) {
-                        this.inGround = true;
-                        break;
-                    }
-                }
-            }
-        }
-
-        if (this.level().getBlockStates(this.getBoundingBox()).noneMatch(BlockBehaviour.BlockStateBase::isAir)) {
+        if (this.level().getBlockStates(this.getBoundingBox()).noneMatch(BlockBehaviour.BlockStateBase::isAir) && !isInWaterOrBubble()) {
             this.discard();
+        //} else if (this.isInWaterOrBubble()) {
+        //    this.discard();
         } else {
             this.setDeltaMovement(vec3.x, vec3.y - (double)this.getGravity(), vec3.z);
             this.setPos(d0, d1, d2);
         }
     }
 
-    private boolean shouldFall() {
-        return this.inGround && this.level().noCollision((new AABB(this.position(), this.position())).inflate(0.06D));
-    }
-
-    private void startFalling() {
-        this.inGround = false;
-        Vec3 vec3 = this.getDeltaMovement();
-        this.setDeltaMovement(vec3.multiply((double)(this.random.nextFloat() * 0.2F), (double)(this.random.nextFloat() * 0.2F), (double)(this.random.nextFloat() * 0.2F)));
-        this.life = 0;
-    }
-
-    public void move(MoverType pType, Vec3 pPos) {
-        super.move(pType, pPos);
-        if (pType != MoverType.SELF && this.shouldFall()) {
-            this.startFalling();
-        }
-    }
-
-    @Nullable
-    protected EntityHitResult findHitEntity(Vec3 pStartVec, Vec3 pEndVec) {
-        return ProjectileUtil.getEntityHitResult(this.level(), this, pStartVec, pEndVec, this.getBoundingBox().expandTowards(this.getDeltaMovement()).inflate(1.0D), this::canHitEntity);
-    }
-
     protected float getGravity() {
         return 0.03F;
     }
-
-    protected float getWaterInertia() {return 0.7F;}
 
     @Override
     protected void onHitEntity(EntityHitResult hitResult) {
@@ -234,13 +130,32 @@ public class SappingRazorProjectileEntity extends Projectile {
         //this.level().playSound(null, this.getX(), this.getY(), this.getZ(), ModSounds.METAL_DETECTOR_FOUND_ORE.get(), SoundSource.NEUTRAL, 2F, 1F);
 
         LivingEntity livingentity = owner instanceof LivingEntity ? (LivingEntity)owner : null;
-        float damage = 5.5f;
+        float damage = 5f;
         boolean hurt = hitEntity.hurt(this.damageSources().mobProjectile(this, livingentity), damage);
         if (hurt) {
             if(hitEntity instanceof LivingEntity livingHitEntity) {
                 livingHitEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 60, 0), owner);
             }
         }
+    }
+
+    protected float getWaterInertia() {return 0.7F;}
+
+    protected void onHitBlock(BlockHitResult pResult) {
+        this.lastState = this.level().getBlockState(pResult.getBlockPos());
+        super.onHitBlock(pResult);
+        Vec3 vec3 = pResult.getLocation().subtract(this.getX(), this.getY(), this.getZ());
+        this.setDeltaMovement(vec3);
+        Vec3 vec31 = vec3.normalize().scale((double)0.05F);
+        this.setPosRaw(this.getX() - vec31.x, this.getY() - vec31.y, this.getZ() - vec31.z);
+        //this.playSound(this.getHitGroundSoundEvent(), 1.0F, 1.2F / (this.random.nextFloat() * 0.2F + 0.9F));
+        this.inGround = true;
+        //this.shakeTime = 7;
+        //this.setCritArrow(false);
+        //this.setPierceLevel((byte)0);
+        //this.setSoundEvent(SoundEvents.ARROW_HIT);
+        //this.setShotFromCrossbow(false);
+        //this.resetPiercedEntities();
     }
 
     @Override
@@ -270,31 +185,6 @@ public class SappingRazorProjectileEntity extends Projectile {
         }
     }
 
-    public void playerTouch(Player pEntity) {
-        if (!this.level().isClientSide && (this.inGround)) {
-            if (this.tryPickup(pEntity)) {
-                pEntity.take(this, 1);
-                this.discard();
-            }
-
-        }
-    }
-
-    protected boolean tryPickup(Player pPlayer) {
-        switch (this.pickup) {
-            case ALLOWED:
-                return pPlayer.getInventory().add(this.getPickupItem());
-            case CREATIVE_ONLY:
-                return pPlayer.getAbilities().instabuild;
-            default:
-                return false;
-        }
-    }
-
-    protected ItemStack getPickupItem() {
-        return this.sappingRazorItem.copy();
-    }
-
     @Override
     protected void defineSynchedData() {
         this.entityData.define(HIT, false);
@@ -303,19 +193,5 @@ public class SappingRazorProjectileEntity extends Projectile {
     @Override
     public Packet<ClientGamePacketListener> getAddEntityPacket() {
         return NetworkHooks.getEntitySpawningPacket(this);
-    }
-
-    public static enum Pickup {
-        DISALLOWED,
-        ALLOWED,
-        CREATIVE_ONLY;
-
-        public static SappingRazorProjectileEntity.Pickup byOrdinal(int pOrdinal) {
-            if (pOrdinal < 0 || pOrdinal > values().length) {
-                pOrdinal = 0;
-            }
-
-            return values()[pOrdinal];
-        }
     }
 }

@@ -11,7 +11,9 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import java.util.List;
 
 public class SpireFeatureConfiguration implements FeatureConfiguration {
-    // CREDIT GOES TO: TeamTwilight | https://github.com/TeamTwilight/twilightforest, from whom this code is adapted for use in the Recurrence Modpack.
+    // CREDIT GOES TO: TeamTwilight | https://github.com/TeamTwilight/twilightforest, from whom this code is adapted.
+    // The Twilight Forest uses a custom LGPL License
+    // https://github.com/TeamTwilight/twilightforest/blob/1.20.x/LICENSE
     public static final Codec<SpireFeatureConfiguration> CODEC = RecordCodecBuilder.create((p_159816_) -> {
         return p_159816_.group(ResourceLocation.CODEC.listOf().fieldOf("spire_structures").forGetter((p_159830_) -> {
             return p_159830_.spireStructures;

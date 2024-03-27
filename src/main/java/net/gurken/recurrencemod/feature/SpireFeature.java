@@ -20,7 +20,9 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 import org.apache.commons.lang3.mutable.MutableInt;
 
 public class SpireFeature extends Feature<SpireFeatureConfiguration> {
-    // CREDIT GOES TO: TeamTwilight | https://github.com/TeamTwilight/twilightforest, from whom this code is adapted for use in the Recurrence Modpack.
+    // CREDIT GOES TO: TeamTwilight | https://github.com/TeamTwilight/twilightforest, from whom this code is adapted.
+    // The Twilight Forest uses a custom LGPL License
+    // https://github.com/TeamTwilight/twilightforest/blob/1.20.x/LICENSE
     public SpireFeature(Codec<SpireFeatureConfiguration> pCodec) {
         super(pCodec);
     }

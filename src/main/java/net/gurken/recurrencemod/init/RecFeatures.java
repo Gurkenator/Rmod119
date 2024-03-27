@@ -9,7 +9,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class RecFeatures {
-    // CREDIT GOES TO: TeamTwilight | https://github.com/TeamTwilight/twilightforest, from whom this code is adapted for use in the Recurrence Modpack
+    // CREDIT GOES TO: TeamTwilight | https://github.com/TeamTwilight/twilightforest, from whom this code is adapted.
+    // The Twilight Forest uses a custom LGPL License
+    // https://github.com/TeamTwilight/twilightforest/blob/1.20.x/LICENSE
     public static final DeferredRegister<Feature<?>> FEATURES = DeferredRegister.create(ForgeRegistries.FEATURES, RecurrenceMod.MOD_ID);
 
     public static final RegistryObject<Feature<SpireFeatureConfiguration>> SPIRE = FEATURES.register("spire", () -> new SpireFeature(SpireFeatureConfiguration.CODEC));
