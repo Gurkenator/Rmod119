@@ -12,20 +12,20 @@ import net.minecraft.client.model.geom.PartPose;
 import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.world.entity.Entity;
 
-public class SappingRazorModel<T extends Entity> extends EntityModel<T> {
-    private final ModelPart sapping_razor;
+public class VagabondThrowingKnifeModel<T extends Entity> extends EntityModel<T> {
+    private final ModelPart vagabond_throwing_knife;
 
-    public SappingRazorModel(ModelPart root) {
-        this.sapping_razor = root.getChild("sapping_razor");
+    public VagabondThrowingKnifeModel(ModelPart root) {
+        this.vagabond_throwing_knife = root.getChild("vagabond_throwing_knife");
     }
 
     public static LayerDefinition createBodyLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
         PartDefinition partdefinition = meshdefinition.getRoot();
 
-        PartDefinition sapping_razor = partdefinition.addOrReplaceChild("sapping_razor", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 14.1555F, -0.5533F, 1.5708F, 1.1781F, 3.1416F));
+        PartDefinition vagabond_throwing_knife = partdefinition.addOrReplaceChild("vagabond_throwing_knife", CubeListBuilder.create(), PartPose.offsetAndRotation(0.0F, 14.1555F, -0.5533F, 1.5708F, 1.1781F, 3.1416F));
 
-        PartDefinition cube_r1 = sapping_razor.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(17, 8).addBox(-0.5F, 0.0F, 3.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
+        PartDefinition cube_r1 = vagabond_throwing_knife.addOrReplaceChild("cube_r1", CubeListBuilder.create().texOffs(17, 8).addBox(-0.5F, 0.0F, 3.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(6, 14).addBox(-0.5F, -2.0F, 1.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 14).addBox(-0.5F, -4.0F, -1.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
                 .texOffs(6, 0).addBox(-0.5F, -12.0F, -9.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F))
@@ -59,7 +59,7 @@ public class SappingRazorModel<T extends Entity> extends EntityModel<T> {
                 .texOffs(13, 15).addBox(-0.5F, -3.0F, -8.0F, 1.0F, 2.0F, 9.0F, new CubeDeformation(0.0F))
                 .texOffs(0, 0).addBox(-0.5F, -1.0F, -7.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, -0.4055F, -0.6967F, 0.7854F, 0.0F, 0.0F));
 
-        PartDefinition cube_r2 = sapping_razor.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(15, 3).addBox(-0.5F, -1.5F, -4.5F, 1.0F, 3.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 1.0087F, -1.4038F, 0.7854F, 0.0F, 0.0F));
+        PartDefinition cube_r2 = vagabond_throwing_knife.addOrReplaceChild("cube_r2", CubeListBuilder.create().texOffs(15, 3).addBox(-0.5F, -1.5F, -4.5F, 1.0F, 3.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 1.0087F, -1.4038F, 0.7854F, 0.0F, 0.0F));
 
         return LayerDefinition.create(meshdefinition, 64, 64);
     }
@@ -71,6 +71,6 @@ public class SappingRazorModel<T extends Entity> extends EntityModel<T> {
 
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        sapping_razor.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+        vagabond_throwing_knife.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 }

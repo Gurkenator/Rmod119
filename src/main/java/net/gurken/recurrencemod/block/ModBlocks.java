@@ -261,6 +261,10 @@ public class ModBlocks {
             () -> new SkeletonBlock(BlockBehaviour.Properties.copy(Blocks.SKELETON_SKULL)
                     .strength(6.0f, 18.0f).noOcclusion().noCollission().mapColor(MapColor.TERRACOTTA_WHITE)));
 
+    public static final RegistryObject<Block> SKELETON_BLOCK_ADJUSTABLE = registerBlock("skeleton_block_adjustable",
+            () -> new SkeletonBlock(BlockBehaviour.Properties.copy(Blocks.SKELETON_SKULL)
+                    .strength(6.0f, 18.0f).noOcclusion().noCollission().mapColor(MapColor.TERRACOTTA_WHITE)));
+
     public static final RegistryObject<Block> PROXY_BLOCK_1 = registerBlock("proxy_block_1",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(-1.0F, 3600000.0F).noLootTable()));

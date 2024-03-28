@@ -4,7 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import net.gurken.recurrencemod.RecurrenceMod;
-import net.gurken.recurrencemod.entity.custom.SappingRazorProjectileEntity;
+import net.gurken.recurrencemod.entity.custom.VagabondThrowingKnifeEntity;
 import net.gurken.recurrencemod.entity.layers.ModModelLayers;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderer;
@@ -14,17 +14,17 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
-public class SappingRazorRenderer extends EntityRenderer<SappingRazorProjectileEntity> {
-    public static final ResourceLocation TEXTURE = new ResourceLocation(RecurrenceMod.MOD_ID, "textures/entity/sapping_razor_projectile.png");
-    protected SappingRazorModel model;
+public class VagabondThrowingKnifeRenderer extends EntityRenderer<VagabondThrowingKnifeEntity> {
+    public static final ResourceLocation TEXTURE = new ResourceLocation(RecurrenceMod.MOD_ID, "textures/entity/vagabond_throwing_knife.png");
+    protected VagabondThrowingKnifeModel model;
 
-    public SappingRazorRenderer(EntityRendererProvider.Context pContext) {
+    public VagabondThrowingKnifeRenderer(EntityRendererProvider.Context pContext) {
         super(pContext);
-        model = new SappingRazorModel<>(pContext.bakeLayer(ModModelLayers.SAPPING_RAZOR_PROJECTILE_LAYER));
+        model = new VagabondThrowingKnifeModel(pContext.bakeLayer(ModModelLayers.VAGABOND_THROWING_KNIFE_LAYER));
         this.shadowRadius = 0.2f;
     }
 
-    public void render(SappingRazorProjectileEntity entity, float pEntityYaw, float pPartialTick, PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight) {
+    public void render(VagabondThrowingKnifeEntity entity, float pEntityYaw, float pPartialTick, PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight) {
         pPoseStack.pushPose();
         pPoseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(pPartialTick, entity.yRotO, entity.getYRot()) - 90.0F));
         pPoseStack.mulPose(Axis.ZP.rotationDegrees(Mth.lerp(pPartialTick, entity.xRotO, entity.getXRot()) + 90.0F));
@@ -35,9 +35,8 @@ public class SappingRazorRenderer extends EntityRenderer<SappingRazorProjectileE
         super.render(entity, pEntityYaw, pPartialTick, pPoseStack, pBuffer, pPackedLight);
     }
 
-
     @Override
-    public ResourceLocation getTextureLocation(SappingRazorProjectileEntity pEntity) {
+    public ResourceLocation getTextureLocation(VagabondThrowingKnifeEntity pEntity) {
         return TEXTURE;
     }
 }

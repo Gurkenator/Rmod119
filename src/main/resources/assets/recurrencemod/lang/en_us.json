@@ -20,7 +20,7 @@
 
   "item.recurrencemod.nomad_sword": "Nomad Sword",
 
-  "item.recurrencemod.sapping_razor": "Sapping Razor",
+  "item.recurrencemod.vagabond_throwing_knife": "Vagabond Throwing Knife",
 
   "item.recurrencemod.knife_sword": "Makeshift Knife",
   "item.recurrencemod.broken_sword": "Broken Sword",
@@ -132,6 +132,7 @@
 
   "block.recurrencemod.skeleton_block": "Skeleton",
   "block.recurrencemod.scattered_skeleton_block": "Scattered Skeleton",
+  "block.recurrencemod.skeleton_block_adjustable": "Adjustable Skeleton",
 
   "tooltip.recurrencemod.blue_pills": "Get you high but smell really bad",
   "tooltip.recurrencemod.red_pills": "A volatile mix",

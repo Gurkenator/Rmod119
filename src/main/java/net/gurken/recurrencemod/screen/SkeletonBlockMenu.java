@@ -106,12 +106,13 @@ public class SkeletonBlockMenu extends AbstractContainerMenu {
         return copyOfSourceStack;
     }
 
-    // Credit goes to Cryness on the KaupenHub Discord!
+    // Credit goes to Cryness on the KaupenHub Discord for helping me with this method!
     @Override
     public boolean stillValid(Player player) {
         ContainerLevelAccess acc = ContainerLevelAccess.create(level, blockEntity.getBlockPos());
         return stillValid(acc,player, ModBlocks.SKELETON_BLOCK.get()) ||
-                stillValid(acc,player, ModBlocks.SCATTERED_SKELETON_BLOCK.get());
+                stillValid(acc,player, ModBlocks.SCATTERED_SKELETON_BLOCK.get()) ||
+                stillValid(acc,player, ModBlocks.SKELETON_BLOCK_ADJUSTABLE.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {

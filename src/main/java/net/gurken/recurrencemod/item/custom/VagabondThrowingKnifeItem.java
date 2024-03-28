@@ -1,6 +1,6 @@
 package net.gurken.recurrencemod.item.custom;
 
-import net.gurken.recurrencemod.entity.custom.SappingRazorProjectileEntity;
+import net.gurken.recurrencemod.entity.custom.VagabondThrowingKnifeEntity;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
@@ -11,8 +11,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
-public class SappingRazorItem extends Item {
-    public SappingRazorItem(Properties pProperties) {
+public class VagabondThrowingKnifeItem extends Item {
+    public VagabondThrowingKnifeItem(Properties pProperties) {
         super(pProperties);
     }
 
@@ -23,9 +23,9 @@ public class SappingRazorItem extends Item {
         pPlayer.getCooldowns().addCooldown(this, 30);
 
         if (!pLevel.isClientSide) {
-            SappingRazorProjectileEntity sapping_razor = new SappingRazorProjectileEntity(pLevel, pPlayer);
-            sapping_razor.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 2.0F, 0.9F);
-            pLevel.addFreshEntity(sapping_razor);
+            VagabondThrowingKnifeEntity vagabond_throwing_knife = new VagabondThrowingKnifeEntity(pLevel, pPlayer);
+            vagabond_throwing_knife.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 2.5F, 0.9F);
+            pLevel.addFreshEntity(vagabond_throwing_knife);
         }
 
         pPlayer.awardStat(Stats.ITEM_USED.get(this));

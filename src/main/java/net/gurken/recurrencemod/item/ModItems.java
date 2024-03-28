@@ -101,8 +101,8 @@ public class ModItems {
     public static final RegistryObject<Item> NOMAD_SWORD = ITEMS.register("nomad_sword",
             () -> new NomadSwordItem(ModTiers.NOMAD, 3, -3.2F,
                     new Item.Properties()));
-    public static final RegistryObject<Item> SAPPING_RAZOR = ITEMS.register("sapping_razor",
-            () -> new SappingRazorItem(new Item.Properties().stacksTo(16)));
+    public static final RegistryObject<Item> VAGABOND_THROWING_KNIFE = ITEMS.register("vagabond_throwing_knife",
+            () -> new VagabondThrowingKnifeItem(new Item.Properties().stacksTo(16)));
 
 
     public static final RegistryObject<Item> CANNED_MEAT = ITEMS.register("canned_meat",
