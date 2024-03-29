@@ -25,6 +25,7 @@ public class VagabondThrowingKnifeRenderer extends EntityRenderer<VagabondThrowi
     }
 
     public void render(VagabondThrowingKnifeEntity entity, float pEntityYaw, float pPartialTick, PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight) {
+        pPoseStack.scale(0.5f, 0.5f, 0.5f);
         pPoseStack.pushPose();
         pPoseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(pPartialTick, entity.yRotO, entity.getYRot()) - 90.0F));
         pPoseStack.mulPose(Axis.ZP.rotationDegrees(Mth.lerp(pPartialTick, entity.xRotO, entity.getXRot()) + 90.0F));
