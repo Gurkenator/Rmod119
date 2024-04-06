@@ -2,14 +2,16 @@ package net.gurken.recurrencemod;
 
 import com.mojang.logging.LogUtils;
 import net.gurken.recurrencemod.block.ModBlocks;
-import net.gurken.recurrencemod.entity.ModBlockEntities;
+import net.gurken.recurrencemod.block.entity.ModBlockEntities;
 import net.gurken.recurrencemod.entity.ModEntities;
 import net.gurken.recurrencemod.entity.client.RaiderRenderer;
 import net.gurken.recurrencemod.entity.client.VagabondThrowingKnifeRenderer;
 import net.gurken.recurrencemod.init.RecFeatures;
 import net.gurken.recurrencemod.item.ModCreativeModeTabs;
 import net.gurken.recurrencemod.item.ModItems;
+import net.gurken.recurrencemod.recipe.ModRecipes;
 import net.gurken.recurrencemod.screen.ModMenuTypes;
+import net.gurken.recurrencemod.screen.NomadFactionForgeScreen;
 import net.gurken.recurrencemod.screen.SkeletonBlockScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -25,6 +27,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.slf4j.Logger;
 import software.bernie.geckolib.GeckoLib;
 
 import java.util.Locale;
@@ -35,7 +38,7 @@ import java.util.Locale;
 public class RecurrenceMod
 {
     public static final String MOD_ID = "recurrencemod";
-    //private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public RecurrenceMod()
     {
@@ -47,6 +50,7 @@ public class RecurrenceMod
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
         ModEntities.register(modEventBus);
         RecFeatures.FEATURES.register(modEventBus);
 
@@ -198,6 +202,7 @@ public class RecurrenceMod
             event.accept(ModItems.LUNATIC_PLATINGS);
 
             event.accept(ModItems.NOMAD_SWORD);
+            event.accept(ModBlocks.NOMAD_FACTION_FORGE);
             event.accept(ModItems.VAGABOND_THROWING_KNIFE);
 
             event.accept(ModItems.BLUE_PILLS);
@@ -244,6 +249,7 @@ public class RecurrenceMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             MenuScreens.register(ModMenuTypes.SKELETON_BLOCK_MENU.get(), SkeletonBlockScreen::new);
+            MenuScreens.register(ModMenuTypes.NOMAD_FACTION_FORGE_MENU.get(), NomadFactionForgeScreen::new);
 
             EntityRenderers.register(ModEntities.RAIDER.get(), RaiderRenderer::new);
 

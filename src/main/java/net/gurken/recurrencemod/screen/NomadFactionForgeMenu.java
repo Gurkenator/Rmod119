@@ -1,7 +1,7 @@
 package net.gurken.recurrencemod.screen;
 
 import net.gurken.recurrencemod.block.ModBlocks;
-import net.gurken.recurrencemod.block.entity.SkeletonBlockBlockEntity;
+import net.gurken.recurrencemod.block.entity.NomadFactionForgeBlockEntity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -12,43 +12,33 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 
-public class SkeletonBlockMenu extends AbstractContainerMenu {
-
-    public final SkeletonBlockBlockEntity blockEntity;
+public class NomadFactionForgeMenu extends AbstractContainerMenu {
+    public final NomadFactionForgeBlockEntity blockEntity;
     private final Level level;
     private final ContainerData data;
 
-
-    public SkeletonBlockMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(15));
+    public NomadFactionForgeMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
+        this(pContainerId, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(7));
     }
 
-    public SkeletonBlockMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(ModMenuTypes.SKELETON_BLOCK_MENU.get(), id);
-        checkContainerSize(inv, 15);
-        blockEntity = (SkeletonBlockBlockEntity) entity;
+    public NomadFactionForgeMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
+        super(ModMenuTypes.NOMAD_FACTION_FORGE_MENU.get(), pContainerId);
+        checkContainerSize(inv, 7);
+        blockEntity = (NomadFactionForgeBlockEntity) entity;
         this.level = inv.player.level();
         this.data = data;
 
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 8, 18));
-            this.addSlot(new SlotItemHandler(handler, 1, 30, 18));
-            this.addSlot(new SlotItemHandler(handler, 2, 86, 18));
-            this.addSlot(new SlotItemHandler(handler, 3, 108, 18));
-            this.addSlot(new SlotItemHandler(handler, 4, 130, 18));
-            this.addSlot(new SlotItemHandler(handler, 5, 152, 18));
-            this.addSlot(new SlotItemHandler(handler, 6, 8, 40));
-            this.addSlot(new SlotItemHandler(handler, 7, 26, 40));
-            this.addSlot(new SlotItemHandler(handler, 8, 44, 40));
-            this.addSlot(new SlotItemHandler(handler, 9, 62, 40));
-            this.addSlot(new SlotItemHandler(handler, 10, 80, 40));
-            this.addSlot(new SlotItemHandler(handler, 11, 98, 40));
-            this.addSlot(new SlotItemHandler(handler, 12, 116, 40));
-            this.addSlot(new SlotItemHandler(handler, 13, 134, 40));
-            this.addSlot(new SlotItemHandler(handler, 14, 152, 40));
+        this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(iItemHandler -> {
+            this.addSlot(new SlotItemHandler(iItemHandler, 0, 55, 10));
+            this.addSlot(new SlotItemHandler(iItemHandler, 1, 105, 10));
+            this.addSlot(new SlotItemHandler(iItemHandler, 2, 55, 60));
+            this.addSlot(new SlotItemHandler(iItemHandler, 3, 105, 60));
+            this.addSlot(new SlotItemHandler(iItemHandler, 4, 80, 35));
+            this.addSlot(new SlotItemHandler(iItemHandler, 5, 152, 60));
+            this.addSlot(new SlotItemHandler(iItemHandler, 6, 8, 60));
         });
 
         addDataSlots(data);
@@ -70,7 +60,7 @@ public class SkeletonBlockMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 15;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 7;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {
@@ -105,26 +95,43 @@ public class SkeletonBlockMenu extends AbstractContainerMenu {
         return copyOfSourceStack;
     }
 
-    // Credit goes to Cryness on the KaupenHub Discord for helping me with this method!
     @Override
-    public boolean stillValid(Player player) {
-        ContainerLevelAccess acc = ContainerLevelAccess.create(level, blockEntity.getBlockPos());
-        return stillValid(acc,player, ModBlocks.SKELETON_BLOCK.get()) ||
-                stillValid(acc,player, ModBlocks.SCATTERED_SKELETON_BLOCK.get()) ||
-                stillValid(acc,player, ModBlocks.SKELETON_BLOCK_ADJUSTABLE.get());
+    public boolean stillValid(Player pPlayer) {
+        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
+                pPlayer, ModBlocks.NOMAD_FACTION_FORGE.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 70 + i * 18));
+                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 91 + i * 18));
             }
         }
     }
 
     private void addPlayerHotbar(Inventory playerInventory) {
         for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 128));
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 149));
         }
+    }
+
+    public boolean isCrafting() {
+        return data.get(0) > 0;
+    }
+
+    public int getScaledProgress() {
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);  // Max Progress
+        int progressArrowSize = 31; // This is the height in pixels of your arrow
+
+        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
+    public int getScaledProgressFluid() {
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);  // Max Progress
+        int progressBubbleSize = 8; // This is the height in pixels of your arrow
+
+        return maxProgress != 0 && progress != 0 ? progress * progressBubbleSize / maxProgress : 0;
     }
 }

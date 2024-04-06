@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "recurrencemod:block/nomad_faction_forge"
+    },
+    "facing=south": {
+      "model": "recurrencemod:block/nomad_faction_forge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "recurrencemod:block/nomad_faction_forge",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "recurrencemod:block/nomad_faction_forge",
+      "y": 90
+    }
+  }
+}

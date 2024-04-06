@@ -11,6 +11,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public class SkeletonBlockScreen extends AbstractContainerScreen<SkeletonBlockMenu> {
+
+    //private int imageHeight = 152;
     private static final ResourceLocation SKELETON_BLOCK_LOCATION =
             new ResourceLocation(RecurrenceMod.MOD_ID,"textures/gui/skeleton_block_gui.png");
 
@@ -22,6 +24,8 @@ public class SkeletonBlockScreen extends AbstractContainerScreen<SkeletonBlockMe
     @Override
     protected void init() {
         super.init();
+        this.inventoryLabelY = 59;
+        this.titleLabelY = 6;
     }
 
     @Override

@@ -93,7 +93,7 @@ public class ModItems {
                     new Item.Properties()));
 
     public static final RegistryObject<Item> CHAINSWORD = ITEMS.register("chainsword",
-            () -> new AxeItem(ModTiers.LUNATIC, 0, -1.4F,
+            () -> new LunaticChainswordItem(ModTiers.LUNATIC, 0, -1.4F,
                     new Item.Properties()));
     public static final RegistryObject<Item> CHEMDRILL = ITEMS.register("chemdrill",
             () -> new PickaxeItem(ModTiers.LUNATIC, 3, -3.2F,

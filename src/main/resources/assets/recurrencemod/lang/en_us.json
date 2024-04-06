@@ -22,6 +22,9 @@
 
   "item.recurrencemod.vagabond_throwing_knife": "Vagabond Throwing Knife",
 
+  "blockentity.recurrencemod.nomad_faction_forge": "Nomad Faction Forge",
+  "block.recurrencemod.nomad_faction_forge": "Nomad Faction Forge",
+
   "item.recurrencemod.knife_sword": "Makeshift Knife",
   "item.recurrencemod.broken_sword": "Broken Sword",
   "item.recurrencemod.bat_sword": "Bat",
@@ -149,6 +152,9 @@
   "block.recurrencemod.proxy_block_8": "Proxy Block",
   "block.recurrencemod.proxy_block_9": "Proxy Block",
   "block.recurrencemod.proxy_block_10": "Proxy Block",
+
+  "recurrencemod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
+  "recurrencemod.tooltip.liquid.amount": "%s mB",
 
   "creativemodetab.recurrence_tab": "Recurrence"
 }

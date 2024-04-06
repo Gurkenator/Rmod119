@@ -17,6 +17,9 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<SkeletonBlockMenu>> SKELETON_BLOCK_MENU =
             registerMenuType(SkeletonBlockMenu::new, "skeleton_block_menu");
 
+    public static final RegistryObject<MenuType<NomadFactionForgeMenu>> NOMAD_FACTION_FORGE_MENU =
+            registerMenuType(NomadFactionForgeMenu::new, "nomad_faction_forge_menu");
+
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,
                                                                                                   String name) {
