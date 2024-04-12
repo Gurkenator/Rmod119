@@ -19,6 +19,8 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<NomadFactionForgeMenu>> NOMAD_FACTION_FORGE_MENU =
             registerMenuType(NomadFactionForgeMenu::new, "nomad_faction_forge_menu");
+    public static final RegistryObject<MenuType<LunaticFactionForgeMenu>> LUNATIC_FACTION_FORGE_MENU =
+            registerMenuType(LunaticFactionForgeMenu::new, "lunatic_faction_forge_menu");
 
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory,

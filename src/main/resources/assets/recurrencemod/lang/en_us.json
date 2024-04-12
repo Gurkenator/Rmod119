@@ -15,15 +15,19 @@
   "item.recurrencemod.raider_sword": "Raider Sword",
   "item.recurrencemod.raider_axe": "Raider Axe",
 
-  "item.recurrencemod.chainsword": "Chainsaw Sword",
+  "item.recurrencemod.lunatic_chainsword": "Lunatic Chainsword",
   "item.recurrencemod.chemdrill": "Chemical Drill",
 
   "item.recurrencemod.nomad_sword": "Nomad Sword",
 
+  "item.recurrencemod.vagabond_sword": "Vagabond Sword",
   "item.recurrencemod.vagabond_throwing_knife": "Vagabond Throwing Knife",
 
   "blockentity.recurrencemod.nomad_faction_forge": "Nomad Faction Forge",
   "block.recurrencemod.nomad_faction_forge": "Nomad Faction Forge",
+
+  "blockentity.recurrencemod.lunatic_faction_forge": "Lunatic Faction Forge",
+  "block.recurrencemod.lunatic_faction_forge": "Lunatic Faction Forge",
 
   "item.recurrencemod.knife_sword": "Makeshift Knife",
   "item.recurrencemod.broken_sword": "Broken Sword",
@@ -153,8 +157,16 @@
   "block.recurrencemod.proxy_block_9": "Proxy Block",
   "block.recurrencemod.proxy_block_10": "Proxy Block",
 
+  "key.category.recurrencemod.controls": "Recurrence Controls",
+  "key.recurrencemod.faction": "Check Faction Favor",
+
   "recurrencemod.tooltip.liquid.amount.with.capacity": "%s / %s mB",
   "recurrencemod.tooltip.liquid.amount": "%s mB",
+  "recurrencemod.tooltip.faction.favour": "Faction Favour",
+  "recurrencemod.tooltip.faction.favour.amount.capacity": "%s / %s",
+
+  "death.attack.recurrencemod.vagabond_throwing_knife": "%1$s was hit by a Throwing Knife",
+  "death.attack.recurrencemod.vagabond_throwing_knife.player": "%1$s was slain by %2$s using a Throwing Knife",
 
   "creativemodetab.recurrence_tab": "Recurrence"
 }

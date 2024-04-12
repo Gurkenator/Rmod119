@@ -14,6 +14,9 @@ public class ModRecipes {
     public static final RegistryObject<RecipeSerializer<NomadFactionForgeRecipe>> NOMAD_FACTION_FORGE_SERIALIZER =
             SERIALIZERS.register("nomad_faction_forge", () -> NomadFactionForgeRecipe.Serializer.INSTANCE);
 
+    public static final RegistryObject<RecipeSerializer<LunaticFactionForgeRecipe>> LUNATIC_FACTION_FORGE_SERIALIZER =
+            SERIALIZERS.register("lunatic_faction_forge", () -> LunaticFactionForgeRecipe.Serializer.INSTANCE);
+
     public static void register(IEventBus eventBus) {
         SERIALIZERS.register(eventBus);
     }

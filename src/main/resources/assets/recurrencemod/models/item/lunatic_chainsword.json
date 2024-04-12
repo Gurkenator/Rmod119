@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "recurrencemod:item/lunatic/lunatic_chainsword_off"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "recurrencemod:on": 1
+      },
+      "model": "recurrencemod:item/lunatic_chainsword_on"
+    }
+  ]
+}

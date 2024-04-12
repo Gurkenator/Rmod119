@@ -81,6 +81,9 @@ public class NomadFactionForgeBlockEntity extends BlockEntity implements MenuPro
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 100;
+    private final int DEFAULT_MAX_PROGRESS = 78;
+
+    private FluidStack neededFluidStack = FluidStack.EMPTY;
     private final FluidTank FLUID_TANK = createFluidTank();
 
     private FluidTank createFluidTank() {
@@ -211,6 +214,10 @@ public class NomadFactionForgeBlockEntity extends BlockEntity implements MenuPro
     protected void saveAdditional(CompoundTag pTag) {
         pTag.put("inventory", itemHandler.serializeNBT());
         pTag.putInt("nomad_faction_forge.progress", progress);
+        pTag.putInt("nomad_faction_forge.max_progress", maxProgress);
+
+        neededFluidStack.writeToNBT(pTag);
+
         pTag = FLUID_TANK.writeToNBT(pTag);
 
         super.saveAdditional(pTag);
@@ -221,6 +228,8 @@ public class NomadFactionForgeBlockEntity extends BlockEntity implements MenuPro
         super.load(pTag);
         itemHandler.deserializeNBT(pTag.getCompound("inventory"));
         progress = pTag.getInt("nomad_faction_forge.progress");
+        maxProgress = pTag.getInt("nomad_faction_forge.max_progress");
+        neededFluidStack = FluidStack.loadFluidStackFromNBT(pTag);
         FLUID_TANK.readFromNBT(pTag);
     }
 
@@ -242,7 +251,7 @@ public class NomadFactionForgeBlockEntity extends BlockEntity implements MenuPro
     }
 
     private void extractFluid() {
-        this.FLUID_TANK.drain(1000, IFluidHandler.FluidAction.EXECUTE);
+        this.FLUID_TANK.drain(neededFluidStack.getAmount(), IFluidHandler.FluidAction.EXECUTE);
     }
 
     private void fillUpOnFluid() {
@@ -256,6 +265,8 @@ public class NomadFactionForgeBlockEntity extends BlockEntity implements MenuPro
             int drainAmount = Math.min(this.FLUID_TANK.getSpace(), 1000);
 
             FluidStack stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.SIMULATE);
+            //stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
+            //fillTankWithFluid(stack, iFluidHandlerItem.getContainer());
             if(stack.getFluid() == Fluids.WATER) {
                 stack = iFluidHandlerItem.drain(drainAmount, IFluidHandler.FluidAction.EXECUTE);
                 fillTankWithFluid(stack, iFluidHandlerItem.getContainer());
@@ -305,6 +316,10 @@ public class NomadFactionForgeBlockEntity extends BlockEntity implements MenuPro
         if (recipe.isEmpty()) {
             return false;
         }
+
+        maxProgress = recipe.get().getCraftTime();
+        neededFluidStack = recipe.get().getFluidStack();
+
         ItemStack resultItem = recipe.get().getResultItem(getLevel().registryAccess());
 
         return canInsertAmountIntoOutputSlot(resultItem.getCount())
@@ -313,7 +328,7 @@ public class NomadFactionForgeBlockEntity extends BlockEntity implements MenuPro
     }
 
     private boolean hasEnoughFluidToCraft() {
-        return this.FLUID_TANK.getFluidAmount() >= 1000;
+        return this.FLUID_TANK.getFluidAmount() >= neededFluidStack.getAmount();
     }
 
     private Optional<NomadFactionForgeRecipe> getCurrentRecipe() {

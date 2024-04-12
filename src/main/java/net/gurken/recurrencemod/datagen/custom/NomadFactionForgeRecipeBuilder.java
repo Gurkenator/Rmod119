@@ -16,6 +16,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import javax.annotation.Nullable;
@@ -28,15 +29,19 @@ public class NomadFactionForgeRecipeBuilder implements RecipeBuilder {
     private final Ingredient ingredient2;
     private final Ingredient ingredient3;
     private final int count;
+    private final int craftTime;
+    private final FluidStack fluidStack;
     private final Advancement.Builder advancement = Advancement.Builder.advancement();
 
-    public NomadFactionForgeRecipeBuilder(ItemLike pIngredient0, ItemLike pIngredient1, ItemLike pIngredient2, ItemLike pIngredient3, ItemLike result, int count) {
+    public NomadFactionForgeRecipeBuilder(ItemLike pIngredient0, ItemLike pIngredient1, ItemLike pIngredient2, ItemLike pIngredient3, ItemLike result, int count, int craftTime, FluidStack fluidStack) {
         this.ingredient0 = Ingredient.of(pIngredient0);
         this.ingredient1 = Ingredient.of(pIngredient1);
         this.ingredient2 = Ingredient.of(pIngredient2);
         this.ingredient3 = Ingredient.of(pIngredient3);
         this.result = result.asItem();
         this.count = count;
+        this.craftTime = craftTime;
+        this.fluidStack = fluidStack;
     }
 
     @Override
@@ -61,7 +66,7 @@ public class NomadFactionForgeRecipeBuilder implements RecipeBuilder {
                 .addCriterion("has_the_recipe", RecipeUnlockedTrigger.unlocked(pRecipeId))
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
 
-        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.ingredient0, this.ingredient1, this.ingredient2, this.ingredient3,
+        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.ingredient0, this.ingredient1, this.ingredient2, this.ingredient3, this.craftTime, this.fluidStack,
                 this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/"
                 + pRecipeId.getPath())));
 
@@ -75,10 +80,12 @@ public class NomadFactionForgeRecipeBuilder implements RecipeBuilder {
         private final Ingredient ingredient2;
         private final Ingredient ingredient3;
         private final int count;
+        private final int craftTime;
+        private final FluidStack fluidStack;
         private final Advancement.Builder advancement;
         private final ResourceLocation advancementId;
 
-        public Result(ResourceLocation pId, Item pResult, int pCount, Ingredient ingredient0, Ingredient ingredient1, Ingredient ingredient2, Ingredient ingredient3, Advancement.Builder pAdvancement,
+        public Result(ResourceLocation pId, Item pResult, int pCount, Ingredient ingredient0, Ingredient ingredient1, Ingredient ingredient2, Ingredient ingredient3, int craftTime, FluidStack fluidStack, Advancement.Builder pAdvancement,
                       ResourceLocation pAdvancementId) {
             this.id = pId;
             this.result = pResult;
@@ -87,6 +94,8 @@ public class NomadFactionForgeRecipeBuilder implements RecipeBuilder {
             this.ingredient1 = ingredient1;
             this.ingredient2 = ingredient2;
             this.ingredient3 = ingredient3;
+            this.craftTime = craftTime;
+            this.fluidStack = fluidStack;
             this.advancement = pAdvancement;
             this.advancementId = pAdvancementId;
         }
@@ -102,9 +111,15 @@ public class NomadFactionForgeRecipeBuilder implements RecipeBuilder {
             pJson.add("ingredients", jsonarray);
             JsonObject jsonobject = new JsonObject();
             jsonobject.addProperty("item", ForgeRegistries.ITEMS.getKey(this.result).toString());
+
+            pJson.addProperty("fluidType", ForgeRegistries.FLUIDS.getKey(this.fluidStack.getFluid()).toString());
+            pJson.addProperty("fluidAmount", this.fluidStack.getAmount());
+
             if (this.count > 1) {
                 jsonobject.addProperty("count", this.count);
             }
+
+            pJson.addProperty("craftTime", this.craftTime);
 
             pJson.add("output", jsonobject);
         }

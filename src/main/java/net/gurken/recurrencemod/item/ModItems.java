@@ -3,20 +3,12 @@ package net.gurken.recurrencemod.item;
 import net.gurken.recurrencemod.RecurrenceMod;
 import net.gurken.recurrencemod.entity.ModEntities;
 import net.gurken.recurrencemod.item.custom.*;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-
-import javax.annotation.Nullable;
-import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -92,7 +84,7 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.RAIDER, 0x423d3d, 0x191717,
                     new Item.Properties()));
 
-    public static final RegistryObject<Item> CHAINSWORD = ITEMS.register("chainsword",
+    public static final RegistryObject<Item> LUNATIC_CHAINSWORD = ITEMS.register("lunatic_chainsword",
             () -> new LunaticChainswordItem(ModTiers.LUNATIC, 0, -1.4F,
                     new Item.Properties()));
     public static final RegistryObject<Item> CHEMDRILL = ITEMS.register("chemdrill",
@@ -100,6 +92,9 @@ public class ModItems {
                     new Item.Properties()));
     public static final RegistryObject<Item> NOMAD_SWORD = ITEMS.register("nomad_sword",
             () -> new NomadSwordItem(ModTiers.NOMAD, 3, -3.2F,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> VAGABOND_SWORD = ITEMS.register("vagabond_sword",
+            () -> new VagabondSwordItem(ModTiers.NOMAD, 3,-3.2F,
                     new Item.Properties()));
     public static final RegistryObject<Item> VAGABOND_THROWING_KNIFE = ITEMS.register("vagabond_throwing_knife",
             () -> new VagabondThrowingKnifeItem(new Item.Properties().stacksTo(16)));

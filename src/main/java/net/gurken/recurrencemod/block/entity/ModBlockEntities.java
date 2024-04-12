@@ -17,6 +17,8 @@ public class ModBlockEntities {
 
     public static final RegistryObject<BlockEntityType<NomadFactionForgeBlockEntity>> NOMAD_FACTION_FORGE_BE =
             BLOCK_ENTITIES.register("nomad_faction_forge_block_entity", () -> BlockEntityType.Builder.of(NomadFactionForgeBlockEntity::new, ModBlocks.NOMAD_FACTION_FORGE.get()).build(null));
+    public static final RegistryObject<BlockEntityType<LunaticFactionForgeBlockEntity>> LUNATIC_FACTION_FORGE_BE =
+            BLOCK_ENTITIES.register("lunatic_faction_forge_block_entity", () -> BlockEntityType.Builder.of(LunaticFactionForgeBlockEntity::new, ModBlocks.LUNATIC_FACTION_FORGE.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

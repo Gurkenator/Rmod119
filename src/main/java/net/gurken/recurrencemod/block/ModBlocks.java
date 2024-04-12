@@ -263,6 +263,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> NOMAD_FACTION_FORGE = registerBlock("nomad_faction_forge",
             () -> new NomadFactionForgeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
+    public static final RegistryObject<Block> LUNATIC_FACTION_FORGE = registerBlock("lunatic_faction_forge",
+            () -> new LunaticFactionForgeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()));
 
     public static final RegistryObject<Block> SKELETON_BLOCK_ADJUSTABLE = registerBlock("skeleton_block_adjustable",
             () -> new SkeletonBlock(BlockBehaviour.Properties.copy(Blocks.SKELETON_SKULL)

@@ -24,7 +24,7 @@ public class VagabondThrowingKnifeItem extends Item {
 
         if (!pLevel.isClientSide) {
             VagabondThrowingKnifeEntity vagabond_throwing_knife = new VagabondThrowingKnifeEntity(pLevel, pPlayer);
-            vagabond_throwing_knife.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 2.5F, 0.9F);
+            vagabond_throwing_knife.shootFromRotation(pPlayer, pPlayer.getXRot(), pPlayer.getYRot(), 0.0F, 2.0F, 0.9F);
             pLevel.addFreshEntity(vagabond_throwing_knife);
         }
 

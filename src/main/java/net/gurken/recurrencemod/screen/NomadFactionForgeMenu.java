@@ -2,6 +2,8 @@ package net.gurken.recurrencemod.screen;
 
 import net.gurken.recurrencemod.block.ModBlocks;
 import net.gurken.recurrencemod.block.entity.NomadFactionForgeBlockEntity;
+import net.gurken.recurrencemod.client.ClientFactionFavourData;
+import net.gurken.recurrencemod.faction_favour.PlayerFactionFavour;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -125,6 +127,14 @@ public class NomadFactionForgeMenu extends AbstractContainerMenu {
         int progressArrowSize = 31; // This is the height in pixels of your arrow
 
         return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
+    public int getCurrentFactionFavour() {
+        int currentFavour = ClientFactionFavourData.getPlayerFactionFavour();
+        int maxFavour = PlayerFactionFavour.getMaxFactionFavour(); // Max Favour
+        int barSize = 46; // This is the height in pixels of your arrow
+
+        return maxFavour != 0 && currentFavour != 0 ? currentFavour * barSize / maxFavour : 0;
     }
 
     public int getScaledProgressFluid() {

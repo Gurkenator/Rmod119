@@ -35,7 +35,7 @@ import java.util.List;
 public class FluidTankRenderer {
     private static final NumberFormat nf = NumberFormat.getIntegerInstance();
     private static final int TEXTURE_SIZE = 16;
-    private static final int MIN_FLUID_HEIGHT = 1; // ensure tiny amounts of fluid are still visible
+    private static final int MIN_FLUID_HEIGHT = 0; // use 1 to ensure tiny amounts of fluid are still visible
 
     private final long capacity;
     private final TooltipMode tooltipMode;

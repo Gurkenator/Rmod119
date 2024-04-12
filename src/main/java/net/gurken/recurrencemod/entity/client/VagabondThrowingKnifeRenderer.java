@@ -21,11 +21,11 @@ public class VagabondThrowingKnifeRenderer extends EntityRenderer<VagabondThrowi
     public VagabondThrowingKnifeRenderer(EntityRendererProvider.Context pContext) {
         super(pContext);
         model = new VagabondThrowingKnifeModel(pContext.bakeLayer(ModModelLayers.VAGABOND_THROWING_KNIFE_LAYER));
-        this.shadowRadius = 0.2f;
+        this.shadowRadius = 0.25f;
     }
 
     public void render(VagabondThrowingKnifeEntity entity, float pEntityYaw, float pPartialTick, PoseStack pPoseStack, MultiBufferSource pBuffer, int pPackedLight) {
-        pPoseStack.scale(0.5f, 0.5f, 0.5f);
+        pPoseStack.scale(0.65f, 0.65f, 0.65f);
         pPoseStack.pushPose();
         pPoseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(pPartialTick, entity.yRotO, entity.getYRot()) - 90.0F));
         pPoseStack.mulPose(Axis.ZP.rotationDegrees(Mth.lerp(pPartialTick, entity.xRotO, entity.getXRot()) + 90.0F));

@@ -1,5 +1,8 @@
 {
   "type": "recurrencemod:nomad_faction_forge",
+  "craftTime": 80,
+  "fluidAmount": 4000,
+  "fluidType": "minecraft:water",
   "ingredients": [
     {
       "item": "recurrencemod:iron_scraps"
@@ -8,7 +11,7 @@
       "item": "minecraft:netherite_ingot"
     },
     {
-      "item": "minecraft:bucket"
+      "item": "minecraft:glass_bottle"
     },
     {
       "item": "minecraft:bone"

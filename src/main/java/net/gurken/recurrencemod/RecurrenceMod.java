@@ -6,10 +6,13 @@ import net.gurken.recurrencemod.block.entity.ModBlockEntities;
 import net.gurken.recurrencemod.entity.ModEntities;
 import net.gurken.recurrencemod.entity.client.RaiderRenderer;
 import net.gurken.recurrencemod.entity.client.VagabondThrowingKnifeRenderer;
+import net.gurken.recurrencemod.faction_favour.ModNetworking;
 import net.gurken.recurrencemod.init.RecFeatures;
 import net.gurken.recurrencemod.item.ModCreativeModeTabs;
+import net.gurken.recurrencemod.item.ModItemProperties;
 import net.gurken.recurrencemod.item.ModItems;
 import net.gurken.recurrencemod.recipe.ModRecipes;
+import net.gurken.recurrencemod.screen.LunaticFactionForgeScreen;
 import net.gurken.recurrencemod.screen.ModMenuTypes;
 import net.gurken.recurrencemod.screen.NomadFactionForgeScreen;
 import net.gurken.recurrencemod.screen.SkeletonBlockScreen;
@@ -72,6 +75,7 @@ public class RecurrenceMod
     {
         event.enqueueWork(() ->
         {
+            ModNetworking.register();
             ComposterBlock.COMPOSTABLES.put(ModItems.ROTTEN_WOOD.get(), 0.3f);
 
             //TerraBlender
@@ -197,12 +201,13 @@ public class RecurrenceMod
             event.accept(ModItems.RAIDER_BOOTS);
             event.accept(ModItems.RAIDER_PLATINGS);
 
-            event.accept(ModItems.CHAINSWORD);
+            event.accept(ModItems.LUNATIC_CHAINSWORD);
             event.accept(ModItems.CHEMDRILL);
             event.accept(ModItems.LUNATIC_PLATINGS);
-
+            event.accept(ModBlocks.LUNATIC_FACTION_FORGE);
             event.accept(ModItems.NOMAD_SWORD);
             event.accept(ModBlocks.NOMAD_FACTION_FORGE);
+            event.accept(ModItems.VAGABOND_SWORD);
             event.accept(ModItems.VAGABOND_THROWING_KNIFE);
 
             event.accept(ModItems.BLUE_PILLS);
@@ -233,7 +238,7 @@ public class RecurrenceMod
             event.accept(ModItems.RAIDER_LEGGINGS);
             event.accept(ModItems.RAIDER_BOOTS);
 
-            event.accept(ModItems.CHAINSWORD);
+            event.accept(ModItems.LUNATIC_CHAINSWORD);
 
             event.accept(ModItems.GAMBLER_SWORD);
             event.accept(ModItems.BLOOD_SWORD);
@@ -248,12 +253,17 @@ public class RecurrenceMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            MenuScreens.register(ModMenuTypes.SKELETON_BLOCK_MENU.get(), SkeletonBlockScreen::new);
-            MenuScreens.register(ModMenuTypes.NOMAD_FACTION_FORGE_MENU.get(), NomadFactionForgeScreen::new);
+            event.enqueueWork(() -> {
+                ModItemProperties.addCustomItemProperties();
 
-            EntityRenderers.register(ModEntities.RAIDER.get(), RaiderRenderer::new);
+                MenuScreens.register(ModMenuTypes.SKELETON_BLOCK_MENU.get(), SkeletonBlockScreen::new);
+                MenuScreens.register(ModMenuTypes.NOMAD_FACTION_FORGE_MENU.get(), NomadFactionForgeScreen::new);
+                MenuScreens.register(ModMenuTypes.LUNATIC_FACTION_FORGE_MENU.get(), LunaticFactionForgeScreen::new);
 
-            EntityRenderers.register(ModEntities.VAGABOND_THROWING_KNIFE.get(), VagabondThrowingKnifeRenderer::new);
+                EntityRenderers.register(ModEntities.RAIDER.get(), RaiderRenderer::new);
+
+                EntityRenderers.register(ModEntities.VAGABOND_THROWING_KNIFE.get(), VagabondThrowingKnifeRenderer::new);
+            });
         }
     }
 }
