@@ -1,6 +1,5 @@
 {
   "credit": "Made with Blockbench",
-  "parent": "lunatic_faction_forge",
   "texture_size": [64, 64],
   "textures": {
     "0": "recurrencemod:block/lunatic_faction_forge",

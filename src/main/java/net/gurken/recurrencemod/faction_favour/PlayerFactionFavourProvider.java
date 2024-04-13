@@ -20,9 +20,9 @@ public class PlayerFactionFavourProvider implements ICapabilityProvider, INBTSer
     public static Capability<PlayerFactionFavour> PLAYER_FACTION_FAVOUR = CapabilityManager.get(new CapabilityToken<PlayerFactionFavour>() { });
 
     private PlayerFactionFavour faction_favour = null;
-    private final LazyOptional<PlayerFactionFavour> optional = LazyOptional.of(this::createPlayerThirst);
+    private final LazyOptional<PlayerFactionFavour> optional = LazyOptional.of(this::createPlayerFactionFavour);
 
-    private PlayerFactionFavour createPlayerThirst() {
+    private PlayerFactionFavour createPlayerFactionFavour() {
         if(this.faction_favour == null) {
             this.faction_favour = new PlayerFactionFavour();
         }
@@ -42,12 +42,12 @@ public class PlayerFactionFavourProvider implements ICapabilityProvider, INBTSer
     @Override
     public CompoundTag serializeNBT() {
         CompoundTag nbt = new CompoundTag();
-        createPlayerThirst().saveNBTData(nbt);
+        createPlayerFactionFavour().saveNBTData(nbt);
         return nbt;
     }
 
     @Override
     public void deserializeNBT(CompoundTag nbt) {
-        createPlayerThirst().loadNBTData(nbt);
+        createPlayerFactionFavour().loadNBTData(nbt);
     }
 }

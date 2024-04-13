@@ -1,7 +1,8 @@
 {
   "variants": {
     "facing=north": {
-      "model": "recurrencemod:block/lunatic_faction_forge"
+      "model": "recurrencemod:block/lunatic_faction_forge",
+      "y": 0
     },
     "facing=south": {
       "model": "recurrencemod:block/lunatic_faction_forge",

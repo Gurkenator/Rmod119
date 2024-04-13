@@ -51,7 +51,7 @@ public class NomadFactionForgeBlockEntity extends BlockEntity implements MenuPro
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
             return switch(slot) {
-                //case 4, 6 -> false;
+                case 4 -> false;
                 case 5 -> stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
                 default -> super.isItemValid(slot, stack);
             };
@@ -81,7 +81,6 @@ public class NomadFactionForgeBlockEntity extends BlockEntity implements MenuPro
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 100;
-    private final int DEFAULT_MAX_PROGRESS = 78;
 
     private FluidStack neededFluidStack = FluidStack.EMPTY;
     private final FluidTank FLUID_TANK = createFluidTank();

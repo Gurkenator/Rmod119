@@ -37,6 +37,7 @@ public class NomadFactionForgeScreen extends AbstractContainerScreen<NomadFactio
     @Override
     protected void init() {
         super.init();
+        //TODO Title Labels dont work
         this.inventoryLabelY = 80;
         this.titleLabelY = -1;
 
@@ -67,12 +68,12 @@ public class NomadFactionForgeScreen extends AbstractContainerScreen<NomadFactio
     private void addFactionFavourTooltipArea(GuiGraphics guiGraphics, int pMouseX, int pMouseY, int x, int y,
                                         int offsetX, int offsetY) {
         if(isMouseAboveFactionArea(pMouseX, pMouseY, x, y, offsetX, offsetY)) {
-            guiGraphics.renderTooltip(this.font, this.getTooltip(TooltipFlag.Default.NORMAL),
+            guiGraphics.renderTooltip(this.font, getFactionTooltip(TooltipFlag.Default.NORMAL),
                     Optional.empty(), pMouseX - x, pMouseY - y);
         }
     }
 
-    public List<Component> getTooltip(TooltipFlag tooltipFlag) {
+    public List<Component> getFactionTooltip(TooltipFlag tooltipFlag) {
         List<Component> tooltip = new ArrayList<>();
 
         int u = ClientFactionFavourData.getPlayerFactionFavour();
@@ -84,7 +85,7 @@ public class NomadFactionForgeScreen extends AbstractContainerScreen<NomadFactio
             MutableComponent amountString = Component.translatable("recurrencemod.tooltip.faction.favour.amount.capacity", u, k);
             tooltip.add(amountString.withStyle(ChatFormatting.GRAY));
         } catch (RuntimeException e) {
-            RecurrenceMod.LOGGER.error("Failed to get tooltip for fluid: " + e);
+            RecurrenceMod.LOGGER.error("Failed to get tooltip for faction favour: " + e);
         }
 
         return tooltip;
@@ -130,10 +131,8 @@ public class NomadFactionForgeScreen extends AbstractContainerScreen<NomadFactio
     //}
 
     private void renderFactionFavour(GuiGraphics guiGraphics, int x, int y) {
-        if(true) {
-            int k = this.menu.getCurrentFactionFavour();
-            guiGraphics.blit(TEXTURE, x + 12, y + 63 - k, 176, 70 - k, 8, k);
-        }
+        int k = this.menu.getCurrentFactionFavour();
+        guiGraphics.blit(TEXTURE, x + 12, y + 63 - k, 176, 70 - k, 8, k);
     }
 
     @Override

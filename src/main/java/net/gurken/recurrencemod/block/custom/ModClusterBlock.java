@@ -20,7 +20,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
-public class ClusterBlock extends Block implements SimpleWaterloggedBlock {
+public class ModClusterBlock extends Block implements SimpleWaterloggedBlock {
 
     /**
      * This class is an altered copy of Mojang's AmethystClusterBlock class.
@@ -35,7 +35,7 @@ public class ClusterBlock extends Block implements SimpleWaterloggedBlock {
     protected final VoxelShape upAabb;
     protected final VoxelShape downAabb;
 
-    public ClusterBlock(int pOffset, BlockBehaviour.Properties pProperties) {
+    public ModClusterBlock(int pOffset, BlockBehaviour.Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.UP));
         this.upAabb = Block.box((double)pOffset, 0.0D, (double)pOffset, (double)(16 - pOffset), 13, (double)(16 - pOffset));

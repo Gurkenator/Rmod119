@@ -244,11 +244,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> EMERALD_DEPOSIT = registerBlock("emerald_deposit",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)
                     .strength(5f, 6f).mapColor(MapColor.EMERALD).requiresCorrectToolForDrops()));
-    public static final RegistryObject<ClusterBlock> DIAMOND_CLUSTER = registerBlock("diamond_cluster",
-            () -> new ClusterBlock(3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)
+    public static final RegistryObject<ModClusterBlock> DIAMOND_CLUSTER = registerBlock("diamond_cluster",
+            () -> new ModClusterBlock(3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)
                     .strength(1.5f).forceSolidOn().noOcclusion().mapColor(MapColor.DIAMOND).requiresCorrectToolForDrops()));
-    public static final RegistryObject<ClusterBlock> EMERALD_CLUSTER = registerBlock("emerald_cluster",
-            () -> new ClusterBlock(3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)
+    public static final RegistryObject<ModClusterBlock> EMERALD_CLUSTER = registerBlock("emerald_cluster",
+            () -> new ModClusterBlock(3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)
                     .strength(1.5f).forceSolidOn().noOcclusion().mapColor(MapColor.EMERALD).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RUDIMENTARY_BATTERY = registerBlock("rudimentary_battery",

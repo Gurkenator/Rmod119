@@ -57,7 +57,7 @@ public class SkeletonBlockBlockEntity extends BlockEntity implements MenuProvide
 
     @Override
     public Component getDisplayName() {
-        return Component.literal("Skeleton Block");
+        return Component.translatable("blockentity.recurrencemod.skeleton_block");
     }
 
     @Nullable

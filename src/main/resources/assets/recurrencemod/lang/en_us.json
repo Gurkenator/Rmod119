@@ -23,6 +23,8 @@
   "item.recurrencemod.vagabond_sword": "Vagabond Sword",
   "item.recurrencemod.vagabond_throwing_knife": "Vagabond Throwing Knife",
 
+  "blockentity.recurrencemod.skeleton_block": "Skeleton Block",
+
   "blockentity.recurrencemod.nomad_faction_forge": "Nomad Faction Forge",
   "block.recurrencemod.nomad_faction_forge": "Nomad Faction Forge",
 
@@ -167,6 +169,8 @@
 
   "death.attack.recurrencemod.vagabond_throwing_knife": "%1$s was hit by a Throwing Knife",
   "death.attack.recurrencemod.vagabond_throwing_knife.player": "%1$s was slain by %2$s using a Throwing Knife",
+
+  "commands.factionfavor.set.points.invalid": "Invalid favor number",
 
   "creativemodetab.recurrence_tab": "Recurrence"
 }
