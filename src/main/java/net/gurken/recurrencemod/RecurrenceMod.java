@@ -204,6 +204,10 @@ public class RecurrenceMod
 
             event.accept(ModItems.LUNATIC_CHAINSWORD);
             event.accept(ModItems.CHEMDRILL);
+            event.accept(ModItems.LUNATIC_HELMET);
+            event.accept(ModItems.LUNATIC_CHESTPLATE);
+            event.accept(ModItems.LUNATIC_LEGGINGS);
+            event.accept(ModItems.LUNATIC_BOOTS);
             event.accept(ModItems.LUNATIC_PLATINGS);
             event.accept(ModBlocks.LUNATIC_FACTION_FORGE);
             event.accept(ModItems.NOMAD_SWORD);
@@ -240,6 +244,10 @@ public class RecurrenceMod
             event.accept(ModItems.RAIDER_BOOTS);
 
             event.accept(ModItems.LUNATIC_CHAINSWORD);
+            event.accept(ModItems.LUNATIC_HELMET);
+            event.accept(ModItems.LUNATIC_CHESTPLATE);
+            event.accept(ModItems.LUNATIC_LEGGINGS);
+            event.accept(ModItems.LUNATIC_BOOTS);
 
             event.accept(ModItems.GAMBLER_SWORD);
             event.accept(ModItems.BLOOD_SWORD);

@@ -45,6 +45,11 @@
   "item.recurrencemod.raider_leggings": "Raider Leggings",
   "item.recurrencemod.raider_boots": "Raider Boots",
 
+  "item.recurrencemod.lunatic_helmet": "Lunatic Helmet",
+  "item.recurrencemod.lunatic_chestplate": "Lunatic Chestplate",
+  "item.recurrencemod.lunatic_leggings": "Lunatic Leggings",
+  "item.recurrencemod.lunatic_boots": "Lunatic Boots",
+
   "item.recurrencemod.canned_meat": "Canned Meat",
   "item.recurrencemod.canned_vegetables": "Canned Vegetables",
   "item.recurrencemod.canned_soup": "Canned Soup",
@@ -170,7 +175,17 @@
   "death.attack.recurrencemod.vagabond_throwing_knife": "%1$s was hit by a Throwing Knife",
   "death.attack.recurrencemod.vagabond_throwing_knife.player": "%1$s was slain by %2$s using a Throwing Knife",
 
-  "commands.factionfavor.set.points.invalid": "Invalid favor number",
+  "commands.factionfavor.add.levels.success.multiple": "Gave %s faction favor levels to %s players",
+  "commands.factionfavor.add.levels.success.single": "Gave %s faction favor levels to %s",
+  "commands.factionfavor.add.points.success.multiple": "Gave %s faction favor to %s players",
+  "commands.factionfavor.add.points.success.single": "Gave %s faction favor to %s",
+  "commands.factionfavor.query.levels": "%s has %s faction favor levels",
+  "commands.factionfavor.query.points": "%s has %s faction favor",
+  "commands.factionfavor.set.levels.success.multiple": "Set %s faction favor level on %s players",
+  "commands.factionfavor.set.levels.success.single": "Set %s faction favor level on %s",
+  "commands.factionfavor.set.points.invalid": "Invalid faction favor",
+  "commands.factionfavor.set.points.success.multiple": "Set %s faction favor on %s players",
+  "commands.factionfavor.set.points.success.single": "Set %s faction favor on %s",
 
   "creativemodetab.recurrence_tab": "Recurrence"
 }

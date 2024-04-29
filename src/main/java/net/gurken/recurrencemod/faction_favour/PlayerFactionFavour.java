@@ -24,6 +24,10 @@ public class PlayerFactionFavour {
         return MAX_FACTION_FAVOUR;
     }
 
+    public void setFactionFavour(int set) {
+        this.faction_favour = Math.min(set, MAX_FACTION_FAVOUR);
+    }
+
     public void copyFrom(PlayerFactionFavour source) {
         this.faction_favour = source.faction_favour;
     }

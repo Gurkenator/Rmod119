@@ -84,6 +84,19 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.RAIDER, 0x423d3d, 0x191717,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> LUNATIC_HELMET = ITEMS.register("lunatic_helmet",
+            () -> new LunaticArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.HELMET,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> LUNATIC_CHESTPLATE = ITEMS.register("lunatic_chestplate",
+            () -> new LunaticArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> LUNATIC_LEGGINGS = ITEMS.register("lunatic_leggings",
+            () -> new LunaticArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> LUNATIC_BOOTS = ITEMS.register("lunatic_boots",
+            () -> new LunaticArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.BOOTS,
+                    new Item.Properties()));
+
     public static final RegistryObject<Item> LUNATIC_CHAINSWORD = ITEMS.register("lunatic_chainsword",
             () -> new LunaticChainswordItem(ModTiers.LUNATIC, 0, -1.4F,
                     new Item.Properties()));

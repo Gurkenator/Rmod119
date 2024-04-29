@@ -28,18 +28,12 @@ public class FactionFavorCommand {
             return addFactionFavor(p_137341_.getSource(), EntityArgument.getPlayers(p_137341_, "targets"), IntegerArgumentType.getInteger(p_137341_, "amount"), net.gurken.recurrencemod.command.FactionFavorCommand.Type.POINTS);
         }).then(Commands.literal("points").executes((p_137339_) -> {
             return addFactionFavor(p_137339_.getSource(), EntityArgument.getPlayers(p_137339_, "targets"), IntegerArgumentType.getInteger(p_137339_, "amount"), net.gurken.recurrencemod.command.FactionFavorCommand.Type.POINTS);
-        })).then(Commands.literal("levels").executes((p_137337_) -> {
-            return addFactionFavor(p_137337_.getSource(), EntityArgument.getPlayers(p_137337_, "targets"), IntegerArgumentType.getInteger(p_137337_, "amount"), net.gurken.recurrencemod.command.FactionFavorCommand.Type.LEVELS);
         }))))).then(Commands.literal("set").then(Commands.argument("targets", EntityArgument.players()).then(Commands.argument("amount", IntegerArgumentType.integer(0)).executes((p_137335_) -> {
             return setFactionFavor(p_137335_.getSource(), EntityArgument.getPlayers(p_137335_, "targets"), IntegerArgumentType.getInteger(p_137335_, "amount"), net.gurken.recurrencemod.command.FactionFavorCommand.Type.POINTS);
         }).then(Commands.literal("points").executes((p_137333_) -> {
             return setFactionFavor(p_137333_.getSource(), EntityArgument.getPlayers(p_137333_, "targets"), IntegerArgumentType.getInteger(p_137333_, "amount"), net.gurken.recurrencemod.command.FactionFavorCommand.Type.POINTS);
-        })).then(Commands.literal("levels").executes((p_137331_) -> {
-            return setFactionFavor(p_137331_.getSource(), EntityArgument.getPlayers(p_137331_, "targets"), IntegerArgumentType.getInteger(p_137331_, "amount"), net.gurken.recurrencemod.command.FactionFavorCommand.Type.LEVELS);
         }))))).then(Commands.literal("query").then(Commands.argument("targets", EntityArgument.player()).then(Commands.literal("points").executes((p_137322_) -> {
             return queryFactionFavor(p_137322_.getSource(), EntityArgument.getPlayer(p_137322_, "targets"), net.gurken.recurrencemod.command.FactionFavorCommand.Type.POINTS);
-        })).then(Commands.literal("levels").executes((p_137309_) -> {
-            return queryFactionFavor(p_137309_.getSource(), EntityArgument.getPlayer(p_137309_, "targets"), net.gurken.recurrencemod.command.FactionFavorCommand.Type.LEVELS);
         })))));
         pDispatcher.register(Commands.literal("factionfavor").requires((p_137311_) -> {
             return p_137311_.hasPermission(2);
@@ -49,7 +43,7 @@ public class FactionFavorCommand {
     private static int queryFactionFavor(CommandSourceStack pSource, ServerPlayer pPlayer, net.gurken.recurrencemod.command.FactionFavorCommand.Type pType) {
         int i = pType.query.applyAsInt(pPlayer);
         pSource.sendSuccess(() -> {
-            return Component.translatable("commands.experience.query." + pType.name, pPlayer.getDisplayName(), i);
+            return Component.translatable("commands.factionfavor.query." + pType.name, pPlayer.getDisplayName(), i);
         }, false);
         return i;
     }
@@ -61,11 +55,11 @@ public class FactionFavorCommand {
 
         if (pTargets.size() == 1) {
             pSource.sendSuccess(() -> {
-                return Component.translatable("commands.experience.add." + pType.name + ".success.single", pAmount, pTargets.iterator().next().getDisplayName());
+                return Component.translatable("commands.factionfavor.add." + pType.name + ".success.single", pAmount, pTargets.iterator().next().getDisplayName());
             }, true);
         } else {
             pSource.sendSuccess(() -> {
-                return Component.translatable("commands.experience.add." + pType.name + ".success.multiple", pAmount, pTargets.size());
+                return Component.translatable("commands.factionfavor.add." + pType.name + ".success.multiple", pAmount, pTargets.size());
             }, true);
         }
 
@@ -86,11 +80,11 @@ public class FactionFavorCommand {
         } else {
             if (pTargets.size() == 1) {
                 pSource.sendSuccess(() -> {
-                    return Component.translatable("commands.experience.set." + pType.name + ".success.single", pAmount, pTargets.iterator().next().getDisplayName());
+                    return Component.translatable("commands.factionfavor.set." + pType.name + ".success.single", pAmount, pTargets.iterator().next().getDisplayName());
                 }, true);
             } else {
                 pSource.sendSuccess(() -> {
-                    return Component.translatable("commands.experience.set." + pType.name + ".success.multiple", pAmount, pTargets.size());
+                    return Component.translatable("commands.factionfavor.set." + pType.name + ".success.multiple", pAmount, pTargets.size());
                 }, true);
             }
 
@@ -99,21 +93,17 @@ public class FactionFavorCommand {
     }
 
     static enum Type {
-        POINTS("points", Player::giveExperiencePoints, (p_289274_, p_289275_) -> {
-            if (p_289275_ >= p_289274_.getXpNeededForNextLevel()) {
-                return false;
-            } else {
-                p_289274_.setExperiencePoints(p_289275_);
-                return true;
-            }
-        }, (p_289273_) -> {
-            return Mth.floor(p_289273_.experienceProgress * (float)p_289273_.getXpNeededForNextLevel());
+        POINTS("points", Player::giveExperiencePoints, (pServerPlayer, pInteger) -> {
+            pServerPlayer.setExperienceLevels(pInteger);
+            return true;
+        }, (serverPlayer) -> {
+            return serverPlayer.experienceLevel;
         }),
         LEVELS("levels", ServerPlayer::giveExperienceLevels, (p_137360_, p_137361_) -> {
             p_137360_.setExperienceLevels(p_137361_);
             return true;
-        }, (p_287335_) -> {
-            return p_287335_.experienceLevel;
+        }, (serverPlayer) -> {
+            return serverPlayer.experienceLevel;
         });
 
         public final BiConsumer<ServerPlayer, Integer> add;
