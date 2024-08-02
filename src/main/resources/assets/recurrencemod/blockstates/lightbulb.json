@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "recurrencemod:block/lightbulb"
+    },
+    "facing=east": {
+      "model": "recurrencemod:block/lightbulb_mounted",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "recurrencemod:block/lightbulb_mounted",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "recurrencemod:block/lightbulb_mounted"
+    },
+    "facing=up": {
+      "model": "recurrencemod:block/lightbulb"
+    },
+    "facing=west": {
+      "model": "recurrencemod:block/lightbulb_mounted",
+      "y": 90
+    }
+  }
+}

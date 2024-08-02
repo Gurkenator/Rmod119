@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -41,6 +42,14 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)
                     .strength(6f, 9f).mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> SCORCHSHALE = registerBlock("scorchshale",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f, 3f).mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SCORCHSCALE = registerBlock("scorchscale",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
+                    .strength(2f, 3f).mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SCORCHSHELL = registerBlock("scorchshell",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(2f, 3f).mapColor(MapColor.COLOR_BLACK).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> FUMESTONE = registerBlock("fumestone",
@@ -99,6 +108,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> STEEL_PIPE = registerBlock("steel_pipe",
             () -> new ModPipeBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()
                     .strength(3f, 4.5f).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LEAD_FRAMED_GLASS = registerBlock("lead_framed_glass",
+            () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS)));
+
+    public static final RegistryObject<Block> LIGHTBULB = registerBlock("lightbulb",
+            () -> new LightbulbBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).lightLevel((p_50755_) -> 11)
+                    .strength(0.5f, 0.5f).sound(SoundType.GLASS).pushReaction(PushReaction.DESTROY)));
     public static final RegistryObject<Block> COPPER_WIRING = registerBlock("copper_wiring",
             () -> new WiringBlock(BlockBehaviour.Properties.of().noOcclusion().noCollission()
                     .strength(1f, 1f).mapColor(MapColor.COLOR_ORANGE).requiresCorrectToolForDrops()));
@@ -123,10 +139,10 @@ public class ModBlocks {
                     .strength(0.5f, 0.6f).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion()));
     public static final RegistryObject<Block> METAL_DOOR = registerBlock("metal_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
-                    .strength(2f, 2f).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion(), BlockSetType.IRON));
+                    .strength(2f, 2f).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion(), BlockSetType.STONE));
     public static final RegistryObject<Block> METAL_TRAPDOOR = registerBlock("metal_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
-                    .strength(2f, 2f).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion(), BlockSetType.IRON));
+                    .strength(2f, 2f).requiresCorrectToolForDrops().sound(SoundType.METAL).noOcclusion(), BlockSetType.STONE));
 
     public static final RegistryObject<Block> SCORCHSTONE_BRICKS = registerBlock("scorchstone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)

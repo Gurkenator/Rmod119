@@ -44,19 +44,16 @@ public class ModPipeBlock extends RotatedPillarBlock implements SimpleWaterlogge
     public BlockState getStateForPlacement(BlockPlaceContext p_51454_) {
         FluidState fluidstate = p_51454_.getLevel().getFluidState(p_51454_.getClickedPos());
         boolean flag = fluidstate.getType() == Fluids.WATER;
-        return this.defaultBlockState().setValue(AXIS, p_51454_.getClickedFace().getAxis()).setValue(WATERLOGGED, Boolean.valueOf(flag));
+        return this.defaultBlockState().setValue(AXIS, p_51454_.getClickedFace().getAxis()).setValue(WATERLOGGED, flag);
     }
 
     @Override
     public VoxelShape getShape(BlockState p_154346_, BlockGetter p_154347_, BlockPos p_154348_, CollisionContext p_154349_) {
-        switch (p_154346_.getValue(AXIS)) {
-            case X:
-                return X_AXIS_PIPE;
-            case Z:
-                return Z_AXIS_PIPE;
-            default:
-                return Y_AXIS_PIPE;
-        }
+        return switch (p_154346_.getValue(AXIS)) {
+            case X -> X_AXIS_PIPE;
+            case Z -> Z_AXIS_PIPE;
+            default -> Y_AXIS_PIPE;
+        };
     }
 
     @Override

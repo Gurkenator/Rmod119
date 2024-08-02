@@ -17,6 +17,8 @@ import net.gurken.recurrencemod.screen.ModMenuTypes;
 import net.gurken.recurrencemod.screen.NomadFactionForgeScreen;
 import net.gurken.recurrencemod.screen.SkeletonBlockScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.commands.ExperienceCommand;
@@ -100,6 +102,8 @@ public class RecurrenceMod
             event.accept(ModBlocks.SPIRESTONE);
             event.accept(ModBlocks.SCORCHSLATE);
             event.accept(ModBlocks.SCORCHSHALE);
+            event.accept(ModBlocks.SCORCHSCALE);
+            event.accept(ModBlocks.SCORCHSHELL);
 
             event.accept(ModBlocks.SCORCHSTONE_BRICKS);
             event.accept(ModBlocks.FUSED_SCORCHSTONE);
@@ -148,6 +152,8 @@ public class RecurrenceMod
             event.accept(ModBlocks.RUSTY_PLATING);
             event.accept(ModBlocks.PIPE);
             event.accept(ModBlocks.STEEL_PIPE);
+            event.accept(ModBlocks.LEAD_FRAMED_GLASS);
+            event.accept(ModBlocks.LIGHTBULB);
             event.accept(ModBlocks.COPPER_WIRING);
             event.accept(ModBlocks.RUDIMENTARY_BATTERY);
             event.accept(ModBlocks.METAL_STRUTS);
@@ -272,6 +278,8 @@ public class RecurrenceMod
                 EntityRenderers.register(ModEntities.RAIDER.get(), RaiderRenderer::new);
 
                 EntityRenderers.register(ModEntities.VAGABOND_THROWING_KNIFE.get(), VagabondThrowingKnifeRenderer::new);
+
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEAD_FRAMED_GLASS.get(), RenderType.cutout());
             });
         }
     }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "": {"model":  "recurrencemod:block/lead_framed_glass" }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "recurrencemod:block/ctm/lead_framed_glass_center",
+    "empty": "recurrencemod:block/ctm/lead_framed_glass_empty",
+    "horizontal": "recurrencemod:block/ctm/lead_framed_glass_horizontal",
+    "vertical": "recurrencemod:block/ctm/lead_framed_glass_vertical",
+    "particle": "recurrencemod:block/ctm/lead_framed_glass"
+  }
+}
