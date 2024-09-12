@@ -1,3 +1,6 @@
 {
-  "parent": "recurrencemod:block/copper_wiring"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "recurrencemod:block/copper_wiring_item"
+  }
 }

@@ -45,10 +45,10 @@
   "item.recurrencemod.raider_leggings": "Raider Leggings",
   "item.recurrencemod.raider_boots": "Raider Boots",
 
-  "item.recurrencemod.lunatic_helmet": "Lunatic Helmet",
-  "item.recurrencemod.lunatic_chestplate": "Lunatic Chestplate",
-  "item.recurrencemod.lunatic_leggings": "Lunatic Leggings",
-  "item.recurrencemod.lunatic_boots": "Lunatic Boots",
+  "item.recurrencemod.nomad_helmet": "Nomad Helmet",
+  "item.recurrencemod.nomad_chestplate": "Nomad Chestplate",
+  "item.recurrencemod.nomad_leggings": "Nomad Leggings",
+  "item.recurrencemod.nomad_boots": "Nomad Boots",
 
   "item.recurrencemod.canned_meat": "Canned Meat",
   "item.recurrencemod.canned_vegetables": "Canned Vegetables",
@@ -112,6 +112,7 @@
   "block.recurrencemod.lead_framed_glass": "Lead Framed Glass",
   "block.recurrencemod.lightbulb": "Lightbulb",
   "block.recurrencemod.copper_wiring": "Copper Wiring",
+  "block.recurrencemod.piping": "Piping",
   "block.recurrencemod.metal_struts": "Metal Struts",
   "block.recurrencemod.rancid_carpet": "Rancid Carpet",
   "block.recurrencemod.metal_bars_block": "Metal Bars Block",
@@ -191,5 +192,7 @@
   "commands.factionfavor.set.points.success.multiple": "Set %s faction favor on %s players",
   "commands.factionfavor.set.points.success.single": "Set %s faction favor on %s",
 
-  "creativemodetab.recurrence_tab": "Recurrence"
+  "creativemodetab.recurrence_blocks_tab": "Recurrence Blocks",
+  "creativemodetab.recurrence_materials_tab": "Recurrence Materials",
+  "creativemodetab.recurrence_factions_tab": "Recurrence Factions"
 }

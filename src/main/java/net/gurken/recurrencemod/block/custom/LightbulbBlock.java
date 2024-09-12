@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
@@ -23,12 +24,12 @@ public class LightbulbBlock extends Block implements SimpleWaterloggedBlock {
     public LightbulbBlock(Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.FALSE).setValue(FACING, Direction.UP));
-        this.upAabb = Block.box(4, 6, 4, 12, 16, 12);
-        this.downAabb = Block.box(4, 6, 4, 12, 16, 12);
-        this.northAabb = Block.box(4, 3, 8, 12, 13, 16);
-        this.southAabb = Block.box(4, 3, 0, 12, 13, 8);
-        this.eastAabb = Block.box(0, 3, 4, 8, 13, 12);
-        this.westAabb = Block.box(8, 3, 4, 16, 13, 12);
+        this.upAabb = Shapes.or(Block.box(5, 8, 5, 11, 14, 11), Block.box(6, 14, 6, 10, 16, 10));
+        this.downAabb = Shapes.or(Block.box(5, 8, 5, 11, 14, 11), Block.box(6, 14, 6, 10, 16, 10));
+        this.northAabb = Shapes.or(Block.box(5, 6, 10, 11, 12, 16), Block.box(6, 12, 11, 10, 14, 15));
+        this.southAabb = Shapes.or(Block.box(5, 6, 0, 11, 12, 6), Block.box(6, 12, 1, 10, 14, 5));
+        this.eastAabb = Shapes.or(Block.box(0, 6, 5, 6, 12, 11), Block.box(1, 12, 6, 5, 14, 10));
+        this.westAabb = Shapes.or(Block.box(10, 6, 5, 16, 12, 11), Block.box(11, 12, 6, 15, 14, 10));
     }
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;

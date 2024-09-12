@@ -211,7 +211,7 @@ dependencies {
     //implementation fg.deobf('com.github.glitchfiend:TerraBlender-forge:1.20-3.0.0.163')
 
     //Athena
-    implementation fg.deobf("curse.maven:athena-841890:4764357")
+    implementation fg.deobf("curse.maven:athena-841890:5176879")
     //"modApi"(group = "earth.terrarium.athena", name = "athena-$modLoader-$minecraftVersion", version = athenaVersion)
     //implementation fg.deobf('earth.terrarium.athena:athena-forge-1.20-3.0.1')
 

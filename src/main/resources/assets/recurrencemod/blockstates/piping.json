@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "recurrencemod:block/piping",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "recurrencemod:block/piping"
+    },
+    "facing=south": {
+      "model": "recurrencemod:block/piping",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "recurrencemod:block/piping",
+      "y": 270
+    }
+  }
+}

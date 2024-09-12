@@ -2,8 +2,7 @@ package net.gurken.recurrencemod.item.custom;
 
 import com.google.common.collect.ImmutableMap;
 import net.gurken.recurrencemod.item.ModArmorMaterials;
-import net.gurken.recurrencemod.item.client.armor.LunaticArmorRenderer;
-import net.gurken.recurrencemod.item.client.armor.RaiderArmorRenderer;
+import net.gurken.recurrencemod.item.client.armor.NomadArmorRenderer;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -25,23 +24,23 @@ import software.bernie.geckolib.core.object.PlayState;
 import java.util.Map;
 import java.util.function.Consumer;
 
-public class LunaticArmorItem extends ArmorItem implements GeoItem {
+public class NomadArmorItem extends ArmorItem implements GeoItem {
 
     private AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
 
-    public LunaticArmorItem(ArmorMaterial armorMaterial, Type type, Properties properties) {
+    public NomadArmorItem(ArmorMaterial armorMaterial, Type type, Properties properties) {
         super(armorMaterial, type, properties);
     }
     @Override
     public void initializeClient(Consumer<IClientItemExtensions> consumer) {
         consumer.accept(new IClientItemExtensions() {
-            private LunaticArmorRenderer renderer;
+            private NomadArmorRenderer renderer;
 
             @Override
             public @NotNull HumanoidModel<?> getHumanoidArmorModel(LivingEntity livingEntity, ItemStack itemStack,
                                                                    EquipmentSlot equipmentSlot, HumanoidModel<?> original) {
                 if (this.renderer == null)
-                    this.renderer = new LunaticArmorRenderer();
+                    this.renderer = new NomadArmorRenderer();
 
                 this.renderer.prepForRender(livingEntity, itemStack, equipmentSlot, original);
                 return this.renderer;
@@ -50,13 +49,13 @@ public class LunaticArmorItem extends ArmorItem implements GeoItem {
     }
 
     private PlayState predicate(AnimationState animationState) {
-        animationState.getController().setAnimation(RawAnimation.begin().then("animation.RaiderArmorItem.idle", Animation.LoopType.LOOP));
+        animationState.getController().setAnimation(RawAnimation.begin().then("animation.NomadArmorItem.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
     }
 
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.RAIDER, new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false, true)).build();
+                    .put(ModArmorMaterials.NOMAD, new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false, true)).build();
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {
         if(!world.isClientSide()) {

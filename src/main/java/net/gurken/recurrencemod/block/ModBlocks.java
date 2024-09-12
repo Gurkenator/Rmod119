@@ -116,7 +116,11 @@ public class ModBlocks {
             () -> new LightbulbBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).lightLevel((p_50755_) -> 11)
                     .strength(0.5f, 0.5f).sound(SoundType.GLASS).pushReaction(PushReaction.DESTROY)));
     public static final RegistryObject<Block> COPPER_WIRING = registerBlock("copper_wiring",
-            () -> new WiringBlock(BlockBehaviour.Properties.of().noOcclusion().noCollission()
+            () -> new ModWiringBlock(BlockBehaviour.Properties.of().noOcclusion().noCollission()
+                    .strength(1f, 1f).mapColor(MapColor.COLOR_ORANGE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PIPING = registerBlock("piping",
+            () -> new ClimbablePipingBlock(BlockBehaviour.Properties.of().noOcclusion()
                     .strength(1f, 1f).mapColor(MapColor.COLOR_ORANGE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> METAL_STRUTS = registerBlock("metal_struts",

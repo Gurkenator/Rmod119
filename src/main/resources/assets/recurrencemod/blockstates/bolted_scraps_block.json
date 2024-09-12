@@ -4,16 +4,16 @@
   },
   "athena:loader": "athena:giant",
   "ctm_textures": {
-    "1": "recurrencemod:block/ctm/bolted_scraps_5",
-    "2": "recurrencemod:block/ctm/bolted_scraps_4",
-    "3": "recurrencemod:block/ctm/bolted_scraps_6",
-    "4": "recurrencemod:block/ctm/bolted_scraps_2",
-    "5": "recurrencemod:block/ctm/bolted_scraps_1",
-    "6": "recurrencemod:block/ctm/bolted_scraps_3",
-    "7": "recurrencemod:block/ctm/bolted_scraps_8",
-    "8": "recurrencemod:block/ctm/bolted_scraps_7",
-    "9": "recurrencemod:block/ctm/bolted_scraps_9",
-    "particle": "recurrencemod:block/ctm/bolted_scraps_2"
+    "1": "recurrencemod:block/ctm/1",
+    "2": "recurrencemod:block/ctm/2",
+    "3": "recurrencemod:block/ctm/3",
+    "4": "recurrencemod:block/ctm/4",
+    "5": "recurrencemod:block/ctm/5",
+    "6": "recurrencemod:block/ctm/6",
+    "7": "recurrencemod:block/ctm/7",
+    "8": "recurrencemod:block/ctm/8",
+    "9": "recurrencemod:block/ctm/9",
+    "particle": "recurrencemod:block/ctm/bolted_scraps_5"
   },
   "height": 3,
   "width": 3

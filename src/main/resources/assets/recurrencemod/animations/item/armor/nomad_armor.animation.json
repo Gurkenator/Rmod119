@@ -1,0 +1,120 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.NomadArmorItem.idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"wheel": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"0.5": {
+							"vector": [0, 0, 90],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 180],
+							"easing": "linear"
+						},
+						"1.5": {
+							"vector": [0, 0, 270],
+							"easing": "linear"
+						},
+						"2.0": {
+							"vector": [0, 0, 360],
+							"easing": "linear"
+						}
+					}
+				},
+				"needle": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"0.5": {
+							"vector": [0, 0, 22.5],
+							"easing": "linear"
+						},
+						"1.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"1.5": {
+							"vector": [0, 0, -22.5],
+							"easing": "linear"
+						},
+						"2.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						}
+					}
+				},
+				"right": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"0.5": {
+							"vector": [45, 0, 0],
+							"easing": "easeInOutQuad"
+						},
+						"1.0": {
+							"vector": [22.5, 0, 0],
+							"easing": "linear"
+						},
+						"1.5": {
+							"vector": [45, 0, 0],
+							"easing": "easeInOutQuad"
+						},
+						"2.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						}
+					}
+				},
+				"left": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						},
+						"0.5": {
+							"vector": [45, 0, 0],
+							"easing": "easeInOutQuad"
+						},
+						"1.0": {
+							"vector": [22.5, 0, 0],
+							"easing": "linear"
+						},
+						"1.5": {
+							"vector": [45, 0, 0],
+							"easing": "easeInOutQuad"
+						},
+						"2.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						}
+					}
+				},
+				"anchorright": {
+					"rotation": {
+						"vector": [0, 0, 22.5],
+						"easing": "linear"
+					}
+				},
+				"anchorleft": {
+					"rotation": {
+						"vector": [0, 0, -22.5],
+						"easing": "linear"
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

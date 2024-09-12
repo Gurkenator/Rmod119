@@ -20,7 +20,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
 
-public class WiringBlock extends Block implements SimpleWaterloggedBlock {
+public class ModWiringBlock extends Block implements SimpleWaterloggedBlock {
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final DirectionProperty FACING = BlockStateProperties.FACING;
@@ -28,7 +28,7 @@ public class WiringBlock extends Block implements SimpleWaterloggedBlock {
     protected final VoxelShape southAabb;
     protected final VoxelShape eastAabb;
     protected final VoxelShape westAabb;
-    public WiringBlock(Properties pProperties) {
+    public ModWiringBlock(Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(false)).setValue(FACING, Direction.NORTH));
         this.eastAabb = Block.box(0,3,0,16,6,2);
@@ -56,6 +56,8 @@ public class WiringBlock extends Block implements SimpleWaterloggedBlock {
             case WEST:
                 return this.westAabb;
             case NORTH:
+            case UP:
+            case DOWN:
             default:
                 return this.northAabb;
         }

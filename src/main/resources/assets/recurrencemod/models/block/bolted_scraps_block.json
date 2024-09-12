@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "recurrencemod:block/ctm/bolted_scraps_large"
+    "all": "recurrencemod:block/ctm/bolted_scraps_1"
   }
 }

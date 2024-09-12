@@ -84,18 +84,6 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.RAIDER, 0x423d3d, 0x191717,
                     new Item.Properties()));
 
-    public static final RegistryObject<Item> LUNATIC_HELMET = ITEMS.register("lunatic_helmet",
-            () -> new LunaticArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.HELMET,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> LUNATIC_CHESTPLATE = ITEMS.register("lunatic_chestplate",
-            () -> new LunaticArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.CHESTPLATE,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> LUNATIC_LEGGINGS = ITEMS.register("lunatic_leggings",
-            () -> new LunaticArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.LEGGINGS,
-                    new Item.Properties()));
-    public static final RegistryObject<Item> LUNATIC_BOOTS = ITEMS.register("lunatic_boots",
-            () -> new LunaticArmorItem(ModArmorMaterials.RAIDER, ArmorItem.Type.BOOTS,
-                    new Item.Properties()));
 
     public static final RegistryObject<Item> LUNATIC_CHAINSWORD = ITEMS.register("lunatic_chainsword",
             () -> new LunaticChainswordItem(ModTiers.LUNATIC, 0, -1.4F,
@@ -103,8 +91,23 @@ public class ModItems {
     public static final RegistryObject<Item> CHEMDRILL = ITEMS.register("chemdrill",
             () -> new PickaxeItem(ModTiers.LUNATIC, 3, -3.2F,
                     new Item.Properties()));
+
+
     public static final RegistryObject<Item> NOMAD_SWORD = ITEMS.register("nomad_sword",
             () -> new NomadSwordItem(ModTiers.NOMAD, 3, -3.2F,
+                    new Item.Properties()));
+
+    public static final RegistryObject<Item> NOMAD_HELMET = ITEMS.register("nomad_helmet",
+            () -> new NomadArmorItem(ModArmorMaterials.NOMAD, ArmorItem.Type.HELMET,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> NOMAD_CHESTPLATE = ITEMS.register("nomad_chestplate",
+            () -> new NomadArmorItem(ModArmorMaterials.NOMAD, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> NOMAD_LEGGINGS = ITEMS.register("nomad_leggings",
+            () -> new NomadArmorItem(ModArmorMaterials.NOMAD, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> NOMAD_BOOTS = ITEMS.register("nomad_boots",
+            () -> new NomadArmorItem(ModArmorMaterials.NOMAD, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
     public static final RegistryObject<Item> VAGABOND_SWORD = ITEMS.register("vagabond_sword",
             () -> new VagabondSwordItem(ModTiers.NOMAD, 3,-3.2F,

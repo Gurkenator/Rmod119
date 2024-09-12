@@ -92,7 +92,7 @@ public class RecurrenceMod
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTab() == ModCreativeModeTabs.RECURRENCE_TAB.get()) {
+        if(event.getTab() == ModCreativeModeTabs.RECURRENCE_BLOCKS_TAB.get()) {
             event.accept(ModBlocks.SCORCHSTONE);
             event.accept(ModBlocks.GLIMMERING_SCORCHSTONE);
             event.accept(ModBlocks.DUSTSTONE);
@@ -155,6 +155,7 @@ public class RecurrenceMod
             event.accept(ModBlocks.LEAD_FRAMED_GLASS);
             event.accept(ModBlocks.LIGHTBULB);
             event.accept(ModBlocks.COPPER_WIRING);
+            event.accept(ModBlocks.PIPING);
             event.accept(ModBlocks.RUDIMENTARY_BATTERY);
             event.accept(ModBlocks.METAL_STRUTS);
 
@@ -170,24 +171,6 @@ public class RecurrenceMod
             event.accept(ModBlocks.DIAMOND_CLUSTER);
             event.accept(ModBlocks.EMERALD_CLUSTER);
 
-            event.accept(ModItems.KNIFE_SWORD);
-            event.accept(ModItems.BROKEN_SWORD);
-            event.accept(ModItems.BAT_SWORD);
-            event.accept(ModItems.CANNED_MEAT);
-            event.accept(ModItems.CANNED_VEGETABLES);
-            event.accept(ModItems.CANNED_SOUP);
-            event.accept(ModItems.BOTTLED_WATER);
-            event.accept(ModItems.ROTTEN_WOOD);
-            event.accept(ModItems.COPPER_SCRAPS);
-            event.accept(ModItems.TIN_SCRAPS);
-            event.accept(ModItems.IRON_SCRAPS);
-            event.accept(ModItems.LEAD_SCRAPS);
-            event.accept(ModItems.ALUMINIUM_SCRAPS);
-            event.accept(ModItems.NICKEL_SCRAPS);
-            event.accept(ModItems.SILVER_SCRAPS);
-            event.accept(ModItems.GOLD_SCRAPS);
-            event.accept(ModItems.COBALT_SCRAPS);
-
             event.accept(ModBlocks.GRAFFITI_SPRAY_BLUE);
             event.accept(ModBlocks.GRAFFITI_SPRAY_RED);
             event.accept(ModBlocks.GRAFFITI_SPRAY_YELLOW);
@@ -200,6 +183,39 @@ public class RecurrenceMod
             event.accept(ModBlocks.GRAFFITI_SPRAY_WHITE);
             event.accept(ModBlocks.GRAFFITI_SPRAY_PINK);
 
+            event.accept(ModBlocks.SKELETON_BLOCK);
+            event.accept(ModBlocks.SCATTERED_SKELETON_BLOCK);
+            event.accept(ModBlocks.SKELETON_BLOCK_ADJUSTABLE);
+        }
+
+        if(event.getTab() == ModCreativeModeTabs.RECURRENCE_MATERIALS_TAB.get()) {
+            event.accept(ModItems.KNIFE_SWORD);
+            event.accept(ModItems.BAT_SWORD);
+            event.accept(ModItems.BROKEN_SWORD);
+
+            event.accept(ModItems.CANNED_MEAT);
+            event.accept(ModItems.CANNED_VEGETABLES);
+            event.accept(ModItems.CANNED_SOUP);
+            event.accept(ModItems.BOTTLED_WATER);
+            event.accept(ModItems.ROTTEN_WOOD);
+
+            event.accept(ModItems.COPPER_SCRAPS);
+            event.accept(ModItems.TIN_SCRAPS);
+            event.accept(ModItems.IRON_SCRAPS);
+            event.accept(ModItems.LEAD_SCRAPS);
+            event.accept(ModItems.ALUMINIUM_SCRAPS);
+            event.accept(ModItems.NICKEL_SCRAPS);
+            event.accept(ModItems.SILVER_SCRAPS);
+            event.accept(ModItems.GOLD_SCRAPS);
+            event.accept(ModItems.COBALT_SCRAPS);
+
+            event.accept(ModItems.GAMBLER_SWORD);
+            event.accept(ModItems.BLOOD_SWORD);
+            event.accept(ModItems.SPEED_SWORD);
+        }
+
+        if(event.getTab() == ModCreativeModeTabs.RECURRENCE_FACTIONS_TAB.get()) {
+
             event.accept(ModItems.RAIDER_SWORD);
             event.accept(ModItems.RAIDER_AXE);
             event.accept(ModItems.RAIDER_HELMET);
@@ -207,57 +223,26 @@ public class RecurrenceMod
             event.accept(ModItems.RAIDER_LEGGINGS);
             event.accept(ModItems.RAIDER_BOOTS);
             event.accept(ModItems.RAIDER_PLATINGS);
+            event.accept(ModItems.RAIDER_SPAWN_EGG);
 
             event.accept(ModItems.LUNATIC_CHAINSWORD);
             event.accept(ModItems.CHEMDRILL);
-            event.accept(ModItems.LUNATIC_HELMET);
-            event.accept(ModItems.LUNATIC_CHESTPLATE);
-            event.accept(ModItems.LUNATIC_LEGGINGS);
-            event.accept(ModItems.LUNATIC_BOOTS);
-            event.accept(ModItems.LUNATIC_PLATINGS);
-            event.accept(ModBlocks.LUNATIC_FACTION_FORGE);
-            event.accept(ModItems.NOMAD_SWORD);
-            event.accept(ModBlocks.NOMAD_FACTION_FORGE);
-            event.accept(ModItems.VAGABOND_SWORD);
-            event.accept(ModItems.VAGABOND_THROWING_KNIFE);
-
             event.accept(ModItems.BLUE_PILLS);
             event.accept(ModItems.RED_PILLS);
             event.accept(ModItems.YELLOW_PILLS);
             event.accept(ModItems.GREEN_PILLS);
+            event.accept(ModItems.LUNATIC_PLATINGS);
+            event.accept(ModBlocks.LUNATIC_FACTION_FORGE);
 
-            event.accept(ModItems.GAMBLER_SWORD);
-            event.accept(ModItems.BLOOD_SWORD);
-            event.accept(ModItems.SPEED_SWORD);
+            event.accept(ModItems.NOMAD_SWORD);
+            event.accept(ModItems.NOMAD_HELMET);
+            event.accept(ModItems.NOMAD_CHESTPLATE);
+            event.accept(ModItems.NOMAD_LEGGINGS);
+            event.accept(ModItems.NOMAD_BOOTS);
+            event.accept(ModBlocks.NOMAD_FACTION_FORGE);
 
-            event.accept(ModItems.RAIDER_SPAWN_EGG);
-
-            event.accept(ModBlocks.SKELETON_BLOCK);
-            event.accept(ModBlocks.SCATTERED_SKELETON_BLOCK);
-            event.accept(ModBlocks.SKELETON_BLOCK_ADJUSTABLE);
-        }
-
-        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
-            event.accept(ModItems.KNIFE_SWORD);
-            event.accept(ModItems.BAT_SWORD);
-            event.accept(ModItems.BROKEN_SWORD);
-
-            event.accept(ModItems.RAIDER_SWORD);
-            event.accept(ModItems.RAIDER_AXE);
-            event.accept(ModItems.RAIDER_HELMET);
-            event.accept(ModItems.RAIDER_CHESTPLATE);
-            event.accept(ModItems.RAIDER_LEGGINGS);
-            event.accept(ModItems.RAIDER_BOOTS);
-
-            event.accept(ModItems.LUNATIC_CHAINSWORD);
-            event.accept(ModItems.LUNATIC_HELMET);
-            event.accept(ModItems.LUNATIC_CHESTPLATE);
-            event.accept(ModItems.LUNATIC_LEGGINGS);
-            event.accept(ModItems.LUNATIC_BOOTS);
-
-            event.accept(ModItems.GAMBLER_SWORD);
-            event.accept(ModItems.BLOOD_SWORD);
-            event.accept(ModItems.SPEED_SWORD);
+            event.accept(ModItems.VAGABOND_SWORD);
+            event.accept(ModItems.VAGABOND_THROWING_KNIFE);
         }
     }
 

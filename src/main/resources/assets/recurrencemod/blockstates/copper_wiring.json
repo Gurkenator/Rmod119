@@ -9,6 +9,14 @@
       "model": "recurrencemod:block/copper_wiring",
       "x": 90
     },
+    "facing=up": {
+      "model": "recurrencemod:block/copper_wiring",
+      "x": 90
+    },
+    "facing=down": {
+      "model": "recurrencemod:block/copper_wiring",
+      "x": 90
+    },
     "facing=south": {
       "model": "recurrencemod:block/copper_wiring",
       "x": 90,
