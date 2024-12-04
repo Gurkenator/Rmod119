@@ -90,6 +90,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> LEAD_PANELLING = registerBlock("lead_panelling",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> COPPER_PANELLING = registerBlock("copper_panelling",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RUSTY_GRATING = registerBlock("rusty_grating",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
@@ -271,8 +274,8 @@ public class ModBlocks {
             () -> new ModClusterBlock(3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)
                     .strength(1.5f).forceSolidOn().noOcclusion().mapColor(MapColor.EMERALD).requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> RUDIMENTARY_BATTERY = registerBlock("rudimentary_battery",
-            () -> new RudimentaryBatteryBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+    public static final RegistryObject<Block> BATTERY = registerBlock("battery",
+            () -> new BatteryBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(2.0f, 5.0f)));
     public static final RegistryObject<Block> SKELETON_BLOCK = registerBlock("skeleton_block",
             () -> new SkeletonBlock(BlockBehaviour.Properties.copy(Blocks.SKELETON_SKULL)

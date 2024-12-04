@@ -146,6 +146,7 @@ public class RecurrenceMod
             event.accept(ModBlocks.BOLTED_SCRAPS_BLOCK);
             event.accept(ModBlocks.PLATED_IRON_PILLAR);
             event.accept(ModBlocks.LEAD_PANELLING);
+            event.accept(ModBlocks.COPPER_PANELLING);
             event.accept(ModBlocks.METAL_GRATING);
             event.accept(ModBlocks.RUSTY_GRATING);
             event.accept(ModBlocks.METAL_PLATING);
@@ -156,7 +157,7 @@ public class RecurrenceMod
             event.accept(ModBlocks.LIGHTBULB);
             event.accept(ModBlocks.COPPER_WIRING);
             event.accept(ModBlocks.PIPING);
-            event.accept(ModBlocks.RUDIMENTARY_BATTERY);
+            event.accept(ModBlocks.BATTERY);
             event.accept(ModBlocks.METAL_STRUTS);
 
             event.accept(ModBlocks.CRATE_FOOD);

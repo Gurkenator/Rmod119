@@ -107,6 +107,7 @@
   "block.recurrencemod.metal_plating": "Metal Plating",
   "block.recurrencemod.rusty_plating": "Rusty Plating",
   "block.recurrencemod.lead_panelling": "Lead Panelling",
+  "block.recurrencemod.copper_panelling": "Copper Panelling",
   "block.recurrencemod.pipe": "Pipe",
   "block.recurrencemod.steel_pipe": "Steel Pipe",
   "block.recurrencemod.lead_framed_glass": "Lead Framed Glass",
@@ -147,7 +148,7 @@
   "block.recurrencemod.crate_epic": "Crate",
   "block.recurrencemod.crate_legendary": "Crate",
 
-  "block.recurrencemod.rudimentary_battery": "Rudimentary Battery",
+  "block.recurrencemod.battery": "Battery",
 
   "block.recurrencemod.skeleton_block": "Skeleton",
   "block.recurrencemod.scattered_skeleton_block": "Scattered Skeleton",

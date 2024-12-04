@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "up": "recurrencemod:block/battery_top",
+    "north": "recurrencemod:block/battery_side",
+    "west": "recurrencemod:block/battery_side",
+    "south": "recurrencemod:block/battery_side",
+    "east": "recurrencemod:block/battery_side",
+    "down": "recurrencemod:block/battery_bottom",
+    "particle": "recurrencemod:block/battery_side"
+  }
+}
