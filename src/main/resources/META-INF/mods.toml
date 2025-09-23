@@ -44,9 +44,7 @@ authors="GurkenatorHD" #optional
 description='''
 This mod provides functionality to the Recurrence modpack.
 
-Have some lorem ipsum.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed sagittis luctus odio eu tempus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque volutpat ligula eget lacus auctor sagittis. In hac habitasse platea dictumst. Nunc gravida elit vitae sem vehicula efficitur. Donec mattis ipsum et arcu lobortis, eleifend sagittis sem rutrum. Cras pharetra quam eget posuere fermentum. Sed id tincidunt justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Yay!
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.recurrencemod]] #optional
@@ -68,3 +66,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis lacinia magn
     versionRange="[1.20.1,1.21)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.recurrencemod]]
+    modId="fusion"
+    mandatory=true
+    versionRange="[1.0.0,)"
+    ordering="NONE"
+    side="CLIENT"

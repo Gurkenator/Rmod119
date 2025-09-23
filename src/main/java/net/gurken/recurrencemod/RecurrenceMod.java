@@ -158,6 +158,7 @@ public class RecurrenceMod
             event.accept(ModBlocks.COPPER_WIRING);
             event.accept(ModBlocks.PIPING);
             event.accept(ModBlocks.BATTERY);
+            event.accept(ModBlocks.LIGHTBULB);
             event.accept(ModBlocks.METAL_STRUTS);
 
             event.accept(ModBlocks.CRATE_FOOD);

@@ -79,9 +79,6 @@
     [],
     [],
     [
-	  "recurrencemod:patch_scorchstone_rubble"
-	],
-    [
       "minecraft:freeze_top_layer",
 	  "recurrencemod:snow_purger"
     ]

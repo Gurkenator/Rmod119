@@ -175,6 +175,11 @@ repositories {
         url = "https://cursemaven.com"
     }
 
+    maven { //Modrinth Maven
+        name = "Modrinth Maven"
+        url = "https://api.modrinth.com/maven"
+    }
+
     //maven { url 'https://maven.blamejared.com' } //Patchouli
 
     //maven { url = 'https://maven.minecraftforge.net/' } //Forge Maven
@@ -192,7 +197,7 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     /* other minecraft dependencies are here */
-    minecraft 'net.minecraftforge:forge:1.20.1-47.1.3'
+    minecraft 'net.minecraftforge:forge:1.20.1-47.4.6'
 
     // compile against the JEI API but do not include it at runtime
     compileOnly(fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}"))
@@ -205,7 +210,7 @@ dependencies {
     compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}:api")
 
     //GeckoLib
-    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.3.1')
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.7.4')
 
     //TerraBlender
     //implementation fg.deobf('com.github.glitchfiend:TerraBlender-forge:1.20-3.0.0.163')
@@ -216,8 +221,11 @@ dependencies {
     //implementation fg.deobf('earth.terrarium.athena:athena-forge-1.20-3.0.1')
 
     //CoFH Mods
-    implementation fg.deobf("curse.maven:cofh-core-69162:4970669")
-    implementation fg.deobf("curse.maven:thermal-foundation-222880:4979840")
+    implementation fg.deobf("curse.maven:cofh-core-69162:5374122")
+    implementation fg.deobf("curse.maven:thermal-foundation-222880:5443583")
+
+    // Fusion
+    implementation fg.deobf("maven.modrinth:fusion-connected-textures:1.2.11a-forge-mc1.20.1")
 
     //Patchouli
     //compileOnly fg.deobf("vazkii.patchouli:Patchouli:[VERSION]:api")

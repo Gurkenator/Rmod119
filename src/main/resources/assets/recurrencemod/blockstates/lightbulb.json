@@ -1,7 +1,7 @@
 {
   "variants": {
     "facing=down": {
-      "model": "recurrencemod:block/lightbulb"
+      "model": "recurrencemod:block/lightbulb_hanging"
     },
     "facing=east": {
       "model": "recurrencemod:block/lightbulb_mounted",

@@ -24,12 +24,12 @@ public class LightbulbBlock extends Block implements SimpleWaterloggedBlock {
     public LightbulbBlock(Properties pProperties) {
         super(pProperties);
         this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, Boolean.FALSE).setValue(FACING, Direction.UP));
-        this.upAabb = Shapes.or(Block.box(5, 8, 5, 11, 14, 11), Block.box(6, 14, 6, 10, 16, 10));
         this.downAabb = Shapes.or(Block.box(5, 8, 5, 11, 14, 11), Block.box(6, 14, 6, 10, 16, 10));
-        this.northAabb = Shapes.or(Block.box(5, 6, 10, 11, 12, 16), Block.box(6, 12, 11, 10, 14, 15));
-        this.southAabb = Shapes.or(Block.box(5, 6, 0, 11, 12, 6), Block.box(6, 12, 1, 10, 14, 5));
-        this.eastAabb = Shapes.or(Block.box(0, 6, 5, 6, 12, 11), Block.box(1, 12, 6, 5, 14, 10));
-        this.westAabb = Shapes.or(Block.box(10, 6, 5, 16, 12, 11), Block.box(11, 12, 6, 15, 14, 10));
+        this.upAabb = Shapes.or(Block.box(5, 0, 5, 11, 6, 11), Block.box(6, 6, 6, 10, 8, 10));
+        this.northAabb = Shapes.or(Block.box(5, 5, 10, 11, 11, 16), Block.box(6, 11, 11, 10, 13, 15));
+        this.southAabb = Shapes.or(Block.box(5, 5, 0, 11, 11, 6), Block.box(6, 11, 1, 10, 13, 5));
+        this.eastAabb = Shapes.or(Block.box(0, 5, 5, 6, 11, 11), Block.box(1, 11, 6, 5, 13, 10));
+        this.westAabb = Shapes.or(Block.box(10, 5, 5, 16, 11, 11), Block.box(11, 11, 6, 15, 13, 10));
     }
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -48,8 +48,8 @@ public class LightbulbBlock extends Block implements SimpleWaterloggedBlock {
             case SOUTH -> this.southAabb;
             case EAST -> this.eastAabb;
             case WEST -> this.westAabb;
-            case DOWN -> this.downAabb;
-            default -> this.upAabb;
+            case UP -> this.upAabb;
+            default -> this.downAabb;
         };
     }
 

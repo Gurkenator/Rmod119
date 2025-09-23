@@ -476,7 +476,7 @@
               "if_true": {
                 "type": "minecraft:biome",
                 "biome_is": [
-                  "recurrencemod:forlorn_hills"
+                  "recurrencemod:forlorn_peaks"
                 ]
               },
               "then_run": {
@@ -679,7 +679,7 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "recurrencemod:forlorn_hills"
+            "recurrencemod:forlorn_peaks"
           ]
         },
         "then_run": {
