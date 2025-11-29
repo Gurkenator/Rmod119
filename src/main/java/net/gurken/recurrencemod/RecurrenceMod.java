@@ -245,6 +245,12 @@ public class RecurrenceMod
 
             event.accept(ModItems.VAGABOND_SWORD);
             event.accept(ModItems.VAGABOND_THROWING_KNIFE);
+
+            event.accept(ModItems.RUINATED_HELMET);
+            event.accept(ModItems.RUINATED_CHESTPLATE);
+            event.accept(ModItems.RUINATED_LEGGINGS);
+            event.accept(ModItems.RUINATED_BOOTS);
+            event.accept(ModItems.RUINATED_PLATINGS);
         }
     }
 

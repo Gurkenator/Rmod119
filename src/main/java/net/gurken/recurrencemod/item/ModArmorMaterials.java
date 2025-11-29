@@ -22,14 +22,21 @@ public enum ModArmorMaterials implements ArmorMaterial {
         p_266655_.put(ArmorItem.Type.LEGGINGS, 5);
         p_266655_.put(ArmorItem.Type.CHESTPLATE, 6);
         p_266655_.put(ArmorItem.Type.HELMET, 3);
-    }), 19, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.1F, () -> Ingredient.of(ModItems.RAIDER_PLATINGS.get())),
+    }), 11, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.1F, () -> Ingredient.of(ModItems.RAIDER_PLATINGS.get())),
 
     NOMAD("nomad", 7,Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
         p_266655_.put(ArmorItem.Type.BOOTS, 3);
         p_266655_.put(ArmorItem.Type.LEGGINGS, 5);
         p_266655_.put(ArmorItem.Type.CHESTPLATE, 6);
         p_266655_.put(ArmorItem.Type.HELMET, 3);
-    }), 19, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.1F, () -> Ingredient.of(ModItems.LUNATIC_PLATINGS.get()));
+    }), 16, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.1F, () -> Ingredient.of(ModItems.LUNATIC_PLATINGS.get())),
+
+    RUINATED("ruinated", 7,Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266655_) -> {
+        p_266655_.put(ArmorItem.Type.BOOTS, 3);
+        p_266655_.put(ArmorItem.Type.LEGGINGS, 5);
+        p_266655_.put(ArmorItem.Type.CHESTPLATE, 6);
+        p_266655_.put(ArmorItem.Type.HELMET, 3);
+    }), 6, SoundEvents.ARMOR_EQUIP_IRON, 1.5F, 0.1F, () -> Ingredient.of(ModItems.RUINATED_PLATINGS.get()));
     private static final EnumMap<ArmorItem.Type, Integer> HEALTH_FUNCTION_FOR_TYPE = Util.make(new EnumMap<>(ArmorItem.Type.class), (p_266653_) -> {
         p_266653_.put(ArmorItem.Type.BOOTS, 13);
         p_266653_.put(ArmorItem.Type.LEGGINGS, 15);

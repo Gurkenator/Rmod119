@@ -20,6 +20,8 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LUNATIC_PLATINGS = ITEMS.register("lunatic_platings",
             () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RUINATED_PLATINGS = ITEMS.register("ruinated_platings",
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> IRON_SCRAPS = ITEMS.register("iron_scraps",
             () -> new Item(new Item.Properties()));
@@ -114,6 +116,19 @@ public class ModItems {
                     new Item.Properties()));
     public static final RegistryObject<Item> VAGABOND_THROWING_KNIFE = ITEMS.register("vagabond_throwing_knife",
             () -> new VagabondThrowingKnifeItem(new Item.Properties().stacksTo(16)));
+
+    public static final RegistryObject<Item> RUINATED_HELMET = ITEMS.register("ruinated_helmet",
+            () -> new RuinatedArmorItem(ModArmorMaterials.RUINATED, ArmorItem.Type.HELMET,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> RUINATED_CHESTPLATE = ITEMS.register("ruinated_chestplate",
+            () -> new RuinatedArmorItem(ModArmorMaterials.RUINATED, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> RUINATED_LEGGINGS = ITEMS.register("ruinated_leggings",
+            () -> new RuinatedArmorItem(ModArmorMaterials.RUINATED, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties()));
+    public static final RegistryObject<Item> RUINATED_BOOTS = ITEMS.register("ruinated_boots",
+            () -> new RuinatedArmorItem(ModArmorMaterials.RUINATED, ArmorItem.Type.BOOTS,
+                    new Item.Properties()));
 
 
     public static final RegistryObject<Item> CANNED_MEAT = ITEMS.register("canned_meat",

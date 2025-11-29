@@ -9,4 +9,5 @@ public class NomadArmorRenderer extends GeoArmorRenderer<NomadArmorItem> {
     public NomadArmorRenderer() {
         super(new DefaultedItemGeoModel(new ResourceLocation("recurrencemod", "armor/nomad_armor")));
     }
+    //fromNamespaceAndPath
 }

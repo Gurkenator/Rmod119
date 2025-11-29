@@ -2,6 +2,7 @@
   "item.recurrencemod.rotten_wood": "Rotten Wood",
   "item.recurrencemod.raider_platings": "Raider Platings",
   "item.recurrencemod.lunatic_platings": "Lunatic Platings",
+  "item.recurrencemod.ruinated_platings": "Ruinated Platings",
   "item.recurrencemod.iron_scraps": "Iron Scraps",
   "item.recurrencemod.copper_scraps": "Copper Scraps",
   "item.recurrencemod.tin_scraps": "Tin Scraps",
@@ -49,6 +50,11 @@
   "item.recurrencemod.nomad_chestplate": "Nomad Chestplate",
   "item.recurrencemod.nomad_leggings": "Nomad Leggings",
   "item.recurrencemod.nomad_boots": "Nomad Boots",
+
+  "item.recurrencemod.ruinated_helmet": "Ruinated Helmet",
+  "item.recurrencemod.ruinated_chestplate": "Ruinated Chestplate",
+  "item.recurrencemod.ruinated_leggings": "Ruinated Leggings",
+  "item.recurrencemod.ruinated_boots": "Ruinated Boots",
 
   "item.recurrencemod.canned_meat": "Canned Meat",
   "item.recurrencemod.canned_vegetables": "Canned Vegetables",
