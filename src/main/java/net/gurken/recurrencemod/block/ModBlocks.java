@@ -32,7 +32,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> DUSTSTONE = registerBlock("duststone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(4f, 6f).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PALESTONE = registerBlock("palestone",
+    public static final RegistryObject<Block> ASHSTONE = registerBlock("ashstone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(4f, 6f).mapColor(MapColor.SNOW).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> FRACTURESTONE = registerBlock("fracturestone",
@@ -198,13 +198,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> SPIRESTONE_BRICK_SLAB = registerBlock("spirestone_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)
                     .strength(4f, 6f).mapColor(MapColor.COLOR_GRAY).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PALESTONE_BRICKS = registerBlock("palestone_bricks",
+    public static final RegistryObject<Block> ASHSTONE_BRICKS = registerBlock("ashstone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE_BRICKS)
                     .strength(4f, 6f).mapColor(MapColor.COLOR_LIGHT_GRAY).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PALESTONE_BRICK_STAIRS = registerBlock("palestone_brick_stairs",
-            () -> new StairBlock(() -> ModBlocks.PALESTONE_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)
+    public static final RegistryObject<Block> ASHSTONE_BRICK_STAIRS = registerBlock("ashstone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.ASHSTONE_BRICKS.get().defaultBlockState(),BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_STAIRS)
                     .strength(4f, 6f).mapColor(MapColor.COLOR_LIGHT_GRAY).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PALESTONE_BRICK_SLAB = registerBlock("palestone_brick_slab",
+    public static final RegistryObject<Block> ASHSTONE_BRICK_SLAB = registerBlock("ashstone_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BRICK_SLAB)
                     .strength(4f, 6f).mapColor(MapColor.COLOR_LIGHT_GRAY).requiresCorrectToolForDrops()));
 

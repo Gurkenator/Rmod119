@@ -10,7 +10,7 @@
     "recurrencemod:scorchshale_brick_slab",
     "recurrencemod:spirestone",
     "recurrencemod:duststone",
-    "recurrencemod:palestone",
+    "recurrencemod:ashstone",
     "recurrencemod:fracturestone",
     "recurrencemod:fumestone",
     "recurrencemod:scorchstone_bricks",
@@ -20,8 +20,8 @@
     "recurrencemod:spirestone_bricks",
     "recurrencemod:spirestone_brick_stairs",
     "recurrencemod:spirestone_brick_slab",
-    "recurrencemod:palestone_bricks",
-    "recurrencemod:palestone_brick_stairs",
-    "recurrencemod:palestone_brick_slab"
+    "recurrencemod:ashstone_bricks",
+    "recurrencemod:ashstone_brick_stairs",
+    "recurrencemod:ashstone_brick_slab"
   ]
 }

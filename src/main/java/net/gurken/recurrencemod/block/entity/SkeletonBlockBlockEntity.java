@@ -3,6 +3,7 @@ package net.gurken.recurrencemod.block.entity;
 import net.gurken.recurrencemod.screen.SkeletonBlockMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.Containers;
@@ -12,8 +13,10 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
@@ -23,7 +26,7 @@ import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class SkeletonBlockBlockEntity extends BlockEntity implements MenuProvider {
+public class SkeletonBlockBlockEntity extends RandomizableContainerBlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(15) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -60,10 +63,31 @@ public class SkeletonBlockBlockEntity extends BlockEntity implements MenuProvide
         return Component.translatable("blockentity.recurrencemod.skeleton_block");
     }
 
+    //LootR Compat
+    @Override
+    protected Component getDefaultName() {
+        return null;
+    }
+    //LootR Compat
+    @Override
+    protected NonNullList<ItemStack> getItems() {
+        return null;
+    }
+    //LootR Compat
+    @Override
+    protected void setItems(NonNullList<ItemStack> pItemStacks) {
+
+    }
+
     @Nullable
     @Override
     public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
         return new SkeletonBlockMenu(id, inventory, this, this.data);
+    }
+
+    @Override
+    protected AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory) {
+        return null;
     }
 
     @Override
@@ -113,5 +137,10 @@ public class SkeletonBlockBlockEntity extends BlockEntity implements MenuProvide
         if(level.isClientSide()) {
             return;
         }
+    }
+
+    @Override
+    public int getContainerSize() {
+        return 0;
     }
 }

@@ -1,3 +1,6 @@
 {
-  "parent": "recurrencemod:block/lightbulb"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "recurrencemod:block/lightbulb_item"
+  }
 }

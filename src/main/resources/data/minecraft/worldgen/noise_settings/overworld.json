@@ -497,7 +497,7 @@
                         "type": "minecraft:not",
                         "invert": {
                           "type": "minecraft:vertical_gradient",
-                          "random_name": "recurrencemod:palestone_gradient",
+                          "random_name": "recurrencemod:ashstone_gradient",
                           "true_at_and_below": {
                             "absolute": 72
                           },
@@ -509,7 +509,7 @@
                       "then_run": {
                         "type": "minecraft:block",
                         "result_state": {
-                          "Name": "recurrencemod:palestone"
+                          "Name": "recurrencemod:ashstone"
                         }
                       }
                     }

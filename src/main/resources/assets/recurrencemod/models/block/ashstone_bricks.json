@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "recurrencemod:block/palestone_bricks"
+    "all": "recurrencemod:block/ashstone_bricks"
   }
 }

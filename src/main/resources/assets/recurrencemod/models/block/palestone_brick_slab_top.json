@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "recurrencemod:block/palestone_bricks",
-    "top": "recurrencemod:block/palestone_bricks",
-    "side": "recurrencemod:block/palestone_bricks"
-  }
-}

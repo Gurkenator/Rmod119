@@ -1,0 +1,33 @@
+{
+  "name": "recurrencemod:graffiti_wall",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "recurrencemod:common/graffiti_wall1",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "recurrencemod:common/graffiti_wall2",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "recurrencemod:common/graffiti_wall3",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

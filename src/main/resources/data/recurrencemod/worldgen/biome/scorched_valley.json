@@ -69,10 +69,7 @@
 	  "recurrencemod:geode_iron",
 	  "recurrencemod:geode_gold"
 	],
-    [
-      "minecraft:fossil_upper",
-      "minecraft:fossil_lower"
-    ],
+    [],
     [],
     [],
     [],

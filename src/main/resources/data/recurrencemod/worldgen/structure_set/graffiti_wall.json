@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "recurrencemod:common/graffiti_wall",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 4,
+    "separation": 3,
+    "salt": 1689418493
+  }
+}

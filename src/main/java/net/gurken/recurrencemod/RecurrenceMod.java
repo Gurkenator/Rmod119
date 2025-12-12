@@ -96,7 +96,7 @@ public class RecurrenceMod
             event.accept(ModBlocks.SCORCHSTONE);
             event.accept(ModBlocks.GLIMMERING_SCORCHSTONE);
             event.accept(ModBlocks.DUSTSTONE);
-            event.accept(ModBlocks.PALESTONE);
+            event.accept(ModBlocks.ASHSTONE);
             event.accept(ModBlocks.FRACTURESTONE);
             event.accept(ModBlocks.FUMESTONE);
             event.accept(ModBlocks.SPIRESTONE);
@@ -124,9 +124,9 @@ public class RecurrenceMod
             event.accept(ModBlocks.SPIRESTONE_BRICK_STAIRS);
             event.accept(ModBlocks.SPIRESTONE_BRICK_SLAB);
 
-            event.accept(ModBlocks.PALESTONE_BRICKS);
-            event.accept(ModBlocks.PALESTONE_BRICK_STAIRS);
-            event.accept(ModBlocks.PALESTONE_BRICK_SLAB);
+            event.accept(ModBlocks.ASHSTONE_BRICKS);
+            event.accept(ModBlocks.ASHSTONE_BRICK_STAIRS);
+            event.accept(ModBlocks.ASHSTONE_BRICK_SLAB);
 
             event.accept(ModBlocks.SCORCHSTONE_RUBBLE);
             event.accept(ModBlocks.METAL_BARS_BLOCK);
