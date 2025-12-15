@@ -32,7 +32,6 @@ import org.jetbrains.annotations.Nullable;
 public class SkeletonBlock extends BaseEntityBlock implements SimpleWaterloggedBlock {
 
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-    public static final BooleanProperty IS_LOOT_CONTAINER = BooleanProperty.create("is_loot");
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public SkeletonBlock(Properties p_54120_) {
@@ -43,7 +42,7 @@ public class SkeletonBlock extends BaseEntityBlock implements SimpleWaterloggedB
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
-        return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite()).setValue(WATERLOGGED, Boolean.FALSE).setValue(IS_LOOT_CONTAINER, Boolean.FALSE);
+        return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite()).setValue(WATERLOGGED, Boolean.FALSE);
     }
 
     @Override
@@ -75,7 +74,7 @@ public class SkeletonBlock extends BaseEntityBlock implements SimpleWaterloggedB
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(FACING, WATERLOGGED, IS_LOOT_CONTAINER);
+        builder.add(FACING, WATERLOGGED);
     }
 
     @Override

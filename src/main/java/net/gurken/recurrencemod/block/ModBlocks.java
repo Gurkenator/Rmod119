@@ -278,10 +278,10 @@ public class ModBlocks {
             () -> new BatteryBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(2.0f, 5.0f)));
     public static final RegistryObject<Block> SKELETON_BLOCK = registerBlock("skeleton_block",
-            () -> new SkeletonBlock(BlockBehaviour.Properties.copy(Blocks.SKELETON_SKULL)
+            () -> new SkeletonBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)
                     .strength(6.0f, 18.0f).noOcclusion().noCollission().mapColor(MapColor.TERRACOTTA_WHITE)));
     public static final RegistryObject<Block> SCATTERED_SKELETON_BLOCK = registerBlock("scattered_skeleton_block",
-            () -> new SkeletonBlock(BlockBehaviour.Properties.copy(Blocks.SKELETON_SKULL)
+            () -> new SkeletonBlock(BlockBehaviour.Properties.copy(Blocks.BARREL)
                     .strength(6.0f, 18.0f).noOcclusion().noCollission().mapColor(MapColor.TERRACOTTA_WHITE)));
 
     public static final RegistryObject<Block> NOMAD_FACTION_FORGE = registerBlock("nomad_faction_forge",

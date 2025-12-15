@@ -6,6 +6,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.Containers;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleContainer;
@@ -33,6 +34,7 @@ public class SkeletonBlockBlockEntity extends RandomizableContainerBlockEntity i
             setChanged();
         }
     };
+    //private NonNullList<ItemStack> items = NonNullList.withSize(15, ItemStack.EMPTY);
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
 
@@ -66,7 +68,7 @@ public class SkeletonBlockBlockEntity extends RandomizableContainerBlockEntity i
     //LootR Compat
     @Override
     protected Component getDefaultName() {
-        return null;
+        return Component.translatable("blockentity.recurrencemod.skeleton_block");
     }
     //LootR Compat
     @Override
@@ -89,6 +91,7 @@ public class SkeletonBlockBlockEntity extends RandomizableContainerBlockEntity i
     protected AbstractContainerMenu createMenu(int pContainerId, Inventory pInventory) {
         return null;
     }
+
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
@@ -141,6 +144,6 @@ public class SkeletonBlockBlockEntity extends RandomizableContainerBlockEntity i
 
     @Override
     public int getContainerSize() {
-        return 0;
+        return 15;
     }
 }
