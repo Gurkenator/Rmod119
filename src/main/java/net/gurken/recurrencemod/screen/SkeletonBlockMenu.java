@@ -20,12 +20,12 @@ public class SkeletonBlockMenu extends AbstractContainerMenu {
 
 
     public SkeletonBlockMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(15));
+        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(27));
     }
 
     public SkeletonBlockMenu(int id, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.SKELETON_BLOCK_MENU.get(), id);
-        checkContainerSize(inv, 15);
+        checkContainerSize(inv, 27);
         blockEntity = (SkeletonBlockBlockEntity) entity;
         this.level = inv.player.level();
         this.data = data;
@@ -34,21 +34,33 @@ public class SkeletonBlockMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 8, 18));
-            this.addSlot(new SlotItemHandler(handler, 1, 30, 18));
-            this.addSlot(new SlotItemHandler(handler, 2, 86, 18));
-            this.addSlot(new SlotItemHandler(handler, 3, 108, 18));
-            this.addSlot(new SlotItemHandler(handler, 4, 130, 18));
-            this.addSlot(new SlotItemHandler(handler, 5, 152, 18));
-            this.addSlot(new SlotItemHandler(handler, 6, 8, 40));
-            this.addSlot(new SlotItemHandler(handler, 7, 26, 40));
-            this.addSlot(new SlotItemHandler(handler, 8, 44, 40));
-            this.addSlot(new SlotItemHandler(handler, 9, 62, 40));
-            this.addSlot(new SlotItemHandler(handler, 10, 80, 40));
-            this.addSlot(new SlotItemHandler(handler, 11, 98, 40));
-            this.addSlot(new SlotItemHandler(handler, 12, 116, 40));
-            this.addSlot(new SlotItemHandler(handler, 13, 134, 40));
-            this.addSlot(new SlotItemHandler(handler, 14, 152, 40));
+            this.addSlot(new SlotItemHandler(handler, 0, 8, 40));
+            this.addSlot(new SlotItemHandler(handler, 1, 26, 40));
+            this.addSlot(new SlotItemHandler(handler, 2, 44, 40));
+            this.addSlot(new SlotItemHandler(handler, 3, 62, 40));
+            this.addSlot(new SlotItemHandler(handler, 4, 80, 40));
+            this.addSlot(new SlotItemHandler(handler, 5, 98, 40));
+            this.addSlot(new SlotItemHandler(handler, 6, 116, 40));
+            this.addSlot(new SlotItemHandler(handler, 7, 134, 40));
+            this.addSlot(new SlotItemHandler(handler, 8, 152, 40));
+            this.addSlot(new SlotItemHandler(handler, 9, 8, 22));
+            this.addSlot(new SlotItemHandler(handler, 10, 26, 22));
+            this.addSlot(new SlotItemHandler(handler, 11, 44, 22));
+            this.addSlot(new SlotItemHandler(handler, 12, 62, 22));
+            this.addSlot(new SlotItemHandler(handler, 13, 80, 22));
+            this.addSlot(new SlotItemHandler(handler, 14, 98, 22));
+            this.addSlot(new SlotItemHandler(handler, 15, 116, 22));
+            this.addSlot(new SlotItemHandler(handler, 16, 134, 22));
+            this.addSlot(new SlotItemHandler(handler, 17, 152, 22));
+            this.addSlot(new SlotItemHandler(handler, 18, 8, 4));
+            this.addSlot(new SlotItemHandler(handler, 19, 26, 4));
+            this.addSlot(new SlotItemHandler(handler, 20, 44, 4));
+            this.addSlot(new SlotItemHandler(handler, 21, 62, 4));
+            this.addSlot(new SlotItemHandler(handler, 22, 80, 4));
+            this.addSlot(new SlotItemHandler(handler, 23, 98, 4));
+            this.addSlot(new SlotItemHandler(handler, 24, 116, 4));
+            this.addSlot(new SlotItemHandler(handler, 25, 134, 4));
+            this.addSlot(new SlotItemHandler(handler, 26, 152, 4));
         });
 
         addDataSlots(data);
@@ -70,7 +82,7 @@ public class SkeletonBlockMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 15;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 9;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {

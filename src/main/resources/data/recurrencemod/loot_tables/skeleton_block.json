@@ -1,5 +1,5 @@
 {
-  "type": "recurrencemod:skeleton_block",
+  "type": "minecraft:chest",
   "pools": [
     {
       "bonus_rolls": 0,
@@ -11,123 +11,239 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 2,
-                "min": 1
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:flint",
-          "weight": 10
-        },
-        {
-          "type": "minecraft:tag",
-          "expand": false,
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
                 "max": 3,
                 "min": 1
               },
               "function": "minecraft:set_count"
             }
           ],
-          "name": "recurrencemod:common_crate_loot",
-          "weight": 30
-        },
-        {
-          "type": "minecraft:tag",
-          "expand": false,
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 3,
-                "min": 1
-              },
-              "function": "minecraft:set_count",
-              "conditions": []
-            }
-          ],
-          "name": "recurrencemod:canned_food",
-          "weight": 30
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:enchant_randomly",
-              "enchantments": [
-                "minecraft:sharpness",
-                "minecraft:looting"
-              ],
-              "only_compatible": true
-            }
-          ],
-          "name": "recurrencemod:raider_sword",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "function": "minecraft:set_enchantments",
-              "enchantments": {
-                "minecraft:sharpness": {
-                  "type": "minecraft:uniform",
-                  "min": 1,
-                  "max": 3
-                },
-                "minecraft:efficiency": 2
-              },
-              "add": false
-            }
-          ],
-          "name": "recurrencemod:raider_axe",
-          "weight": 5
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 12,
-                "min": 4
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "recurrencemod:rotten_wood",
+          "name": "recurrencemod:copper_scraps",
           "weight": 15
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:clock",
-          "weight": 2
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "recurrencemod:tin_scraps",
+          "weight": 15
         },
         {
           "type": "minecraft:item",
-          "functions": [],
-          "name": "minecraft:compass",
-          "weight": 2
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 3,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "recurrencemod:iron_scraps",
+          "weight": 15
         },
         {
           "type": "minecraft:item",
-          "name": "minecraft:skeleton_skull",
-          "weight": 1
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 3
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "recurrencemod:lead_scraps",
+          "weight": 15
         }
       ],
       "rolls": {
         "type": "minecraft:uniform",
-        "max": 6,
-        "min": 4
+        "max": 3,
+        "min": 1
       }
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 3
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "recurrencemod:canned_meat",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 3
+              },
+              "add": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "recurrencemod:canned_vegetables",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "recurrencemod:canned_soup",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "recurrencemod:bottled_water",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 3
+              }
+            }
+          ]
+        }
+      ],
+      "functions": []
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "recurrencemod:rotten_wood",
+          "weight": 25,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 3,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:coal",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:flint",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:constant",
+        "value": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "name": "",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:item",
+          "name": "recurrencemod:raider_axe",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.35,
+                "max": 0.85
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "recurrencemod:raider_sword",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_damage",
+              "damage": {
+                "type": "minecraft:uniform",
+                "min": 0.35,
+                "max": 0.85
+              }
+            }
+          ]
+        }
+      ],
+      "functions": []
     }
   ],
-  "random_sequence": "recurrencemod:skeleton_block"
+  "random_sequence": "minecraft:chests/desert_pyramid"
 }

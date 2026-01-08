@@ -227,6 +227,9 @@ dependencies {
     // Fusion
     implementation fg.deobf("maven.modrinth:fusion-connected-textures:1.2.11a-forge-mc1.20.1")
 
+    //LootR
+    implementation fg.deobf("curse.maven:lootr-361276:7263076")
+
     //Patchouli
     //compileOnly fg.deobf("vazkii.patchouli:Patchouli:[VERSION]:api")
     //runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:[VERSION]")

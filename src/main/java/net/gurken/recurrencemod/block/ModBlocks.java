@@ -241,6 +241,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> GRAFFITI_SPRAY_PINK = registerBlock("graffiti_spray_pink",
             () -> new ModMultifaceBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE)
                     .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
+    public static final RegistryObject<Block> GRAFFITI_SPRAY_BROWN = registerBlock("graffiti_spray_brown",
+            () -> new ModMultifaceBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE)
+                    .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
+    public static final RegistryObject<Block> GRAFFITI_SPRAY_LIGHT_BLUE = registerBlock("graffiti_spray_light_blue",
+            () -> new ModMultifaceBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE)
+                    .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
+    public static final RegistryObject<Block> GRAFFITI_SPRAY_MAGENTA = registerBlock("graffiti_spray_magenta",
+            () -> new ModMultifaceBlock(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.SNARE)
+                    .strength(0.5f, 1.0f).noOcclusion().instabreak().noCollission()));
 
     public static final RegistryObject<Block> CRATE_FOOD = registerBlock("crate_food",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)

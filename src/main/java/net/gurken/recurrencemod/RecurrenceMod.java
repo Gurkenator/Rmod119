@@ -69,10 +69,10 @@ public class RecurrenceMod
         modEventBus.addListener(this::addCreative);
     }
 
-    public static ResourceLocation prefix(String name) {
-        // METHOD ADAPTED FROM: TeamTwilight | https://github.com/TeamTwilight/twilightforest
-        return new ResourceLocation(MOD_ID, name.toLowerCase(Locale.ROOT));
-    }
+    //public static ResourceLocation prefix(String name) {
+    //    // METHOD ADAPTED FROM: TeamTwilight | https://github.com/TeamTwilight/twilightforest
+    //    return new ResourceLocation(MOD_ID, name.toLowerCase(Locale.ROOT));
+    //}
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
@@ -184,6 +184,9 @@ public class RecurrenceMod
             event.accept(ModBlocks.GRAFFITI_SPRAY_DARK_GREY);
             event.accept(ModBlocks.GRAFFITI_SPRAY_WHITE);
             event.accept(ModBlocks.GRAFFITI_SPRAY_PINK);
+            event.accept(ModBlocks.GRAFFITI_SPRAY_BROWN);
+            event.accept(ModBlocks.GRAFFITI_SPRAY_LIGHT_BLUE);
+            event.accept(ModBlocks.GRAFFITI_SPRAY_MAGENTA);
 
             event.accept(ModBlocks.SKELETON_BLOCK);
             event.accept(ModBlocks.SCATTERED_SKELETON_BLOCK);
