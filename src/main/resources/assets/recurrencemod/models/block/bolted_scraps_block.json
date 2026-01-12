@@ -1,6 +1,8 @@
 {
+  "loader": "fusion:model",
+  "type": "base",
   "parent": "block/cube_all",
   "textures": {
-    "all": "recurrencemod:block/ctm/bolted_scraps_1"
+    "all": "recurrencemod:block/ctm/bolted_scraps"
   }
 }

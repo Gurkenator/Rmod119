@@ -1,20 +1,5 @@
 {
   "variants": {
     "": {"model":  "recurrencemod:block/bolted_scraps_block" }
-  },
-  "athena:loader": "athena:giant",
-  "ctm_textures": {
-    "1": "recurrencemod:block/ctm/1",
-    "2": "recurrencemod:block/ctm/2",
-    "3": "recurrencemod:block/ctm/3",
-    "4": "recurrencemod:block/ctm/4",
-    "5": "recurrencemod:block/ctm/5",
-    "6": "recurrencemod:block/ctm/6",
-    "7": "recurrencemod:block/ctm/7",
-    "8": "recurrencemod:block/ctm/8",
-    "9": "recurrencemod:block/ctm/9",
-    "particle": "recurrencemod:block/ctm/bolted_scraps_5"
-  },
-  "height": 3,
-  "width": 3
+  }
 }

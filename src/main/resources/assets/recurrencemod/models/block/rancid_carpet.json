@@ -1,6 +1,11 @@
 {
-  "parent": "block/carpet",
+  "loader": "fusion:model",
+  "type": "connecting",
+  "parent": "minecraft:block/carpet",
   "textures": {
-    "wool": "recurrencemod:block/rancid_carpet"
+    "wool": "recurrencemod:block/fusion/rancid_carpet_pieced"
+  },
+  "connections": {
+    "type": "is_same_block"
   }
 }

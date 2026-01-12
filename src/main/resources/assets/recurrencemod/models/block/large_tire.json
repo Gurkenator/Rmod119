@@ -1,6 +1,11 @@
 {
-  "parent": "block/cube_all",
+  "loader": "fusion:model",
+  "type": "connecting",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "recurrencemod:block/ctm/large_tire_empty"
+    "all": "recurrencemod:block/fusion/large_tire_pieced"
+  },
+  "connections": {
+    "type": "is_same_block"
   }
 }
