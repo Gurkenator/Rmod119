@@ -7,6 +7,8 @@ import net.gurken.recurrencemod.block.entity.renderer.NomadFactionForgeBlockEnti
 import net.gurken.recurrencemod.faction_favour.ModNetworking;
 import net.gurken.recurrencemod.faction_favour.packet.FactionFavourC2SPacket;
 import net.gurken.recurrencemod.util.KeyBinding;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
+import net.minecraft.client.renderer.blockentity.ChestRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.InputEvent;

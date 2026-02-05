@@ -1,13 +1,5 @@
 {
   "variants": {
     "": {"model":  "recurrencemod:block/plated_iron_pillar" }
-  },
-  "athena:loader": "athena:pillar",
-  "ctm_textures": {
-    "bottom": "recurrencemod:block/ctm/plated_iron_pillar_bottom",
-    "center": "recurrencemod:block/ctm/plated_iron_pillar_center",
-    "particle": "recurrencemod:block/ctm/plated_iron_pillar_self_particle",
-    "self": "recurrencemod:block/ctm/plated_iron_pillar_self_particle",
-    "top": "recurrencemod:block/ctm/plated_iron_pillar_top"
   }
 }

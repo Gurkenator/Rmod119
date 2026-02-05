@@ -1,6 +1,11 @@
 {
-  "parent": "block/cube_all",
+  "loader": "fusion:model",
+  "type": "connecting",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "recurrencemod:block/ctm/lead_panelling_particle"
+    "all": "recurrencemod:block/fusion/lead_panelling_pieced"
+  },
+  "connections": {
+    "type": "is_same_block"
   }
 }

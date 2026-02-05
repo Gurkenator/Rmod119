@@ -2,7 +2,9 @@ package net.gurken.recurrencemod;
 
 import com.mojang.logging.LogUtils;
 import net.gurken.recurrencemod.block.ModBlocks;
+import net.gurken.recurrencemod.block.entity.MakeshiftChestBlockEntity;
 import net.gurken.recurrencemod.block.entity.ModBlockEntities;
+import net.gurken.recurrencemod.block.entity.renderer.ModChestRenderer;
 import net.gurken.recurrencemod.entity.ModEntities;
 import net.gurken.recurrencemod.entity.client.RaiderRenderer;
 import net.gurken.recurrencemod.entity.client.VagabondThrowingKnifeRenderer;
@@ -19,12 +21,16 @@ import net.gurken.recurrencemod.screen.SkeletonBlockScreen;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.commands.ExperienceCommand;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.ComposterBlock;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -33,6 +39,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 import software.bernie.geckolib.GeckoLib;
 
@@ -68,6 +77,10 @@ public class RecurrenceMod
 
         modEventBus.addListener(this::addCreative);
     }
+
+    //public static ResourceLocation asId(String path) {
+    //    return new ResourceLocation(MOD_ID, path);
+    //}
 
     //public static ResourceLocation prefix(String name) {
     //    // METHOD ADAPTED FROM: TeamTwilight | https://github.com/TeamTwilight/twilightforest
@@ -144,9 +157,14 @@ public class RecurrenceMod
             event.accept(ModBlocks.WARNING_PANEL_LEAD);
             event.accept(ModBlocks.WARNING_PANEL_TIN);
             event.accept(ModBlocks.BOLTED_SCRAPS_BLOCK);
+            event.accept(ModBlocks.PLATED_COPPER_PILLAR);
+            event.accept(ModBlocks.PLATED_TIN_PILLAR);
             event.accept(ModBlocks.PLATED_IRON_PILLAR);
-            event.accept(ModBlocks.LEAD_PANELLING);
+            event.accept(ModBlocks.PLATED_LEAD_PILLAR);
             event.accept(ModBlocks.COPPER_PANELLING);
+            event.accept(ModBlocks.TIN_PANELLING);
+            event.accept(ModBlocks.IRON_PANELLING);
+            event.accept(ModBlocks.LEAD_PANELLING);
             event.accept(ModBlocks.METAL_GRATING);
             event.accept(ModBlocks.RUSTY_GRATING);
             event.accept(ModBlocks.METAL_PLATING);
@@ -157,6 +175,7 @@ public class RecurrenceMod
             event.accept(ModBlocks.LIGHTBULB);
             event.accept(ModBlocks.COPPER_WIRING);
             event.accept(ModBlocks.PIPING);
+            event.accept(ModBlocks.MAKESHIFT_CHEST);
             event.accept(ModBlocks.BATTERY);
             event.accept(ModBlocks.LIGHTBULB);
             event.accept(ModBlocks.METAL_STRUTS);
@@ -276,7 +295,14 @@ public class RecurrenceMod
                 EntityRenderers.register(ModEntities.VAGABOND_THROWING_KNIFE.get(), VagabondThrowingKnifeRenderer::new);
 
                 ItemBlockRenderTypes.setRenderLayer(ModBlocks.LEAD_FRAMED_GLASS.get(), RenderType.cutout());
+
+                BlockEntityRenderers.register(ModBlockEntities.MAKESHIFT_CHEST.get(), ModChestRenderer::new);
             });
+        }
+
+        @SubscribeEvent
+        public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.MAKESHIFT_CHEST.get(), ModChestRenderer::new);
         }
     }
 }

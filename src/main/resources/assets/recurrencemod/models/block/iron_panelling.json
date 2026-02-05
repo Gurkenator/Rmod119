@@ -3,7 +3,7 @@
   "type": "connecting",
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "recurrencemod:block/fusion/copper_panelling_pieced"
+    "all": "recurrencemod:block/fusion/iron_panelling_pieced"
   },
   "connections": {
     "type": "is_same_block"

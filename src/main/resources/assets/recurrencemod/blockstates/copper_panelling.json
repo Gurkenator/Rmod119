@@ -1,13 +1,5 @@
 {
   "variants": {
-    "": {"model":  "recurrencemod:block/lead_panelling" }
-  },
-  "athena:loader": "athena:ctm",
-  "ctm_textures": {
-    "center": "recurrencemod:block/ctm/copper_panelling_center",
-    "empty": "recurrencemod:block/ctm/copper_panelling_empty",
-    "horizontal": "recurrencemod:block/ctm/copper_panelling_horizontal",
-    "vertical": "recurrencemod:block/ctm/copper_panelling_vertical",
-    "particle": "recurrencemod:block/ctm/copper_panelling_particle"
+    "": {"model":  "recurrencemod:block/copper_panelling" }
   }
 }

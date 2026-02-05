@@ -7,6 +7,7 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -84,14 +85,29 @@ public class ModBlocks {
     public static final RegistryObject<Block> BOLTED_SCRAPS_BLOCK = registerBlock("bolted_scraps_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> PLATED_IRON_PILLAR = registerBlock("plated_iron_pillar",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+    public static final RegistryObject<Block> PLATED_COPPER_PILLAR = registerBlock("plated_copper_pillar",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> LEAD_PANELLING = registerBlock("lead_panelling",
+    public static final RegistryObject<Block> PLATED_TIN_PILLAR = registerBlock("plated_tin_pillar",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PLATED_IRON_PILLAR = registerBlock("plated_iron_pillar",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PLATED_LEAD_PILLAR = registerBlock("plated_lead_pillar",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> COPPER_PANELLING = registerBlock("copper_panelling",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> TIN_PANELLING = registerBlock("tin_panelling",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> IRON_PANELLING = registerBlock("iron_panelling",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(4f, 4f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LEAD_PANELLING = registerBlock("lead_panelling",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(4f, 4f).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RUSTY_GRATING = registerBlock("rusty_grating",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)
@@ -282,7 +298,10 @@ public class ModBlocks {
     public static final RegistryObject<ModClusterBlock> EMERALD_CLUSTER = registerBlock("emerald_cluster",
             () -> new ModClusterBlock(3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)
                     .strength(1.5f).forceSolidOn().noOcclusion().mapColor(MapColor.EMERALD).requiresCorrectToolForDrops()));
-
+    public static final RegistryObject<Block> MAKESHIFT_CHEST = registerBlock("makeshift_chest",
+            () -> new MakeshiftChestBlock(BlockBehaviour.Properties.copy(Blocks.CHEST), () -> {
+                return BlockEntityType.CHEST;
+            }));
     public static final RegistryObject<Block> BATTERY = registerBlock("battery",
             () -> new BatteryBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .strength(2.0f, 5.0f)));

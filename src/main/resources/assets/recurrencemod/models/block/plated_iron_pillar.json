@@ -1,6 +1,11 @@
 {
-  "parent": "block/cube_all",
+  "loader": "fusion:model",
+  "type": "connecting",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "recurrencemod:block/ctm/plated_iron_pillar_self_particle"
+    "all": "recurrencemod:block/fusion/plated_iron_pillar_simple"
+  },
+  "connections": {
+    "type": "is_same_block"
   }
 }

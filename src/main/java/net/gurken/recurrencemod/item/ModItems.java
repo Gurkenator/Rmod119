@@ -1,8 +1,11 @@
 package net.gurken.recurrencemod.item;
 
 import net.gurken.recurrencemod.RecurrenceMod;
+import net.gurken.recurrencemod.block.ModBlocks;
+import net.gurken.recurrencemod.block.custom.MakeshiftChestBlock;
 import net.gurken.recurrencemod.entity.ModEntities;
 import net.gurken.recurrencemod.item.custom.*;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.*;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -13,7 +16,6 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, RecurrenceMod.MOD_ID);
-
     public static final RegistryObject<Item> ROTTEN_WOOD = ITEMS.register("rotten_wood",
             () -> new RottenWoodItem(new Item.Properties()));
     public static final RegistryObject<Item> RAIDER_PLATINGS = ITEMS.register("raider_platings",
